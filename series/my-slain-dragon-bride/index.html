@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>My Slain Dragon Bride Manhwa | AnimeInPost</title><meta name="description" content="Read My Slain Dragon Bride Manhwa on AnimeInPost. Explore the story, characters, chapters, and latest updates from the popular Korean webtoon.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><link rel="canonical" href="https://animeinpost.site/series/my-slain-dragon-bride/"><meta name="author" content="AnimeInPost"><meta property="og:type" content="website">
+<meta property="og:title" content="My Slain Dragon Bride Manhwa | AnimeInPost">
+<meta property="og:description" content="Explore the story, characters, chapters, and latest updates from the popular Korean webtoon.">
+<meta property="og:site_name" content="AnimeInPost">
+<meta property="og:url" content="https://animeinpost.site/series/my-slain-dragon-bride/">
+<meta property="og:image" content="https://animeinpost.site/assets/covers/my-slain-dragon-bride.webp"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My Slain Dragon Bride Manhwa | AnimeInPost">
+<meta name="twitter:description" content="Explore the story, characters, chapters, and latest updates from the popular Korean webtoon.">
+<meta name="twitter:image" content="https://animeinpost.site/assets/covers/my-slain-dragon-bride.webp"><link rel="manifest" href="../../assets/manifest.json">
+<link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+<meta name="theme-color" content="#903DE0">
+
+<!-- Header / nav-panel styling (unchanged, reused as-is) -->
+<link rel="stylesheet" href="../../assets/css/nav-panel.css">
+<link rel="stylesheet" href="../../assets/css/desktop-layout.css">
+<!-- Reaction / comment styling (unchanged, reused as-is) -->
+<link rel="stylesheet" href="../../assets/css/comments.css">
+<!-- This page's own styling only -->
+<link rel="stylesheet" href="../../assets/css/series-info.css">
+
+<style>
+/* Prevents the header's menu button from shifting sideways when the
+   nav panel opens/closes. Most nav-panel scripts set body{overflow:hidden}
+   while the panel is open, which removes the scrollbar and reflows the
+   page width, nudging any right-aligned element (like the menu button).
+   scrollbar-gutter reserves that space permanently so nothing shifts.
+   Ideally this single rule should move into nav-panel.css so every page
+   gets the fix, not just this one. */
+html{ scrollbar-gutter: stable; }
+
+/* Root cause of the hamburger-icon jump: on narrow screens the header
+   should show ONLY logo + menu button, one row, ~64px tall — desktop-nav
+   / search / bookmark are meant to be hidden by desktop-layout.css above
+   some breakpoint. If that file isn't loading (or its breakpoint doesn't
+   match this device), those elements wrap the header onto multiple lines,
+   which pushes the hamburger button down inside it. The nav-panel drawer's
+   close button isn't affected by that wrapping, so the two icons land in
+   different spots and it looks like the icon "jumped" on open/close.
+   This is a safety net so the header can never wrap regardless of whether
+   desktop-layout.css loads correctly — the real fix still belongs in that
+   file's breakpoint, but this guarantees it here either way. */
+@media (max-width:899px){
+  .desktop-nav,
+  .desktop-header-right,
+  .desktop-search-results{ display:none !important; }
+}
+
+/* Browsers give <body> a default 8px margin unless something resets it.
+   That margin pushes the in-flow header down, but has no effect on the
+   nav-panel drawer (position:fixed ignores body margin) — so it was the
+   other half of the icon-jump gap. */
+body{ margin:0; }
+</style>
+</head>
+
+<body class="si-page">
+
+<!-- =====================================================================
+     HEADER — copied verbatim from your existing index.html (browse page)
+     Only the asset paths were adjusted from ../assets/ to ../../assets/
+     because this page lives one folder deeper (/series/<slug>/).
+     Do not edit markup here; edit nav-panel.css / desktop-layout.css /
+     nav-panel.js / search.js instead so every page stays in sync.
+===================================================================== -->
+
+<div class="nav-panel-overlay" id="navPanelOverlay"></div>
+
+<div class="nav-panel" id="navPanel">
+  <div class="nav-panel-top">
+  <a href="/" class="header-logo">
+    <img src="../../assets/logo.png" alt="AnimeInPost">
+  </a>
+
+  <button class="menu-btn" id="navPanelClose" aria-label="Close menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+      <path d="M18 6L6 18"/>
+      <path d="M6 6l12 12"/>
+    </svg>
+  </button>
+</div>
+
+  <div class="nav-search-wrap">
+    <div class="nav-search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="navSearchInput" placeholder="Search series...">
+    </div>
+    <div class="nav-search-results" id="navSearchResults"></div>
+  </div>
+
+  <div class="nav-grid">
+    <a href="/" class="nav-tile">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M3 10.5L12 3l9 7.5"/>
+  <path d="M5 9.5V21h14V9.5"/>
+</svg></span>
+      Home
+    </a>
+    <a href="../../bookmarks.html" class="nav-tile">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M6 3h12v18l-6-4-6 4V3z"/>
+</svg></span>
+      Bookmarks
+    </a>
+    <a href="/series/" class="nav-tile">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M2 5a3 3 0 0 1 3-3h7v18H5a3 3 0 0 0-3 3z"/>
+  <path d="M22 5a3 3 0 0 0-3-3h-7v18h7a3 3 0 0 1 3 3z"/>
+</svg></span>
+      Series
+    </a>
+  </div>
+
+  <div class="nav-section-label">Resources</div>
+  <div class="nav-grid">
+    <a href="/download.html" class="nav-tile">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M4 3h14a2 2 0 0 1 2 2v16H6a2 2 0 0 0-2 2V3z"/>
+</svg></span>
+      Ebooks
+    </a>
+    <a href="#" class="nav-tile">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M4 20V10"/>
+  <path d="M10 20V4"/>
+  <path d="M16 20v-7"/>
+  <path d="M22 20v-12"/>
+</svg></span>
+      Comics
+    </a>
+    <a href="#" class="nav-tile">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-4 4-8z"/>
+  <path d="M12 14a3 3 0 1 0 3 3c0-1.5-1.5-3-3-3z"/>
+</svg></span>
+      Users
+    </a>
+  </div>
+</div>
+
+<header>
+  <a href="/" class="header-logo">
+    <img src="../../assets/logo.png" alt="AnimeInPost">
+  </a>
+
+  <nav class="desktop-nav">
+    <a href="/" class="desktop-nav-link">Home</a>
+    <a href="/series/" class="desktop-nav-link">Series</a>
+    <div class="desktop-nav-dropdown" id="resourcesDropdown">
+      <button type="button" class="desktop-nav-link desktop-nav-dropdown-btn" id="resourcesDropdownBtn">
+        Resources
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="desktop-nav-dropdown-menu">
+        <a href="/download.html">Ebooks</a>
+        <a href="#">Comics</a>
+        <a href="#">Users</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="desktop-header-right">
+    <button type="button" class="desktop-search" id="desktopSearchTrigger" aria-label="Open search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" placeholder="Search" tabindex="-1" readonly>
+      <span class="desktop-search-kbd">Ctrl K</span>
+    </button>
+
+    <a href="/bookmarks.html" class="desktop-bookmark-btn" aria-label="Bookmarks">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 3h12v18l-6-4-6 4V3z"/>
+      </svg>
+    </a>
+  </div>
+
+  <button class="menu-btn" id="navPanelTrigger" aria-label="Open menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+      <path d="M3 6h18"/>
+      <path d="M3 12h18"/>
+      <path d="M3 18h18"/>
+    </svg>
+  </button>
+</header>
+
+<!-- Desktop search overlay (Ctrl/Cmd+K style) -->
+<div class="desktop-search-overlay" id="desktopSearchOverlay">
+  <div class="desktop-search-modal">
+    <div class="desktop-search-modal-input">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="desktopSearchModalInput" placeholder="Search comics and users...">
+      <button type="button" class="desktop-search-modal-esc" id="desktopSearchModalEsc">Esc</button>
+    </div>
+    <div class="desktop-search-modal-results" id="desktopSearchModalResults"></div>
+  </div>
+</div>
+
+<!-- =====================================================================
+     SERIES INFO BODY — new markup for this page only. Driven entirely by
+     assets/js/series-info.js + meta/iam-the-fated-villain_meta.json +
+     meta/iam-the-fated-villain.json. Edit those files, not this markup.
+===================================================================== -->
+<main>
+
+ <div class="si-top">
+  <section class="si-hero">
+    <div class="si-hero-cover">
+      <img id="si-cover-img" src="../../assets/covers/my-slain-dragon-bride.webp" alt="cover">
+    </div>
+  </section>
+
+  <section class="si-details">
+    <h1 class="si-title" id="si-title">My Slain Dragon Bride</h1>
+    <p class="si-alt-titles" id="si-alt-titles"></p>
+
+    <div class="si-genres" id="si-genres"></div>
+
+    <div class="si-stats">
+      <div class="si-stat" data-stat="rating">
+        <div class="si-stat-value">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.7z"/></svg>
+          <span id="si-rating">—</span>
+        </div>
+        <div class="si-stat-label">Rating</div>
+      </div>
+      <div class="si-stat" data-stat="chapters">
+        <div class="si-stat-value">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/></svg>
+          <span id="si-stat-chapters">—</span>
+        </div>
+        <div class="si-stat-label">Chapters</div>
+      </div>
+      <div class="si-stat" data-stat="bookmarks">
+        <div class="si-stat-value">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>
+          <span id="si-bookmarks">—</span>
+        </div>
+        <div class="si-stat-label">Bookmarks</div>
+      </div>
+    </div>
+
+    <button class="si-bookmark-btn" id="si-bookmark-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>
+      <span>Bookmark</span>
+    </button>
+
+    <div class="si-action-row">
+      <a class="si-action-btn si-first-ch" href="./read/chapter-1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/></svg>
+        First Chapter
+      </a>
+      <button class="si-action-btn si-info-btn" id="si-info-open">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        Full series info
+      </button>
+    </div>
+  </section>
+ </div>
+
+  <section class="si-chapters">
+    <div class="si-chapters-head">
+      <h2 id="si-chapter-count">Chapters</h2>
+      <button class="si-sort-btn" id="si-sort-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18"/><path d="M6 12h12"/><path d="M10 17h4"/></svg>
+        <span id="si-sort-label">Newest</span>
+      </button>
+    </div>
+
+    <div class="si-chapter-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="si-chapter-search-input" placeholder="Search chapters...">
+    </div>
+
+    <div class="si-chapter-list" id="si-chapter-list"></div>
+  </section>
+
+  <!-- =====================================================================
+       REACTIONS + COMMENTS — copied verbatim from your existing chapter-1.html
+       rc-wrapper. Only the heading text was changed from "this chapter"
+       to "this series". Styling/behavior untouched (comments.css / comments.js).
+  ===================================================================== -->
+  <section class="rc-wrapper" id="rcWrapper">
+
+    <div class="rc-reactions-block">
+      <h2 class="rc-question">What did you think of this series?</h2>
+      <p class="rc-total-count" id="rcTotalCount">0 reactions</p>
+
+      <div class="rc-reaction-grid">
+
+        <button class="rc-reaction-btn" data-reaction="upvote">
+          <span class="rc-emoji"></span>
+          <span class="rc-count" data-count="upvote"></span>
+          <span class="rc-label">Upvote</span>
+        </button>
+
+        <button class="rc-reaction-btn" data-reaction="funny">
+          <span class="rc-emoji"></span>
+          <span class="rc-count" data-count="funny"></span>
+          <span class="rc-label">Funny</span>
+        </button>
+
+        <button class="rc-reaction-btn" data-reaction="love">
+          <span class="rc-emoji"></span>
+          <span class="rc-count" data-count="love"></span>
+          <span class="rc-label">Love</span>
+        </button>
+
+        <button class="rc-reaction-btn" data-reaction="surprised">
+          <span class="rc-emoji"></span>
+          <span class="rc-count" data-count="surprised"></span>
+          <span class="rc-label">Surprised</span>
+        </button>
+
+        <button class="rc-reaction-btn" data-reaction="angry">
+          <span class="rc-emoji"></span>
+          <span class="rc-count" data-count="angry"></span>
+          <span class="rc-label">Angry</span>
+        </button>
+
+        <button class="rc-reaction-btn" data-reaction="sad">
+          <span class="rc-emoji"></span>
+          <span class="rc-count" data-count="sad"></span>
+          <span class="rc-label">Sad</span>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="rc-comments-header">
+      <h3 class="rc-comments-title" id="rcCommentsCount">
+        0 Comments
+      </h3>
+
+      <div class="rc-sort-toggle">
+        <button class="rc-sort-btn active" data-sort="newest">
+          Newest
+        </button>
+
+        <button class="rc-sort-btn" data-sort="oldest">
+          Oldest
+        </button>
+      </div>
+    </div>
+
+    <div class="rc-comment-form">
+
+      <input
+        type="text"
+        class="rc-input"
+        id="rcNameInput"
+        placeholder="Your name"
+        maxlength="50"
+        autocomplete="name"
+      >
+
+      <input
+        type="email"
+        class="rc-input"
+        id="rcEmailInput"
+        placeholder="Email (optional, not displayed)"
+        maxlength="100"
+        autocomplete="email"
+      >
+
+      <textarea
+        class="rc-comment-input"
+        id="rcCommentInput"
+        placeholder="Write a comment..."
+        rows="4"
+        maxlength="1000"
+      ></textarea>
+
+      <div class="rc-form-toolbar">
+        <button class="rc-post-btn" id="rcPostBtn">
+          Post Comment
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- =====================================================================
+     SERIES INFO MODAL — new markup, matches the "Series Info" reference
+     screenshot. Opened by the "Full series info" button above.
+===================================================================== -->
+<div class="si-modal-overlay" id="si-modal-overlay">
+  <div class="si-modal">
+    <div class="si-modal-head">
+      <h2>Series Info</h2>
+      <button class="si-modal-close" id="si-modal-close" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="si-modal-body">
+      <p class="si-modal-section-label">Description</p>
+      <p class="si-modal-desc" id="si-modal-desc"></p>
+
+      <p class="si-modal-section-label">Also Known As</p>
+      <p class="si-modal-alt-titles" id="si-modal-alt-titles"></p>
+
+      <p class="si-modal-section-label">Author</p>
+      <p class="si-modal-author" id="si-modal-author"></p>
+
+      <div class="si-genres" id="si-modal-genres" style="margin-bottom:18px;"></div>
+
+      <button class="si-modal-rating-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.7z"/></svg>
+        Rating
+      </button>
+
+      <div class="si-modal-stats">
+        <div class="si-stat" data-stat="rating">
+          <div class="si-stat-value"><span id="si-modal-rating">—</span></div>
+          <div class="si-stat-label">Rating</div>
+        </div>
+        <div class="si-stat" data-stat="chapters">
+          <div class="si-stat-value"><span id="si-modal-chapters">—</span></div>
+          <div class="si-stat-label">Chapters</div>
+        </div>
+        <div class="si-stat" data-stat="bookmarks">
+          <div class="si-stat-value"><span id="si-modal-bookmarks">—</span></div>
+          <div class="si-stat-label">Bookmarks</div>
+        </div>
+      </div>
+
+      <div class="si-modal-meta-row">
+        <div class="si-modal-meta-card">
+          <div class="si-meta-label">Status</div>
+          <div class="si-meta-value"><span class="si-meta-dot"></span><span id="si-status">—</span></div>
+        </div>
+        <div class="si-modal-meta-card">
+          <div class="si-meta-label">Type</div>
+          <div class="si-meta-value"><span class="si-meta-dot"></span><span id="si-type">—</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="margin-top:30px; padding:20px; background:var(--si-card); border-top:1px solid var(--si-border); display:flex; flex-wrap:wrap; justify-content:center; gap:12px; border-radius:18px 18px 0 0;">
+  <a href="/about.html" style="background:var(--si-card); border:1px solid var(--si-border); color:var(--si-muted); padding:10px 16px; border-radius:12px; font-size:13px; text-decoration:none;">About Us</a>
+  <a href="/donate.html" style="background:var(--si-card); border:1px solid var(--si-border); color:var(--si-muted); padding:10px 16px; border-radius:12px; font-size:13px; text-decoration:none;">Support</a>
+  <a href="/contact.html" style="background:var(--si-card); border:1px solid var(--si-border); color:var(--si-muted); padding:10px 16px; border-radius:12px; font-size:13px; text-decoration:none;">Contact</a>
+  <div style="width:100%; text-align:center; margin-top:10px; padding:10px 14px; background:var(--si-card); border:1px solid var(--si-border); border-radius:12px; font-size:12px; color:var(--si-muted);">
+    © 2026 AnimeInPost — All rights reserved
+  </div>
+</footer>
+
+<!-- Header scripts — reused as-is -->
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/nav-panel.js"></script>
+
+<!-- Shared bookmark data layer — must load before series-info.js -->
+<script src="../../assets/js/bookmark-store.js"></script>
+
+<!-- This page's own script only -->
+<script
+  id="series-info-script"
+  data-slug="my-slain-dragon-bride"
+  data-meta="../../meta/my-slain-dragon-bride_meta.json"
+  data-chapters="../../meta/my-slain-dragon-bride.json"
+  src="../../assets/js/series-info.js">
+</script>
+
+<!-- Comment section script — reused as-is -->
+<script src="../../assets/js/comments.js"></script>
+
+<script>
+(function(){
+  var dropdown = document.querySelector('.desktop-nav-dropdown');
+  var dropdownBtn = document.querySelector('.desktop-nav-dropdown-btn');
+  if(dropdown && dropdownBtn){
+    dropdownBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e){
+      if(!dropdown.contains(e.target)){
+        dropdown.classList.remove('open');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){
+        dropdown.classList.remove('open');
+      }
+    });
+  }
+
+  // Desktop search overlay (Ctrl/Cmd+K style, 769px+)
+  var desktopSearchEmptyState = `
+    <div class="search-empty-state">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <p>Enter at least 3 characters to search.</p>
+    </div>
+  `;
+
+  var desktopSearch = (typeof initSearch === 'function' && document.getElementById('desktopSearchModalInput'))
+    ? initSearch({
+        inputSelector: '#desktopSearchModalInput',
+        resultsSelector: '#desktopSearchModalResults',
+        dataUrl: '../../data/search-index.json',
+        seeAllUrl: '/series/',
+        emptyStateHtml: desktopSearchEmptyState
+      })
+    : null;
+
+  var desktopSearchTrigger = document.getElementById('desktopSearchTrigger');
+  var desktopSearchOverlay = document.getElementById('desktopSearchOverlay');
+  var desktopSearchModal = desktopSearchOverlay
+    ? desktopSearchOverlay.querySelector('.desktop-search-modal')
+    : null;
+  var desktopSearchEsc = document.getElementById('desktopSearchModalEsc');
+
+  function openDesktopSearch() {
+    if (!desktopSearchOverlay) return;
+    desktopSearchOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (desktopSearch) desktopSearch.reset();
+    requestAnimationFrame(function(){
+      if (desktopSearch) desktopSearch.focus();
+    });
+  }
+
+  function closeDesktopSearch() {
+    if (!desktopSearchOverlay) return;
+    desktopSearchOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (desktopSearchTrigger) {
+    desktopSearchTrigger.addEventListener('click', openDesktopSearch);
+  }
+
+  if (desktopSearchEsc) {
+    desktopSearchEsc.addEventListener('click', closeDesktopSearch);
+  }
+
+  if (desktopSearchOverlay) {
+    desktopSearchOverlay.addEventListener('click', function(e){
+      if (desktopSearchModal && !desktopSearchModal.contains(e.target)) {
+        closeDesktopSearch();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', function(e){
+    var isOpen = desktopSearchOverlay && desktopSearchOverlay.classList.contains('active');
+
+    if (isOpen && e.key === 'Escape') {
+      closeDesktopSearch();
+      return;
+    }
+
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      if (desktopSearchTrigger && desktopSearchTrigger.offsetParent !== null) {
+        e.preventDefault();
+        openDesktopSearch();
+      }
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

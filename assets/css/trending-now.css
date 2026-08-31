@@ -1,0 +1,224 @@
+/* ===================== Trending Now ===================== */
+
+.tn-section{
+  background:#0a0a10;
+  padding:14px 0 20px;
+}
+
+.tn-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 16px 14px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  margin-bottom:14px;
+}
+
+.tn-head-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.tn-badge{
+  width:32px;
+  height:32px;
+  flex-shrink:0;
+  border-radius:9px;
+  background:#8b2fe0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.tn-badge svg{
+  width:16px;
+  height:16px;
+  fill:#fff;
+}
+
+.tn-heading{
+  font-size:16px;
+  font-weight:800;
+  color:#fff;
+  letter-spacing:.2px;
+  margin:0;
+  white-space:nowrap;
+}
+
+.tn-cta{
+  flex-shrink:0;
+  background:#8b2fe0;
+  color:#fff;
+  font-weight:700;
+  font-size:12px;
+  text-decoration:none;
+  padding:8px 16px;
+  border-radius:999px;
+  white-space:nowrap;
+  transition:background .15s ease, transform .15s ease;
+}
+
+.tn-cta:hover{ background:#9b45ea; transform:translateY(-1px); }
+.tn-cta:active{ transform:scale(.97); }
+
+.tn-scroll{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  scroll-snap-type:x proximity;
+  padding:2px 16px 6px;
+  max-width:1200px;
+  margin:0 auto;
+  box-sizing:border-box;
+  scrollbar-width:none;
+}
+.tn-scroll::-webkit-scrollbar{ display:none; }
+
+.tn-card{
+  flex-shrink:0;
+  scroll-snap-align:start;
+  width:150px;
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+
+@media(max-width:640px){
+  .tn-card{ width:38vw; }
+}
+
+.tn-cover{
+  position:relative;
+  width:100%;
+  aspect-ratio:3/4;
+  border-radius:10px;
+  overflow:hidden;
+  background:#15151f;
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.tn-cover img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .35s ease;
+}
+
+.tn-card:hover .tn-cover img{ transform:scale(1.05); }
+
+.tn-cover-fade{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.92) 0%, rgba(0,0,0,.55) 32%, rgba(0,0,0,0) 62%);
+  pointer-events:none;
+}
+
+.tn-cover-title{
+  position:absolute;
+  left:8px;
+  right:8px;
+  bottom:8px;
+  color:#fff;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.15;
+  text-shadow:0 2px 8px rgba(0,0,0,.5);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.tn-meta{
+  padding:6px 2px 0;
+}
+
+.tn-chapter{
+  color:#8f8f9c;
+  font-size:11px;
+  font-weight:500;
+  margin:0 0 3px;
+}
+
+.tn-rating{
+  display:flex;
+  align-items:center;
+  gap:3px;
+}
+
+.tn-stars{
+  display:flex;
+  gap:1px;
+}
+
+.tn-stars svg{
+  width:10px;
+  height:10px;
+  fill:#f6b90c;
+}
+
+.tn-rating-num{
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  margin-left:1px;
+}
+
+/* ================= LOADING SKELETON ================= */
+
+.tn-skel-badge{
+  width:32px;
+  height:32px;
+  border-radius:9px;
+}
+
+.tn-skel-heading{
+  width:120px;
+  height:18px;
+  border-radius:5px;
+}
+
+.tn-skel-cta{
+  width:84px;
+  height:32px;
+  border-radius:999px;
+}
+
+.tn-skel-cover{
+  width:100%;
+  aspect-ratio:3/4;
+  border-radius:10px;
+}
+
+.tn-skel-line{
+  height:10px;
+  border-radius:4px;
+  margin-top:8px;
+}
+
+.tn-skel-line.short{
+  width:60%;
+}
+
+/* ================= SECTION DIVIDER (card-shaped) ================= */
+
+.tn-section-divider{
+  max-width:1200px;
+  margin:18px auto 4px;
+  padding:0 16px;
+}
+
+.tn-section-divider-bar{
+  height:4px;
+  border-radius:999px;
+  background:linear-gradient(
+    90deg,
+    rgba(139,63,247,0) 0%,
+    rgba(139,63,247,.55) 50%,
+    rgba(139,63,247,0) 100%
+  );
+}

@@ -1,0 +1,5 @@
+{
+  "defaultCommentOrder": "newest",
+  "origins": ["https://animeinpost.site"],
+  "originsRegex": ["http://localhost:[0-9]+"]
+}

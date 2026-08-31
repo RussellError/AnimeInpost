@@ -1,0 +1,338 @@
+/* ===================================================================
+   series-info.css
+   Styles ONLY the series info page body (hero, stats, chapter list,
+   series-info modal). Header/nav-panel styling lives in nav-panel.css
+   + desktop-layout.css. Reaction/comment styling lives in comments.css.
+   This file must not redefine selectors owned by those files.
+=================================================================== */
+
+:root{
+  --si-bg:#0a0a0f;
+  --si-card:#15141f;
+  --si-card-2:#1b1a28;
+  --si-border:#2a2836;
+  --si-text:#f4f3f8;
+  --si-muted:#9c99ab;
+  --si-purple:#8b3ce0;
+  --si-purple-2:#a855f7;
+  --si-gold:#f5b400;
+  --si-green:#3ddc84;
+  --si-blue:#5b8def;
+  --si-amber:#f6a609;
+}
+
+.si-page{
+  background:var(--si-bg);
+  color:var(--si-text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  min-height:100vh;
+}
+
+/* ---------- Hero ---------- */
+.si-hero{
+  position:relative;
+  padding:36px 16px 28px;
+  display:flex;
+  justify-content:center;
+  overflow:hidden;
+  isolation:isolate;
+}
+.si-hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:var(--si-backdrop-url);
+  background-size:cover;
+  background-position:center 20%;
+  filter:blur(18px) brightness(0.55) saturate(1.15);
+  transform:scale(1.15);
+  z-index:-2;
+}
+.si-hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(10,10,15,0.35) 0%, var(--si-bg) 92%);
+  z-index:-1;
+}
+.si-hero-cover{
+  width:220px;
+  max-width:56vw;
+  aspect-ratio:2/3;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 18px 40px -12px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.06);
+}
+.si-hero-cover img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* ---------- Details card ---------- */
+.si-details{
+  max-width:640px;
+  margin:0 auto;
+  padding:20px 16px 8px;
+}
+.si-title{
+  font-size:26px;
+  font-weight:800;
+  letter-spacing:-0.01em;
+  margin:0 0 6px;
+}
+.si-alt-titles{
+  color:var(--si-muted);
+  font-size:12.5px;
+  line-height:1.5;
+  margin:0 0 14px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.si-genres{
+  display:flex; flex-wrap:wrap; gap:8px;
+  margin:0 0 14px;
+}
+.si-genre-chip{
+  background:var(--si-card-2);
+  border:1px solid var(--si-border);
+  color:var(--si-text);
+  font-size:12.5px;
+  padding:6px 12px;
+  border-radius:8px;
+}
+/* ---------- Stats bar ---------- */
+.si-stats{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  background:var(--si-card);
+  border:1px solid var(--si-border);
+  border-radius:14px;
+  padding:16px 8px;
+  margin-bottom:14px;
+}
+.si-stat{
+  text-align:center;
+  border-left:1px solid var(--si-border);
+}
+.si-stat:first-child{ border-left:none; }
+.si-stat-value{
+  display:flex; align-items:center; justify-content:center; gap:6px;
+  font-size:18px; font-weight:800;
+}
+.si-stat-value svg{ width:17px; height:17px; flex-shrink:0; }
+.si-stat[data-stat="rating"] .si-stat-value{ color:var(--si-gold); }
+.si-stat[data-stat="chapters"] .si-stat-value{ color:var(--si-green); }
+.si-stat[data-stat="bookmarks"] .si-stat-value{ color:var(--si-blue); }
+.si-stat-label{
+  font-size:11.5px; color:var(--si-muted); margin-top:3px;
+  text-transform:uppercase; letter-spacing:.03em;
+}
+
+/* ---------- Action buttons ---------- */
+.si-bookmark-btn{
+  width:100%;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  background:linear-gradient(135deg, var(--si-purple) 0%, var(--si-purple-2) 100%);
+  color:#fff; font-size:15px; font-weight:700;
+  border:none; border-radius:12px;
+  padding:14px; margin-bottom:10px;
+  cursor:pointer;
+}
+.si-bookmark-btn.active{ background:#3d3655; color:#d8d7dd; }
+.si-bookmark-btn.active svg{ fill:currentColor; }
+.si-bookmark-btn svg{ width:19px; height:19px; }
+
+.si-action-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:22px;
+}
+.si-action-btn{
+  display:flex; align-items:center; justify-content:center; gap:7px;
+  font-size:14.5px; font-weight:700;
+  border-radius:12px; padding:13px;
+  text-decoration:none;
+  border:1px solid var(--si-border);
+  position:relative;
+}
+.si-action-btn svg{ width:18px; height:18px; }
+.si-action-btn.si-first-ch{ background:#e9e8ef; color:#111; border-color:#e9e8ef; }
+.si-action-btn.si-info-btn{
+  background:var(--si-card-2);
+  color:var(--si-purple-2);
+  border-color:var(--si-purple);
+  cursor:pointer;
+}
+.si-premium-badge{
+  position:absolute; top:-9px; right:8px;
+  background:#111; color:#ffcb3d;
+  font-size:9px; font-weight:800; letter-spacing:.04em;
+  padding:2px 6px; border-radius:5px;
+  border:1px solid rgba(255,203,61,0.5);
+}
+
+/* ---------- Chapters ---------- */
+.si-chapters{
+  max-width:640px;
+  margin:0 auto;
+  padding:0 16px 8px;
+}
+.si-chapters-head{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:12px;
+}
+.si-chapters-head h2{ font-size:19px; font-weight:800; margin:0; }
+.si-sort-btn{
+  display:flex; align-items:center; gap:6px;
+  background:var(--si-card-2);
+  border:1px solid var(--si-border);
+  color:var(--si-text);
+  font-size:13px; font-weight:600;
+  padding:8px 12px; border-radius:9px;
+  cursor:pointer;
+}
+.si-sort-btn svg{ width:14px; height:14px; }
+
+.si-chapter-search{
+  display:flex; align-items:center; gap:10px;
+  background:var(--si-card);
+  border:1px solid var(--si-border);
+  border-radius:12px;
+  padding:11px 14px;
+  margin-bottom:6px;
+}
+.si-chapter-search svg{ width:17px; height:17px; color:var(--si-muted); flex-shrink:0; }
+.si-chapter-search input{
+  flex:1; background:none; border:none; outline:none;
+  color:var(--si-text); font-size:14.5px;
+}
+.si-chapter-search input::placeholder{ color:var(--si-muted); }
+
+/* Fixed-height scrolling box: the 348 chapters scroll inside this box
+   instead of pushing the reactions/comments section further down the page. */
+.si-chapter-list{
+  border-top:1px solid var(--si-border);
+  border:1px solid var(--si-border);
+  border-radius:12px;
+  max-height:420px;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  margin-bottom:24px;
+}
+.si-chapter-row{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:15px 14px;
+  border-bottom:1px solid var(--si-border);
+  text-decoration:none; color:var(--si-text);
+}
+.si-chapter-row:last-child{ border-bottom:none; }
+.si-chapter-row:active{ background:var(--si-card-2); }
+.si-chapter-name{ font-size:15px; font-weight:700; }
+.si-chapter-date{ font-size:12.5px; color:var(--si-muted); flex-shrink:0; padding-left:10px; }
+.si-chapter-empty{ padding:26px 4px; text-align:center; color:var(--si-muted); font-size:14px; }
+
+/* ---------- Series info modal (screenshot 2) ---------- */
+.si-modal-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,0.6);
+  display:flex; align-items:flex-end; justify-content:center;
+  z-index:200; opacity:0; pointer-events:none; transition:opacity .2s ease;
+}
+.si-modal-overlay.open{ opacity:1; pointer-events:auto; }
+.si-modal{
+  width:100%; max-width:640px;
+  max-height:88vh;
+  display:flex;
+  flex-direction:column;
+  background:var(--si-bg);
+  border-radius:20px 20px 0 0;
+  transform:translateY(16px);
+  transition:transform .2s ease;
+  overflow:hidden; /* the panel itself never scrolls */
+}
+.si-modal-overlay.open .si-modal{ transform:translateY(0); }
+.si-modal-head{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:22px 20px 16px;
+  flex-shrink:0;
+  background:var(--si-bg);
+  border-bottom:1px solid var(--si-border);
+}
+.si-modal-body{
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  padding:18px 20px 30px;
+}
+.si-modal-head h2{ font-size:22px; font-weight:800; margin:0; }
+.si-modal-close{ background:none; border:none; color:var(--si-text); cursor:pointer; padding:4px; }
+.si-modal-close svg{ width:22px; height:22px; }
+.si-modal-section-label{ font-size:17px; font-weight:800; margin:0 0 10px; }
+.si-modal-desc{ font-size:14.5px; line-height:1.65; color:#d8d6e0; margin:0 0 18px; }
+.si-modal-alt-titles{ font-size:13.5px; line-height:1.6; color:var(--si-muted); margin:0 0 18px; }
+.si-modal-author{ font-size:14.5px; font-weight:600; color:var(--si-text); margin:0 0 18px; }
+.si-modal-rating-btn{
+  width:100%; display:flex; align-items:center; justify-content:center; gap:8px;
+  border:1px solid var(--si-gold); border-radius:12px;
+  color:var(--si-gold); font-size:16px; font-weight:700;
+  padding:14px; background:none; margin-bottom:16px;
+}
+.si-modal-stats{
+  display:grid; grid-template-columns:1fr 1fr 1fr;
+  background:var(--si-card); border-radius:14px; padding:18px 8px;
+  margin-bottom:16px;
+}
+.si-modal-meta-row{
+  display:grid; grid-template-columns:1fr 1fr; gap:12px;
+}
+.si-modal-meta-card{
+  background:var(--si-card); border-radius:12px; padding:14px;
+}
+.si-modal-meta-card .si-meta-label{ font-size:12px; color:var(--si-muted); margin-bottom:6px; }
+.si-modal-meta-card .si-meta-value{
+  font-size:15px; font-weight:700; color:var(--si-purple-2);
+  display:flex; align-items:center; gap:7px;
+}
+.si-meta-dot{ width:8px; height:8px; border-radius:50%; background:var(--si-purple-2); flex-shrink:0; }
+
+/* ---------- Desktop: two-column layout, wider container ----------
+   Mobile stacks cover-over-details (default rules above). At this
+   breakpoint the cover sits beside the details instead of above them,
+   and the whole page uses far more of the viewport width so it stops
+   reading as a narrow mobile column stranded in a sea of empty margin. */
+@media (min-width:860px){
+  .si-top{
+    display:flex;
+    align-items:flex-start;
+    gap:40px;
+    max-width:1100px;
+    margin:0 auto;
+    padding:44px 32px 8px;
+  }
+  .si-hero{
+    padding:0;
+    flex:0 0 300px;
+    justify-content:flex-start;
+  }
+  .si-hero::before,
+  .si-hero::after{ display:none; } /* full-bleed blur backdrop only makes sense mobile-width */
+  .si-hero-cover{ width:300px; max-width:none; }
+
+  .si-details{
+    flex:1;
+    min-width:0;
+    padding:0;
+    max-width:none;
+  }
+  .si-title{ font-size:34px; }
+  .si-action-row{ max-width:460px; }
+
+  .si-chapters{ max-width:1100px; padding:0 32px 40px; }
+  .si-chapter-list{ max-height:520px; }
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+button,
+a,
+img {
+  user-select: none;
+  -webkit-user-select: none;
+}

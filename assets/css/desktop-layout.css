@@ -1,0 +1,706 @@
+/* ================= DESKTOP LAYOUT ENHANCEMENTS ================= */
+/* Only applies to screens 769px and above - mobile remains unchanged */
+
+/* ================= DESKTOP NAVBAR (hidden on mobile by default) ================= */
+.desktop-nav,
+.desktop-header-right,
+.desktop-search-overlay {
+  display: none;
+}
+
+@media (min-width: 769px) {
+
+  header {
+    padding: 12px 24px;
+    gap: 24px;
+  }
+
+  /* Hide the mobile hamburger on desktop (!important beats the inline
+     <style> block in <head>, which loads after this file and would
+     otherwise re-show it) */
+  .menu-btn {
+    display: none !important;
+  }
+
+  /* Hide the mobile slide-out nav panel entirely on desktop */
+  .nav-panel-overlay,
+  .nav-panel {
+    display: none !important;
+  }
+
+  /* ---- Nav links ---- */
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 8px;
+  }
+
+  .desktop-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    opacity: 0.85;
+    transition: 0.15s ease;
+  }
+
+  .desktop-nav-link:hover,
+  .desktop-nav-link.active {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.14);
+  }
+
+  .desktop-nav-dropdown {
+    position: relative;
+  }
+
+  .desktop-nav-dropdown-btn svg {
+    transition: transform 0.15s ease;
+  }
+
+  .desktop-nav-dropdown.open .desktop-nav-dropdown-btn svg {
+    transform: rotate(180deg);
+  }
+
+  .desktop-nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 160px;
+    background: #1B1724;
+    border: 1px solid #2b2f40;
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: 0.15s ease;
+    z-index: 50;
+  }
+
+  .desktop-nav-dropdown.open .desktop-nav-dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .desktop-nav-dropdown-menu a {
+    display: block;
+    padding: 10px 12px;
+    color: #e2e4ea;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+
+  .desktop-nav-dropdown-menu a:hover {
+    background: #262a38;
+    color: #fff;
+  }
+
+  /* ---- Right side: search + bookmark ---- */
+  .desktop-header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    position: relative;
+  }
+
+  .desktop-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 9px 12px;
+    min-width: 220px;
+    color: #fff;
+  }
+
+  .desktop-search svg {
+    opacity: 0.8;
+    flex-shrink: 0;
+  }
+
+  .desktop-search input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .desktop-search input::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .desktop-search-kbd {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 5px;
+    padding: 3px 6px;
+    font-family: inherit;
+    flex-shrink: 0;
+  }
+
+  /* ---- Search trigger becomes a button that opens the overlay below;
+     it no longer holds a live input, so clicks anywhere on it open
+     the modal instead of focusing text in place. ---- */
+  .desktop-search {
+    cursor: pointer;
+  }
+
+  .desktop-search input {
+    pointer-events: none;
+  }
+
+  .desktop-bookmark-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .desktop-bookmark-btn:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  /* ================= DESKTOP SEARCH OVERLAY (Cmd/Ctrl+K style) ================= */
+
+  .desktop-search-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 6, 10, 0.75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 300;
+    /* Scales down on short viewports (e.g. a phone in "desktop site" mode
+       with the on-screen keyboard open) instead of always pushing the
+       modal 90px down regardless of how much room is actually left. */
+    padding: clamp(24px, 8vh, 90px) 24px 24px;
+    overflow-y: auto;
+  }
+
+  .desktop-search-overlay.active {
+    display: block;
+  }
+
+  .desktop-search-modal {
+    max-width: 640px;
+    /* Hard cap so the modal can never exceed the visible viewport — the
+       results list scrolls internally instead of extending past the
+       bottom of the screen. */
+    max-height: 80vh;
+    margin: 0 auto;
+    background: #1B1724;
+    border: 1px solid #2b2f40;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desktop-search-modal-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    border-bottom: 1px solid #2b2f40;
+    flex-shrink: 0;
+  }
+
+  .desktop-search-modal-input svg {
+    flex-shrink: 0;
+    opacity: 0.6;
+    color: #fff;
+  }
+
+  .desktop-search-modal-input input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    pointer-events: auto;
+  }
+
+  .desktop-search-modal-input input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  .desktop-search-modal-esc {
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  /* Reuses .search-result-list / .search-result-item / .search-empty /
+     .search-skeleton from nav-panel.css — only the container differs.
+     flex:1 + min-height:0 lets this shrink and scroll inside the modal's
+     80vh cap rather than forcing the modal taller than the screen. */
+  .desktop-search-modal-results {
+    display: none;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .desktop-search-modal-results.active {
+    display: block;
+  }
+
+  .search-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 56px 24px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+  }
+
+  .search-empty-state svg {
+    opacity: 0.35;
+  }
+
+  .search-empty-state p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+}
+  
+@media (min-width: 769px) {
+  
+  /* ================= HERO CAROUSEL - DESKTOP ================= */
+  .hero-carousel {
+    padding: 24px 0 32px;
+    background: linear-gradient(135deg, rgba(144, 61, 224, 0.05) 0%, rgba(50, 227, 255, 0.05) 100%);
+  }
+
+  .hero-track {
+    height: 400px;
+  }
+
+  .hero-slide {
+    width: 280px;
+    height: 380px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+  }
+
+  .hero-slide[data-pos="center"] {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 5;
+    filter: brightness(1);
+  }
+
+  .hero-slide[data-pos="left"] {
+    transform: translateX(-220px) scale(0.85);
+    opacity: 0.65;
+    z-index: 3;
+    filter: brightness(0.7);
+  }
+
+  .hero-slide[data-pos="right"] {
+    transform: translateX(220px) scale(0.85);
+    opacity: 0.65;
+    z-index: 3;
+    filter: brightness(0.7);
+  }
+
+  .hero-slide[data-pos="far-left"] {
+    transform: translateX(-360px) scale(0.72);
+    opacity: 0.35;
+    z-index: 1;
+    filter: brightness(0.45);
+  }
+
+  .hero-slide[data-pos="far-right"] {
+    transform: translateX(360px) scale(0.72);
+    opacity: 0.35;
+    z-index: 1;
+    filter: brightness(0.45);
+  }
+
+  .hero-slide[data-pos="hidden"] {
+    transform: translateX(0) scale(0.6);
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero-slide .hero-title {
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .hero-slide .hero-rating {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .hero-dots {
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .hero-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .hero-dot.active {
+    width: 24px;
+  }
+
+  /* ================= TRENDING SECTION - DESKTOP GRID ================= */
+  
+  .section-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 28px 0 14px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .trending-scroll {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+    padding: 0 16px 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: visible;
+    box-sizing: border-box;
+  }
+
+  .trend-card {
+    flex-shrink: 1;
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .trend-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  .trend-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .trend-info {
+    padding: 10px 10px;
+  }
+
+  .trend-info .trend-title {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .trend-info .trend-chapter {
+    font-size: 11px;
+    margin-top: 4px;
+  }
+
+  /* ================= LATEST UPDATES - 2-COLUMN LIST (matches reference) ================= */
+
+  .latest-chapters-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .latest-chapters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lc-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+  }
+
+  .lc-row:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .lc-cover {
+    width: 88px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .lc-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .lc-body {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .lc-title {
+    color: var(--text);
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.25;
+    min-height: 0;
+  }
+
+  .lc-title:hover {
+    color: var(--accent);
+  }
+
+  .lc-chapter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: none;
+  }
+
+  .lc-chapter-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .lc-chapter-name {
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 10px;
+  }
+
+  .lc-chapter-time {
+    color: var(--muted);
+    font-size: 13px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .lc-chapter-row.is-new .lc-chapter-name {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* ================= PAGINATION - DESKTOP ================= */
+  
+  .lc-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    padding: 16px;
+    border-top: none;
+  }
+
+  .lc-page-num,
+  .lc-page-arrow {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s ease;
+  }
+
+  .lc-page-num.active {
+    background: #903DE0;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .lc-page-num:hover:not(.active) {
+    background: var(--border);
+    transform: translateY(-2px);
+  }
+
+  /* ================= FOOTER - DESKTOP ================= */
+  
+  footer {
+    margin-top: 40px;
+    padding: 24px 16px;
+    gap: 16px;
+  }
+
+  .footer-card {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .copyright {
+    font-size: 13px;
+  }
+
+  /* ================= WRAPPER & GENERAL ================= */
+  
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  
+  /* Large desktop optimizations */
+  
+  .trending-scroll {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .hero-slide {
+    width: 320px;
+    height: 420px;
+  }
+
+  .hero-slide[data-pos="left"] {
+    transform: translateX(-260px) scale(0.87);
+  }
+
+  .hero-slide[data-pos="right"] {
+    transform: translateX(260px) scale(0.87);
+  }
+
+  .hero-slide[data-pos="far-left"] {
+    transform: translateX(-420px) scale(0.74);
+  }
+
+  .hero-slide[data-pos="far-right"] {
+    transform: translateX(420px) scale(0.74);
+  }
+
+  .hero-slide[data-pos="hidden"] {
+    opacity: 0.15;
+    filter: brightness(0.3);
+  }
+
+  .section-title {
+    padding: 0;
+  }
+
+}
+
+@media (min-width: 1280px) {
+
+  .hero-track {
+    height: 440px;
+  }
+
+}
+
+
+/* ================= FORCE DARK THEME - ALL DEVICES ================= */
+/* The whole site always uses the dark palette now, regardless of the
+   visitor's OS/browser light-dark preference or screen width.
+   !important is required because this file loads before the inline
+   <style> block in index.html, whose plain :root{...} would otherwise
+   win the cascade at equal specificity. */
+:root {
+  --bg: #0a0b10 !important;
+  --card: #121522 !important;
+  --header: #0f111a !important;
+  --border: #1f2433 !important;
+  --text: #fff !important;
+  --muted: #aaa !important;
+  --accent: #32e3ff !important;
+  --accent-rgb: 50, 227, 255 !important;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+button,
+a,
+img {
+  user-select: none;
+  -webkit-user-select: none;
+}

@@ -1,0 +1,339 @@
+/* ================= HEADER (fixed brand purple, no theme switching) ================= */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 16px;
+  background:#903DE0;
+  border-bottom:none;
+}
+
+/* Logo is a circular avatar with a dark-gray backing circle. Shared by
+   the real header AND the nav panel's own top row (both use the
+   .header-logo class) so the two stay pixel-identical. Tap highlight is
+   killed so tapping the logo doesn't flash a square highlight box behind
+   the circle on mobile. */
+.header-logo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  flex-shrink:0;
+  text-decoration:none;
+  -webkit-tap-highlight-color:transparent;
+  outline:none;
+}
+
+.header-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+/* Menu/close button — tap highlight killed here too, this is the square
+   flash that was showing behind the hamburger/X on tap. */
+.menu-btn{
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:none;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+  padding:0;
+  -webkit-tap-highlight-color:transparent;
+  outline:none;
+}
+
+.menu-btn svg{
+  width:28px;
+  height:28px;
+}
+
+/* ================= NAV PANEL (fast in-place fade) ================= */
+.nav-panel-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:1999;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 0.15s ease;
+}
+.nav-panel-overlay.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.nav-panel{
+  position:fixed;
+  top:0;
+  right:0;
+  width:100%;
+  max-width:420px;
+  height:100%;
+  background:#1B1724;
+  z-index:2000;
+  padding:20px;
+  box-sizing:border-box;
+  overflow-y:auto;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 0.15s ease;
+  box-shadow:-10px 0 40px rgba(0,0,0,.4);
+}
+.nav-panel.open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* Matches the site <header> exactly (10px 16px padding, 44px-tall row)
+   so the logo/close icon sit in the same spot the header logo/menu
+   button occupied right before the panel opened. Breaks out of the
+   panel's own 20px padding via negative margin, then re-applies it
+   below via margin-bottom. No border, to match the seamless purple→dark
+   swap in the reference recording. */
+.nav-panel-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 16px;
+  margin:-20px -20px 20px -20px;
+}
+
+.nav-panel-close{
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+  line-height:1;
+  padding:6px;
+}
+
+.nav-search{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#1c1f2b;
+  border:1px solid #2b2f40;
+  border-radius:999px;
+  padding:14px 18px;
+  margin-bottom:20px;
+  position:relative;
+}
+.nav-search svg{
+  flex-shrink:0;
+  opacity:.6;
+}
+.nav-search input{
+  flex:1;
+  min-width:0;
+  border:none;
+  outline:none;
+  background:transparent;
+  color:#fff;
+  font-size:17px;
+  font-weight:700;
+}
+.nav-search input::placeholder{
+  color:#7d8091;
+  font-weight:400;
+}
+
+/* Clear (X) button injected by search.js next to the input */
+.search-clear-btn{
+  flex-shrink:0;
+  width:26px;
+  height:26px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:none;
+  border:none;
+  color:#8a8d99;
+  cursor:pointer;
+  padding:0;
+  border-radius:50%;
+  transition:.15s ease;
+}
+.search-clear-btn:hover{
+  color:#fff;
+  background:#262a38;
+}
+.search-clear-btn[hidden]{ display:none; }
+
+/* ================= RESULTS PANEL (overlay) ================= */
+/* .nav-search and .nav-search-results must share a position:relative
+   parent — .nav-search-wrap — so the results panel can sit absolutely
+   right under the search box and float ON TOP of everything below
+   (resource tiles, sign up, etc.) instead of pushing them down. Nothing
+   above (.nav-panel-top / the close button) is ever affected. */
+.nav-search-wrap{
+  position:relative;
+}
+
+.nav-search-results{
+  display:none;
+  position:absolute;
+  top:calc(100% + 8px);
+  left:0;
+  right:0;
+  z-index:5;
+  background:#111015;
+  border:1px solid #2b2f40;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 16px 40px rgba(0,0,0,.5);
+}
+.nav-search-results.active{
+  display:block;
+}
+
+/* ---- result list ---- */
+.search-result-list{
+  max-height:280px;
+  overflow-y:auto;
+}
+.search-result-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 18px;
+  text-decoration:none;
+  color:#fff;
+  border-bottom:1px solid #1c1f2b;
+}
+.search-result-item:last-child{ border-bottom:none; }
+.search-result-item:hover{ background:#1c1f2b; }
+.search-result-item img{
+  width:52px;
+  height:70px;
+  object-fit:cover;
+  border-radius:6px;
+  flex-shrink:0;
+}
+.search-result-item .search-avatar{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+}
+.search-result-text{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  min-width:0;
+}
+.search-result-title{
+  font-size:18px;
+  font-weight:700;
+  color:#fff;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.search-result-sub{
+  font-size:14px;
+  color:#8a8d99;
+}
+
+/* ---- see all results ---- */
+.search-see-all{
+  display:block;
+  text-align:center;
+  padding:18px;
+  color:#8b3cf7;
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+  border-top:1px solid #262a38;
+}
+.search-see-all:hover{
+  background:#1c1f2b;
+}
+
+.search-empty{
+  padding:20px;
+  color:#7d8091;
+  font-size:14px;
+  text-align:center;
+}
+
+/* ---- loading skeleton (shown for a beat before real results) ---- */
+.search-skeleton{ pointer-events:none; }
+
+.skeleton-thumb{
+  width:52px;
+  height:70px;
+  border-radius:6px;
+  flex-shrink:0;
+  background:linear-gradient(90deg,#1c1f2b 25%,#262a38 37%,#1c1f2b 63%);
+  background-size:400% 100%;
+  animation:skeleton-shine 1.2s ease-in-out infinite;
+}
+
+.skeleton-line{
+  display:block;
+  border-radius:4px;
+  background:linear-gradient(90deg,#1c1f2b 25%,#262a38 37%,#1c1f2b 63%);
+  background-size:400% 100%;
+  animation:skeleton-shine 1.2s ease-in-out infinite;
+}
+.skeleton-title{ width:70%; height:14px; margin-bottom:8px; }
+.skeleton-sub{ width:40%; height:11px; }
+
+@keyframes skeleton-shine{
+  0%{ background-position:100% 50%; }
+  100%{ background-position:0 50%; }
+}
+
+
+.nav-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:10px;
+  margin-bottom:22px;
+}
+
+.nav-tile{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  background:#1c1f2b;
+  border:1px solid #2b2f40;
+  border-radius:14px;
+  padding:18px 8px;
+  text-decoration:none;
+  color:#e2e4ea;
+  font-size:14px;
+  font-weight:600;
+  transition:0.15s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.nav-tile:active{ transform:scale(0.96); }
+.nav-tile.active{
+  background:rgba(139,60,247,.18);
+  border-color:#8b3cf7;
+  color:#b98cf9;
+}
+.nav-tile .nav-tile-icon{
+  font-size:22px;
+  line-height:1;
+}
+
+.nav-section-label{
+  color:#7d8091;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  margin:0 0 12px;
+  padding-bottom:10px;
+  border-bottom:1px solid #262a38;
+}

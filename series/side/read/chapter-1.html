@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Story 1 — Treasure Hunt</title>
+    <meta property="og:title" content="Story 1 — Treasure Hunt" />
+    <link rel="manifest" href="../../../assets/manifest.json">
+    <link rel="shortcut icon" href="../../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../assets/reader.css">
+    <link rel="stylesheet" href="../../../assets/reader-rich-text.css">
+    <meta name="description" content="Read Omniscient Reader's Viewpoint One Shot Side Stories online">
+    
+</head>
+
+<body>
+    <nav class="menu" id="menu-bar">
+        <a href="../"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#e3e3e3">
+                <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+            </svg></a>
+        <a href="#" onclick="openChapters()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z" />
+            </svg></a>
+        <a href="#comments"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#e3e3e3">
+                <path
+                    d="M240-400h480v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM880-80 720-240H160q-33 0-56.5-23.5T80-320v-480q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v720ZM160-320h594l46 45v-525H160v480Zm0 0v-480 480Z" />
+            </svg></a>
+        <a href="#" onclick="document.getElementById('download').style.display = 'flex'"><svg
+                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+            </svg></a>
+        <a href="#" onclick="document.getElementById('edit').style.display = 'flex'"><svg
+                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+            </svg></a>
+        <a href="#" onclick="document.documentElement.requestFullscreen();"><svg xmlns="http://www.w3.org/2000/svg"
+                height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="M120-120v-200h80v120h120v80H120Zm520 0v-80h120v-120h80v200H640ZM120-640v-200h200v80H200v120h-80Zm640 0v-120H640v-80h200v200h-80Z" />
+            </svg></a>
+        <a href="#" onclick="document.getElementById('settings').style.display = 'block'"><svg
+                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+            </svg></a>
+    </nav>
+    <nav class="chapters" id="chapters">
+        <span class="close-chapters-btn" onclick="document.getElementById('chapters').style.display = 'none'">X</span>
+        <input type="search" oninput="findChapter()" id="find-chapter" min="0" placeholder="Search Chapters">
+
+        <div class="search-reasult" id="chapter-search-reasult">
+        </div>
+    </nav>
+    <nav class="settings" id="settings">
+        <span class="close-settings-btn" onclick="document.getElementById('settings').style.display = 'none'">X</span>
+
+        <form class="setting_items" id="settings-form">
+            <div class="setting_item">Theme <select name="set-theme" id="set-theme">">
+                    <option value="dark" selected>Dark</option>
+                    <option value="light">Light</option>
+                    <option value="sepia">Sepia</option>
+                    <option value="pastel">Pastel</option>
+                    <option value="midnight">Midnight</option>
+                    <option value="forest">Forest</option>
+                    <option value="paper">Paper</option>
+                    <option value="lavender">Lavender</option>
+                    <option value="dark-sepia">Dark Sepia</option>
+                    <option value="dark-pastel">Dark Pastel</option>
+                    <option value="dark-forest">Dark Forest</option>
+                    <option value="dark-paper">Dark Paper</option>
+                    <option value="dark-lavender">Dark Lavender</option>
+                </select></div>
+            <div class="setting_item">Font <select name="set-font" id="set-font">
+                    <option value="system-ui" style="font-family: system-ui;">System-UI</option>
+                    <option value="Verdana" style="font-family: Verdana;" selected>Verdana</option>
+                    <option value="Arial" style="font-family: Arial;">Arial</option>
+                    <option value="Georgia" style="font-family: Georgia;">Georgia</option>
+                    <option value="Times New Roman" style="font-family: 'Times New Roman';">Times New Roman</option>
+                    <option value="Trebuchet MS" style="font-family: 'Trebuchet MS';">Trebuchet MS</option>
+                    <option value="Courier New" style="font-family: 'Courier New';">Courier New</option>
+                    <option value="Tahoma" style="font-family: Tahoma;">Tahoma</option>
+                    <option value="Lucida Sans Unicode" style="font-family: 'Lucida Sans Unicode';">Lucida Sans Unicode
+                    </option>
+                    <option value="Arial Black" style="font-family: 'Arial Black';">Arial Black</option>
+                    <option value="Impact" style="font-family: Impact;">Impact</option>
+
+                </select></div>
+            <div class="setting_item">Font Size
+                <input type="number" min="30" max="100" value="51" id="set-font-size">
+            </div>
+            <div class="setting_item">Line Height
+                <input type="number" min="1" max="100" value="49" oninput="" id="set-line-height">
+			</div>
+            <div class="setting_item">Font Weight
+                <select name="set-font-weight" id="set-font-weight">
+                    <option value="normal" style="font-weight: unset;" selected>Normal</option>
+                    <option value="lighter" style="font-weight: lighter;">Lighter</option>
+                    <option value="bold" style="font-weight: bold;">Bold</option>
+                    <option value="bolder" style="font-weight: bolder;">Bolder</option>
+                </select>
+            </div>
+            <hr>
+                <div class="setting_item">Rich Text Features <input type="checkbox" name="set-rich-text-toggle"
+                    id="set-rich-text-toggle" checked></div>
+            <div class="setting_item">System Message Style <select name="set-rich-system-msg" id="set-rich-system-msg">
+                    <option value="theme1">Disabled</option>
+                    <option value="theme2">Brackets</option>
+                    <option value="theme3">Hologram</option>
+                    <option value="theme4">Box</option>
+                    <option value="theme5" selected>Alert</option>
+                </select></div>
+            <div class="setting_item">System Window Style <select name="set-rich-system-window"
+                    id="set-rich-system-window">
+                    <option value="theme1">Disabled</option>
+                    <option value="theme2">Brackets</option>
+                    <option value="theme3" selected>Hologram</option>
+                    <option value="theme4">Box</option>
+                    <option value="theme5">Alert</option>
+                </select></div>
+            <div class="setting_item">Constellations Speech Style <select name="set-rich-const" id="set-rich-const">
+                    <option value="theme1">Disabled</option>
+                    <option value="theme2" selected>Brackets</option>
+                    <option value="theme3">Alert</option>
+                </select></div>
+            <div class="setting_item">Outer God Speech Style <select name="set-rich-outer" id="set-rich-outer">
+                    <option value="theme1">Disabled</option>
+                    <option value="theme2" selected>Brackets</option>
+                    <option value="theme3">Alert</option>
+                </select></div>
+            <div class="setting_item">Quote Style <select name="set-rich-quote" id="set-rich-quote">
+                    <option value="theme1">Disabled</option>
+                    <option value="theme2" selected>Brackets</option>
+                    <option value="theme3">Alert</option>
+                </select></div>
+            <div class="setting_item">Notice Style <select name="set-rich-notice" id="set-rich-notice">
+                    <option value="theme1">Disabled</option>
+                    <option value="theme2" selected>Highlighted</option>
+                    <option value="theme3">Alert</option>
+                </select></div>
+            <div class="setting_item">Generic Box Style <select name="set-rich-box" id="set-rich-box">
+                    <option value="theme1">Disabled</option>
+                    <option value="theme2" selected>box</option>
+                </select></div>
+
+            <input class="setting_reset" type="reset" value="Reset Everything">
+        </form>
+
+    </nav>
+    <nav class="download" id="download">
+        <span class="close-download-btn" onclick="document.getElementById('download').style.display = 'none'">X</span>
+        <hr>
+        <a href="../../../download.html"><button>Download Full EPUB</button></a>
+        <hr>
+        
+    </nav>
+
+    <div class="main">
+        
+        <div class="title_mobile"><img src="../../../../assets/od-stigma.webp" alt="title mobile"></div>
+        <article class="orv_main">
+            <div class="orv_title"><h1>Story 1 — Treasure Hunt</h1></div>
+<br>
+<p class="orv_line">"The last game is 'Treasure Hunt'."</p>
+<p class="orv_line">When she first heard it, Yoo Sangah recalled the memory of the day she joined Mino Soft.</p>
+<p class="orv_line">The day she saw the legendary "Quest Interview" she had only heard about.</p>
+<p class="orv_line">"You're not doing that again, are you?" asked the nervous HR employee.</p>
+<p class="orv_line">"I am indeed doing it."</p>
+<p class="orv_line">"Ha, that's ridiculous. It's the weekend."</p>
+<p class="orv_line">"Anyway, it's an in-house picnic."</p>
+<p class="orv_line">Executive Director Kang, who was speaking through a megaphone, continued in a loud voice as if he had guessed the employees' feelings.</p>
+<p class="orv_line">"Now, each treasure is linked to the main quest, and there is a reward for those who complete all the quests."</p>
+<p class="orv_line">"What kind of reward, huh?"</p>
+<p class="orv_line">"Well, I'll give you a tumbler again."</p>
+<p class="orv_line">Complaints erupted from the employees' mouths.</p>
+<p class="orv_line">On weekends when she could rest, Yoo Sangah couldn't have felt good because she was rushing out and hunting for treasure in the middle of the mountain.</p>
+<p class="orv_line">Kang, who was also annoyed, continued.</p>
+<p class="orv_line">"This game will be reflected in next quarter's personnel review. Do you have any motivation now?"</p>
+<p class="orv_line">The hum of the employees changed from simple irritation to a more serious atmosphere. While some people asked what company in the world would give extra points for personnel evaluations as a quest, others muttered, "Yes, this is how Mino Soft works."</p>
+<p class="orv_line">And Yoo Sangah thought of a certain someone.</p>
+<p class="orv_line">He would be good at this, she thought. Almost at the same time, phone vibrations echoed from all around.</p>
+<p class="orv_line">Yoo Sangah reflexively took out her smartphone. It was an announcement that an update was added to the in-house application.</p>
+<p class="orv_line">"Everyone's updated, right? Now, here we go."</p>
+<div class="orv_system"><p>[MINO SOFT ver.4.24 has been updated.]</p></div>
+<div class="orv_system"><p>[Do you want to activate 'Treasure Hunt Mode'?]</p></div>
+<br>
+<p class="orv_line">The app immediately loaded the camera screen once she approved GPS and camera integration. Just how many developers had they run ragged for an in-house picnic?</p>
+<p class="orv_line">"If you turn on the AR camera in the app and look around, you'll see things differently than usual. By the way, you can get your AR glasses from Manager Lee."</p>
+<p class="orv_line">"Uh, it's still a prototype, so handle it with care. Now, come grab yours one by one."</p>
+<p class="orv_line">Yoo Sangah also saw this product at the company's prototype exhibition.</p>
+<div class="orv_system"><p>[MINO GLASS]</p></div>
+<p class="orv_line">"Wow, as expected of Mino Soft's class!"</p>
+<p class="orv_line">"Are we making our own hardware now?" People gathered in front of Manager Lee after receiving the glasses.</p>
+<p class="orv_line">Yoo Sangah also received one.</p>
+<p class="orv_line">"Be careful not to get hurt, and let's search hard for the treasures!"</p>
+<p class="orv_line">"It's like Pokémon Go."</p>
+<p class="orv_line">"If you're running out of battery, grab one here." Yoo Sangah stared down at the portable batteries packed in a plastic box.</p>
+<p class="orv_line">Staring at the portable batteries with the "MINO" logo neatly printed on them, she hesitated for a moment before taking two.</p>
+<div class="orv_system"><p>[The screen connection is complete]</p></div>
+<div class="orv_system"><p>[Let's start "Treasure Hunt"]</p></div>
+<br>
+<p class="orv_line">The augmented reality screen was linked to the smartphone screen when she wore the large AR glasses.</p>
+<p class="orv_line">"Wow, the development team must have had a hard time."</p>
+<p class="orv_line">"...Mine is a bit translucent."</p>
+<p class="orv_line">"Isn't it dangerous to see the surroundings so they made it transparent?"</p>
+<p class="orv_line">"Oh, I'm getting motion sickness, so I'll just look at my smartphone screen instead. Can I?"</p>
+<p class="orv_line">They've been preparing for this outing for quite a while.</p>
+<p class="orv_line">Moreover, the main event itself was quite something. "...Didn't you just call us here to test a new product, not for an in-house outing?"</p>
+<p class="orv_line">The atmosphere was similar to the day they had huddled together in the company interview room.</p>
+<p class="orv_line">With employees moving quickly while talking, it felt as though they were a QA team testing a new game.</p>
+<p class="orv_line">Yoo Sangah tapped the '!' icon on the app.</p>
+<p class="orv_line">Then, as if waiting, the "Treasure Hunt Rules" popped up on the screen.</p>
+<p class="orv_line">1. You can team up with any employee you want. However, when you form a team, your prize will be split in half.</p>
+<p class="orv_line">2. There are three clues in total, and the person who finds all three clues can locate the treasure.</p>
+<p class="orv_line">3. You can also take other players' clues according to the rules.</p>
+<p class="orv_line">It seemed to reflect the CEO's fondness for survival games.</p>
+<p class="orv_line">"Let's hurry up and go and 'get' them."</p>
+<p class="orv_line">Employees scattered as if they had promised.</p>
+<p class="orv_line">Teams were already starting to form here and there.</p>
+<p class="orv_line">"Manager Lim, do you want to join us?"</p>
+<p class="orv_line">"Mr. Cheon Myeongwoo?"</p>
+<p class="orv_line">"You're in the QA team, right? Don't you know this system well?"</p>
+<p class="orv_line">The HR and finance team members were the most eager, as if they felt disadvantaged compared to the development departments.</p>
+<p class="orv_line">"Yoo Sangah, will you be on the team with me?"</p>
+<p class="orv_line">"Oh, I was going to ask someone to join me first."</p>
+<p class="orv_line">"Come on, Sangah, let's do it together."</p>
+<p class="orv_line">"I'm sorry."</p>
+<p class="orv_line">She had someone she wanted to partner with...</p>
+<p class="orv_line">People backed off, unable to push further against Yoo Sangah's apologetic, troubled smile.</p>
+<p class="orv_line">Among them was Han Myeongoh, head of the finance team.</p>
+<p class="orv_line">She heard murmurs behind her.</p>
+<p class="orv_line">"Already? With who?"</p>
+<p class="orv_line">"She's probably just saying she doesn't want to, you know?"</p>
+<p class="orv_line">Yoo Sangah pretended not to hear and slipped away.</p>
+<p class="orv_line">The employees soon forgot about her and began teaming up among themselves.</p>
+<p class="orv_line">She was used to this kind of company event, but it was just as tedious as it was familiar.</p>
+<p class="orv_line">Yoo Sangah minimized the company app and checked the text messages she had ignored earlier.</p>
+<p class="orv_line">[When will you come home?]</p>
+<br>
+<p class="orv_line">As she drafted and deleted replies repeatedly, employees passing by chatted about promotions.</p>
+<p class="orv_line">If they received extra points on their performance review this time, their promotions next quarter would be guaranteed. It seemed only Mino Soft would do something like this.</p>
+<p class="orv_line">Getting promoted would be nice.</p>
+<p class="orv_line">Yoo Sangah had worked hard in her own way, too.</p>
+<p class="orv_line">No, it was a given. She organized her portfolio diligently every month and studied foreign languages.</p>
+<p class="orv_line">Just in case, she worked on new certifications and studied coding in her spare time.</p>
+<p class="orv_line">To present herself well to executives and clients, she kept up with fashion trends, jogged an hour every day, and did Pilates twice a week.</p>
+<p class="orv_line">[If you're going to keep doing that, pretend you don't have parents]</p>
+<p class="orv_line">[Sangah, your dad and brother...]</p>
+<br>
+<p class="orv_line">But if someone asked if all of this was truly for a promotion...</p>
+<div class="orv_quote"><p>「 You don't seem to like games very much. Why did you apply? 」</p></div>
+<p class="orv_line">Mino Soft interview day.</p>
+<p class="orv_line">She thought she had hidden it completely.</p>
+<p class="orv_line">Furthermore, she hadn't expected to hear that from a fellow applicant, not even an interviewer.</p>
+<p class="orv_line">Yoo Sangah had snapped back, unlike her usual self.</p>
+<p class="orv_line">"Can't I make a living doing what I like?"</p>
+<p class="orv_line">Right after, she thought, 'Oh dear. That wasn't like me at all.'</p>
+<p class="orv_line">She had tried to smooth it over with a belated smile, but he replied first.</p>
+<p class="orv_line">"Is that so?"</p>
+<p class="orv_line">The man hadn't seemed particularly offended. He looked naive, yet kind.</p>
+<p class="orv_line">Kim Dokja.</p>
+<p class="orv_line">A man whose expressions she couldn't read.</p>
+<p class="orv_line">"That's true."</p>
+<p class="orv_line">As if just trying to get by, Kim Dokja had answered in a half-hearted voice, scratching his cheek.</p>
+<p class="orv_line">A cheap, rumpled suit and a tie with an awful, drab color. His hair was messy. His face was neat enough, but it was hard to give him a passing grade based on first impressions.</p>
+<p class="orv_line">Yoo Sangah had added another comment before she knew it.</p>
+<p class="orv_line">"You might want to fix your interview outfit."</p>
+<p class="orv_line">She regretted it the moment it left her mouth. Realizing she shouldn't have said that, she smiled quickly and said she was joking.</p>
+<p class="orv_line">"I wore it exactly as the internet recommended."</p>
+<p class="orv_line">Seeing the man look a bit depressed, Yoo Sangah had felt conflicted. Should she offer advice here, or just smile and walk away like a normal person? The hesitation didn't last long.</p>
+<p class="orv_line">"It would look better if you changed your tie."</p>
+<p class="orv_line">"I'll change it for my next interview. If you don't mind, can I give you a piece of advice?"</p>
+<p class="orv_line">"What is it?"</p>
+<p class="orv_line">Kim Dokja pointed forward and said,</p>
+<p class="orv_line">"Right now, choose the third option."</p>
+<p class="orv_line">Just like that day, three options stood before Yoo Sangah's eyes now.</p>
+<div class="orv_system"><p>[1. Treasure hunt main route]</p></div>
+<div class="orv_system"><p>[2. Give up and eat hamburgers given by executive director Kang]</p></div>
+<div class="orv_system"><p>[3. Treasure hunt hidden route]</p></div>
+<br>
+<p class="orv_line">Yoo Sangah calmly scanned her surroundings.</p>
+<p class="orv_line">Kim Dokja was nowhere to be seen near the QA team. She hadn't run into him in a while, but had he skipped the event entirely?</p>
+<p class="orv_line">It would be just like him. She looked down at the portable battery in her hand. If the game had already started, she needed to hurry, too.</p>
+<div class="orv_system"><p>[* The main route is the route for normal game progress. You can earn rewards upon completion, and you won't be eliminated even if you fall into a trap]</p></div>
+<div class="orv_system"><p>[* Hidden routes are much more difficult and have a higher chance of elimination. You can get extra points]</p></div>
+<br>
+<p class="orv_line">Ultimately, after reading the descriptions, Yoo Sangah chose the third option just as she had back then.</p>
+<div class="orv_system"><p>[You chose the hidden route]</p></div>
+<div class="orv_system"><p>[Follow the marked path]</p></div>
+<br>
+<p class="orv_line">Immediately, an arrow icon appeared on the AR screen.</p>
+<p class="orv_line">The other employees who chose the hidden route alongside Yoo Sangah immediately bolted in the direction of the arrow.</p>
+<p class="orv_line">"Oh, I'm leaving first."</p>
+<p class="orv_line">"Take your time."</p>
+<p class="orv_line">"What's going on? Is this hidden?"</p>
+<p class="orv_line">Yoo Sangah didn't budge, watching the others rush off in a hurry.</p>
+<div class="orv_quote"><p>「 If a path is labeled 'hidden' so openly, it's usually a trap. Who writes down secrets so blatantly? 」</p></div>
+<p class="orv_line">Yoo Sangah waited.</p>
+<p class="orv_line">Ten seconds, twenty seconds, then a full minute passed.</p>
+<p class="orv_line">Faint screams began to echo from ahead.</p>
+<p class="orv_line">"Whoa, what is this?!"</p>
+<p class="orv_line">And about ten seconds later, notifications of the eliminated employees began flashing at the top of the app.</p>
+<div class="orv_system"><p>[Employee Byun Hyunjae is out]</p></div>
+<div class="orv_system"><p>[Manager Lee Haneul is out]</p></div>
+<p class="orv_line">(···)</p>
+<p class="orv_line">Just as she expected, it was exactly like back then.</p>
+<p class="orv_line">"How did you know that?"</p>
+<p class="orv_line">"You just know when you see it. There was similar advice in a web... book I read. 'Be wary of secrets that are openly written as secrets.'"</p>
+<p class="orv_line">It was a simple enough concept.</p>
+<p class="orv_line">However, few people could put into practice what they only understood in theory.</p>
+<p class="orv_line">What had she said in response? Had she asked him for the book's title?</p>
+<p class="orv_line">It was time to move. Yoo Sangah tied her shoelaces tight and began to follow the arrow with light steps.</p>
+<p class="orv_line">Bloody bodies lay scattered along the ridge. They weren't real people, of course—it was just the AR simulation.</p>
+<p class="orv_line">The terrain was getting rough, so Yoo Sangah switched off the Mino Glass screen and began navigating down carefully, monitoring the surroundings through her phone.</p>
+<p class="orv_line">Sometimes she saw items that seemed to be spilled by avatars.</p>
+<div class="orv_system"><p>[Unusual item]</p></div>
+<div class="orv_system"><p>[Secret diary of Manager Lee's dreams and hopes]</p></div>
+<div class="orv_system"><p>[Suspicious, bloody traitor's USB]</p></div>
+<div class="orv_system"><p>[CEO's secret book]</p></div>
+<p class="orv_line">(···)</p>
+<p class="orv_line">At this point, she couldn't tell if this was a picnic or a beta test for a new game.</p>
+<p class="orv_line">Perhaps the line between them was blurred. Or maybe, as Kim Dokja might have said, it was a secretly developed test of employee loyalty.</p>
+<p class="orv_line">It felt as if Kim Dokja was right there saying, "That item looks useful."</p>
+<p class="orv_line">Surprised, Yoo Sangah spun around reflexively. A small figure right next to her fell to the ground with a grunt.</p>
+<p class="orv_line">It was a woman wearing sunglasses, a mask, and a cap. The mask looked oversized on her small face. Yoo Sangah reflexively reached out to help.</p>
+<p class="orv_line">"I'm sorry."</p>
+<p class="orv_line">"I'm fine. Sorry, I was peeking at your phone."</p>
+<p class="orv_line">"Oh, yes."</p>
+<p class="orv_line">"Are those glasses AR devices? It's my first time seeing that model." Yoo Sangah blanked out for a moment. It had been a long time since she had dealt with someone who went so entirely at their own pace.</p>
+<p class="orv_line">"Oh, yes. Well, it's still a prototype."</p>
+<p class="orv_line">She caught a glimpse of cat-like eyes behind the slightly lowered sunglasses. Looking at her petite stature and the absence of an employee lanyard, she didn't seem to work here.</p>
+<p class="orv_line">The girl looked around and grumbled.</p>
+<p class="orv_line">"Why are there so many people today? Is there a company picnic or something?"</p>
+<p class="orv_line">"And what kind of game is this? Is it getting officially released? An AR game?"</p>
+<p class="orv_line">"Yes."</p>
+<p class="orv_line">"Then I'll get out of your way. I suppose you're testing it."</p>
+<p class="orv_line">Yoo Sangah stared at the girl's face for a while and smiled.</p>
+<p class="orv_line">Then, she pulled down her mask, smiled, and put it back on.</p>
+<p class="orv_line">"Show me the game." The girl held out a cat-like hand. Yoo Sangah wasn't used to such bluntness and didn't know how to respond.</p>
+<p class="orv_line">Moreover, although she didn't want to judge by age, the girl in front of her looked like a teenager no matter how she looked at her.</p>
+<p class="orv_line">"It's a company secret."</p>
+<p class="orv_line">"A secret? I love secrets. I won't tell anyone, so just give me a tiny hint."</p>
+<p class="orv_line">As Yoo Sangah turned to walk away, the girl suddenly reached out and tapped the smartphone screen.</p>
+<p class="orv_line">"Go if you want, but pick that up before you leave. It's a must-have item."</p>
+<p class="orv_line">"What?"</p>
+<p class="orv_line">"The CEO's secret book."</p>
+<p class="orv_line">Yoo Sangah picked up the item shown on the AR screen.</p>
+<div class="orv_system"><p>[CEO's secret book]</p></div>
+<br>
+<p class="orv_line">Explanation: Literally, the CEO's secret book. When you fall into a trap, you can revive only once in exchange for the CEO's secret.</p>
+<p class="orv_line">It was a really useful item.</p>
+<p class="orv_line">"...What do you do for a living?"</p>
+<p class="orv_line">"Me? I'm a writer."</p>
+<p class="orv_line">"Are you a scenario writer for our company?"</p>
+<p class="orv_line">"I don't work here. By the way, what company is this?"</p>
+<p class="orv_line">Yoo Sangah decided to play along. Normally she wouldn't have, but she felt a bit more relaxed today. "It's Mino Soft," she said.</p>
+<p class="orv_line">"Oh, that company that mass-produces pay-to-win gacha games. I know them."</p>
+<p class="orv_line">"Well—"</p>
+<p class="orv_line">She was going to make an excuse, but it was true.</p>
+<p class="orv_line">The self-proclaimed writer spoke animatedly.</p>
+<p class="orv_line">"Their recent mobile game had an insane monetization model. No matter how much people defend mobile games, they have no conscience."</p>
+<p class="orv_line">"It really is."</p>
+<p class="orv_line">The girl shrugged, tapped something on her phone, and turned the screen toward Yoo Sangah.</p>
+<p class="orv_line">"I'm the top player."</p>
+<p class="orv_line">[Rank 1: Genius Pretty Girl Writer (NEW)]</p>
+<br>
+<p class="orv_line">To maintain the number one spot on the server, she must have spent a fortune... Was she some third-generation chaebol? Yet, she didn't seem like the type.</p>
+<p class="orv_line">"You said you're a writer. What did you write?"</p>
+<p class="orv_line">"Do you read novels?"</p>
+<p class="orv_line">"A little bit."</p>
+<p class="orv_line">"What do you read?"</p>
+<p class="orv_line">"Raymond Carver, Haruki Murakami, and..."</p>
+<p class="orv_line">"Alright, alright. I've heard enough."</p>
+<p class="orv_line">Yoo Sangah, slightly irked, narrowed her eyes.</p>
+<p class="orv_line">"...what did you write?"</p>
+<p class="orv_line">"Hmm, well. Just know that it's very famous."</p>
+<p class="orv_line">"Did you write a novel that you can't say?"</p>
+<p class="orv_line">"No, there's nothing I can't say."</p>
+<p class="orv_line">Yoo Sangah asked, tilting her head.</p>
+<p class="orv_line">"Is it an R-rated novel?"</p>
+<p class="orv_line">"No."</p>
+<p class="orv_line">"Is it a web novel then?"</p>
+<p class="orv_line">"Pretty much."</p>
+<p class="orv_line">She couldn't see her eyes because she was wearing sunglasses, but she thought she knew what expression it was.</p>
+<p class="orv_line">"You're an interesting type. I sometimes write characters like you in my novels."</p>
+<p class="orv_line">Why did Kim Dokja's smirk suddenly flash in her mind? Today was indeed a strange day. Yoo Sangah clenched her teeth to hide her annoyance and spoke.</p>
+<p class="orv_line">"And what type is that?"</p>
+<p class="orv_line">Yoo Sangah smiled outwardly while grinding her teeth inside.</p>
+<p class="orv_line">"The type that suddenly changes when given the chance, striking the opponent's neck like this."</p>
+<p class="orv_line">Yoo Sangah remained expressionless for a moment, watching the girl who was holding her own neck with both hands in demonstration.</p>
+<p class="orv_line">A few seconds later, Yoo Sangah smiled.</p>
+<p class="orv_line">"You wouldn't understand even if I told you."</p>
+<p class="orv_line">The girl stared at Yoo Sangah like she was a rare specimen, letting out an involuntary chuckle.</p>
+<p class="orv_line">"Wow..."</p>
+<p class="orv_line">"What?"</p>
+<p class="orv_line">"I was actually a little scared just now." Of course, she didn't look scared at all.</p>
+<p class="orv_line">If anything, she looked thrilled. Muttering, "A well-executed cliché always catches you off guard," she began typing on her phone's memo app.</p>
+<p class="orv_line">Yoo Sangah didn't know if the girl was actually a writer, but a quick glance showed the memo app was packed with text.</p>
+<p class="orv_line">Checking the screen, Yoo Sangah realized she was walking up the mountain path side-by-side with the girl.</p>
+<p class="orv_line">There were no fellow employees around. Everyone seemed to be scattered looking for clues.</p>
+<div class="orv_system"><p>[The first clue is nearby]</p></div>
+<br>
+<p class="orv_line">And there's a good timing notification.</p>
+<p class="orv_line">She hadn't intended to try this hard, but she was actually making progress.</p>
+<p class="orv_line">The girl spoke to Yoo Sangah, who was searching for the treasure by panning her camera.</p>
+<p class="orv_line">"Do you mind if I watch?"</p>
+<p class="orv_line">"You've already been watching."</p>
+<p class="orv_line">"Isn't that it?" Where there had been a simple bush, a computer now stood tall on the AR screen.</p>
+<p class="orv_line">It was a retro model from the 1990s, with a bulky CRT monitor and a horizontal desktop case—rendered in augmented reality.</p>
+<p class="orv_line">She couldn't believe they even had such a device. Seeing that the acquisition button did not appear, the computer itself did not seem to be a clue.</p>
+<p class="orv_line">When she pressed the screen and turned on the computer, a game soon appeared on the monitor.</p>
+<p class="orv_line">The game logo, colorful illustrations, and the main character's lines began to cross from the monitor on the screen.</p>
+<div class="orv_quote"><p>「 I'm not going back. 」</p></div>
+<p class="orv_line">Perhaps because it was a prototype, the storytelling was rough. She couldn't tell what it was about, but it seemed rather aggressive, showing a shirtless man wielding a sword on screen.</p>
+<p class="orv_line">"...This is a bit like the novel I read."</p>
+<p class="orv_line">"A novel?"</p>
+<p class="orv_line">"His novel hasn't even been gamified, yet someone turned it into a game? What kind of crazy bastard did this?"</p>
+<p class="orv_line">A memory surfaced in Yoo Sangah's mind.</p>
+<p class="orv_line">The contractor from the QA team. A hazy memory of a pale face and an awkward smile. For some reason, he had once asked her for feedback on a game's setting.</p>
+<p class="orv_line">The girl, growing impatient, tapped Yoo Sangah's screen without asking.</p>
+<p class="orv_line">Then the intro skipped, and the game began.</p>
+<div class="orv_system"><p>[Controlling Avatar to win the dance competition]</p></div>
+<div class="orv_system"><p>[If you win the competition, you will be recognized as the "true lord" of Gorgon]</p></div>
+<p class="orv_line">"Is it a fighting game?"</p>
+<p class="orv_line">"Do you know how to do it?"</p>
+<p class="orv_line">"Not at all."</p>
+<p class="orv_line">Fortunately, the controls were simple, making it easy even for a first-timer.</p>
+<p class="orv_line">The two of them swept through the round of 16, the quarterfinals, and the semifinals, finally reaching the finals.</p>
+<p class="orv_line">"It's like an entrenching tool. Extremely cost-effective."</p>
+<p class="orv_line">"An entrenching tool?"</p>
+<p class="orv_line">"A weapon specialized in thrusts. Just keep thrusting and you win. You don't even need other skills."</p>
+<p class="orv_line">"I think thrusting is the only option in the first place."</p>
+<p class="orv_line">No matter what input she entered, the character only thrust. A quick thrust. A normal thrust. A heavy thrust. The skill names were incredibly lazy.</p>
+<p class="orv_line">The two, who went to the round of 16, the quarterfinals, and the semifinals at once, are about to play in the finals.</p>
+<div class="orv_system"><p>[The final round of the dance competition begins]</p></div>
+<div class="orv_system"><p>[If you win the final round, you can get the first clue]</p></div>
+<br>
+<p class="orv_line">At that point, a cutscene suddenly appeared.</p>
+<p class="orv_line">The woman in fairy clothes who appeared in the cutscene said,</p>
+<div class="orv_system"><p>["You came all the way up here. But it's a shame. The final match won't be as easy as you think."]</p></div>
+<p class="orv_line">"What's with that line?"</p>
+<div class="orv_system"><p>["The crowd here gathered to see if you really deserve to be a lord. In other words, it's not just your force that we're curious about."]</p></div>
+<p class="orv_line">The girl grumbled at the lengthy cutscene.</p>
+<p class="orv_line">"...Is this a visual novel, not a fighting game?"</p>
+<p class="orv_line">The screen rippled. As the distortion cleared, a new scene appeared.</p>
+<div class="orv_system"><p>[You're climbing a rugged mountain range with your colleague]</p></div>
+<br>
+<p class="orv_line">In a vast rocky landscape reminiscent of the Grand Canyon, the pitons securing the protagonist's rope to the rock face were beginning to pop out one by one.</p>
+<p class="orv_line">With a scream, the last anchor gave way, leaving the party dangling in the air, suspended by a single rope. The cutscene was surprisingly tense, causing Yoo Sangah to clench her fists.</p>
+<div class="orv_system"><p>[Leader! If this keeps up, we won't hold on much longer!]</p></div>
+<div class="orv_system"><p>[You must choose. If you don't cut the rope below...!]</p></div>
+<p class="orv_line">She suddenly knew what this was about.</p>
+<p class="orv_line">Soon the screen stopped and options appeared.</p>
+<p class="orv_line">1. "More people need to live. Cut the rope and sacrifice one person." [Button A]</p>
+<p class="orv_line">2. "Life is all precious. Even if it is annihilated, it does not cut off anyone's rope." [Button B]</p>
+<div class="orv_system"><p>[You must decide in 60 seconds.]</p></div>
+<br>
+<p class="orv_line">Yoo Sangah and the girl, checking the choices, murmured almost at the same time.</p>
+<p class="orv_line">"Trolley dilemma."</p>
+<p class="orv_line">"It's asking if you'll sacrifice the few to save the many."</p>
+<p class="orv_line">If the game's premise was correct, the protagonist was participating in a dance competition to be recognized as the 'Lord.'</p>
+<p class="orv_line">And the person who created the game was 'Mino Soft,' and it was the general employee who played the game.</p>
+<div class="orv_system"><p>[50 seconds left]</p></div>
+<br>
+<p class="orv_line">Then the answer was simple.</p>
+<p class="orv_line">"I think the answer is option 1, sacrifice the few," the girl said.</p>
+<p class="orv_line">This was a game designed by a corporation. And corporations wanted leaders who would sacrifice the few for the sake of the organization. That was how corporate logic worked.</p>
+<p class="orv_line">The logical choice, both inside and outside the game, was to ensure the survival of the majority.</p>
+<p class="orv_line">Yoo Sangah opened her mouth.</p>
+<p class="orv_line">"The person hanging at the bottom might be the most capable one."</p>
+<p class="orv_line">"But we can't all die together."</p>
+<p class="orv_line">"A company doesn't run on a one-man show. Maybe the answer lies in something beyond conventional logic."</p>
+<p class="orv_line">"Maybe. But honestly, if I were a corporate executive, I'd view anyone who chose option 2 as unfit."</p>
+<p class="orv_line">She was right. From a corporate perspective, option 1 was correct. That was the girl's opinion, and Yoo Sangah agreed. But still...</p>
+<p class="orv_line">"Isn't there a way for everyone to survive? I feel like I shouldn't pick either of those options."</p>
+<p class="orv_line">Watching the timer tick down, Yoo Sangah's eyes wavered.</p>
+<div class="orv_system"><p>[40 seconds left]</p></div>
+<br>
+<p class="orv_line">For a moment, a faint memory became clear.</p>
+<p class="orv_line">There was no doubt that the person who made this...</p>
+<p class="orv_line">"If it were Kim Dokja..."</p>
+<p class="orv_line">"What?"</p>
+<p class="orv_line">"The developer. I remembered he was working on this."</p>
+<p class="orv_line">The girl's finger froze. "...What did you say his name was?"</p>
+<p class="orv_line">"Kim Dokja. Do you know him?"</p>
+<p class="orv_line">The girl was captured through the AR screen.</p>
+<p class="orv_line">*Bzzzt.* For a split second, something resembling sparks crackled over her sunglasses on the screen.</p>
+<p class="orv_line">Surprised, Yoo Sangah lowered her glasses and looked at her directly. There were no sparks. Her cat-like eyes were simply staring back.</p>
+<p class="orv_line">Was it an illusion? The prototype glasses might be malfunctioning.</p>
+<p class="orv_line">"I don't know him. It's a weird name. Just hurry up and choose."</p>
+<p class="orv_line">Was it an illusion?</p>
+<div class="orv_system"><p>[15 seconds left]</p></div>
+<p class="orv_line">"If you don't choose, I'll press it."</p>
+<div class="orv_system"><p>[10 seconds left]</p></div>
+<br>
+<p class="orv_line">If she were Kim Dokja... With ten seconds remaining, Yoo Sangah racked her brain. It was a corporate quest, but Kim Dokja was the one who designed it.</p>
+<p class="orv_line">Would Kim Dokja really set option 1 as the correct answer?</p>
+<div class="orv_quote"><p>「 I'll attend the team dinner, but I have to leave by seven. 」</p></div>
+<p class="orv_line">Or did he choose option 2, where everyone dies, as the answer?</p>
+<div class="orv_quote"><p>「 I'm not going to the picnic. I hate hiking. 」</p></div>
+<p class="orv_line">A smile played on Yoo Sangah's lips. Her finger moved toward the screen before she knew it.</p>
+<div class="orv_system"><p>[5 seconds left]</p></div>
+<p class="orv_line">"Huh? Hey!"</p>
+<p class="orv_line">Her finger passed right by button A and button B, heading toward a completely empty spot.</p>
+<p class="orv_line">It was a choice that made no sense, one that didn't even exist on the screen. She might be eliminated for this, but still...</p>
+<div class="orv_system"><p>[Button C has been entered]</p></div>
+<br>
+<p class="orv_line">Yoo Sangah chose button C.</p>
+<p class="orv_line">Then the cutscene came up.</p>
+<div class="orv_system"><p>["I'll choose number 3"]</p></div>
+<div class="orv_system"><p>["What? That option doesn't exist."]</p></div>
+<div class="orv_system"><p>["No. 3. It's a ridiculous setup. If the rock wall is the problem..."]</p></div>
+<br>
+<p class="orv_line">Yoo Sangah and the girl stared blankly at the cutscene. Intense wind pressure was forming in the main character's drama on the screen.</p>
+<div class="orv_system"><p>["You can break the rock wall"]</p></div>
+<br>
+<p class="orv_line">A cinematic showing the massive rock wall shattering from a single thrust played, followed by a grand subtitle.</p>
+<div class="orv_system"><p>["The World After The Fall" is coming to you soon]</p></div>
+<br>
+<p class="orv_line">Was it a game teaser video?</p>
+<p class="orv_line">The girl murmured in disbelief.</p>
+<p class="orv_line">"No way, it was a scam like this?"</p>
+<p class="orv_line">Yoo Sangah didn't reply, just staring blankly at the display.</p>
+<p class="orv_line">The girl nudged Yoo Sangah's arm with her elbow.</p>
+<p class="orv_line">"How did you know that was the answer?"</p>
+<p class="orv_line">"...I figured it would be something like this if he was the one who made it."</p>
+<div class="orv_system"><p>[The first clue is 'Coordinate A'.]</p></div>
+<p class="orv_line">"I get the gist of it. We collect three clues to find the coordinates of the final treasure."</p>
+<p class="orv_line">Finding the first clue was a pleasant surprise, but they were now deep in the mountains. Why did they end up here when she had simply been following the arrow?</p>
+<p class="orv_line">Was the GPS malfunctioning? The terrain had grown rugged enough that walking while looking at the AR screen was becoming dangerous.</p>
+<p class="orv_line">She had made a choice completely unlike her usual self.</p>
+<p class="orv_line">Yoo Sangah wondered—what if she had been the protagonist from the cutscene, hanging on that rock wall with this girl?</p>
+<p class="orv_line">"I would have had to cut the rope."</p>
+<p class="orv_line">"What?"</p>
+<p class="orv_line">"How long are you going to follow me?"</p>
+<p class="orv_line">"Aren't we in the same party now? Come on, this way next."</p>
+<p class="orv_line">Normally, she would have killed some time, exchanged pleasantries, and headed home. Tonight, she had a language lecture and Pilates scheduled.</p>
+<p class="orv_line">She had a class to attend, and not much time to waste. But still...</p>
+<div class="orv_quote"><p>「 Can't I just live doing what I like? 」<br>「 It's just to make a living. 」</p></div>
+<div class="orv_system"><p>[The second clue is nearby]</p></div>
+<br>
+<p class="orv_line">As the AR environment shifted, the surrounding trees on the screen withered all at once.</p>
+<p class="orv_line">The vitality of the trees gathered at the branch tips, and soon, golden fruits bloomed atop the virtual trees.</p>
+<div class="orv_system"><p>[You have to collect the fruit of the fantasy tree]</p></div>
+<div class="orv_system"><p>[Throw a stone and drop the fruit]</p></div>
+<div class="orv_system"><p>[Number of fruits acquired: 0/30]</p></div>
+<br>
+<p class="orv_line">It really felt like a game based on a novel.</p>
+<p class="orv_line">"I guess we're supposed to throw this," the girl said, pointing to a small virtual stone at the bottom of the screen.</p>
+<p class="orv_line">The rules were simple: throw the virtual stone, knock down the fruit, and collect them. It seemed too simple for a hidden route...</p>
+<p class="orv_line">"This isn't working as well as I thought."</p>
+<p class="orv_line">"Let me try."</p>
+<p class="orv_line">They threw the stones repeatedly, but couldn't hit a single fruit. The trajectories were all off. Even when dragging and releasing like a slingshot, the stones fell short. What was the trick?</p>
+<p class="orv_line">"Does it require special controls? That's not how you do it."</p>
+<p class="orv_line">"Whoa, you scared me!"</p>
+<p class="orv_line">Turning around, they saw a boy around ten years old. He wore white children's protective gear and held a large insect net. The girl stared at him in bewilderword.</p>
+<p class="orv_line">"What is this? Why is there a kid alone in the mountains?"</p>
+<p class="orv_line">Yoo Sangah thought that was rich coming from her, but the question was valid.</p>
+<p class="orv_line">Without a word, the boy gestured toward Yoo Sangah's screen.</p>
+<p class="orv_line">"Spin the stone first. Like this."</p>
+<p class="orv_line">When she spun her finger and let go, the stone shot forward and knocked down a fruit.</p>
+<p class="orv_line">Yoo Sangah was impressed.</p>
+<p class="orv_line">"Oh, this is how you do it. Thank you."</p>
+<p class="orv_line">"Look at you, being polite to a kid," the girl teased.</p>
+<p class="orv_line">The boy explained that the speed and direction of the spin determined the stone's trajectory.</p>
+<p class="orv_line">The girl looked annoyed, but Yoo Sangah found the boy endearing.</p>
+<p class="orv_line">"Did you come all this way alone, little friend? Where are your parents?"</p>
+<p class="orv_line">The boy shook his head.</p>
+<p class="orv_line">"It's dangerous here since it's not a regular hiking trail."</p>
+<p class="orv_line">She suggested he walk with them, and he nodded in agreement.</p>
+<p class="orv_line">Collecting the fruits went quickly once they got the hang of it. Yoo Sangah and the girl bickered as they threw stones.</p>
+<p class="orv_line">At one point, they looked ready to throw stones at each other, but their teamwork wasn't bad.</p>
+<div class="orv_system"><p>[Number of fruits acquired: 29/30]</p></div>
+<br>
+<p class="orv_line">Finally, only the last fruit was left.</p>
+<p class="orv_line">"I hit it, but it's not falling," the girl grumbled, repeatedly throwing stones at the final fruit.</p>
+<p class="orv_line">Yoo Sangah also spun the stone and threw it.</p>
+<p class="orv_line">However, no matter how many times she threw it, it didn't hit.</p>
+<p class="orv_line">She thought something was wrong, so she lowered the AR screen.</p>
+<p class="orv_line">"It must be because of that. It's blocking the camera's sensor."</p>
+<p class="orv_line">Indeed, a yellow, palm-sized fruit was hanging from a real branch, blocking the virtual one. It was a type of fruit she had never seen before.</p>
+<p class="orv_line">"The real fruit is blocking the virtual one. I'll just knock it down with a real stone."</p>
+<p class="orv_line">"Wait, don't—"</p>
+<p class="orv_line">Before Yoo Sangah could stop her, the girl picked up a real stone and hurled it at the fruit.</p>
+<p class="orv_line">The fruit fell with a snap, and an ominous buzzing rose from the trees.</p>
+<p class="orv_line">"I don't think that was a fruit."</p>
+<p class="orv_line">But it was too late.</p>
+<p class="orv_line">A swarm of insects poured out from a yellow, barrel-like nest. Wasps.</p>
+<p class="orv_line">The girl's face paled, and Yoo Sangah's mind raced.</p>
+<p class="orv_line">What were you supposed to do when you disturbed a nest? Conflicting advice crossed her mind: run in a straight line, jump into water, crouch low and back away.</p>
+<p class="orv_line">She didn't know which was correct, or if some of it was just myths.</p>
+<p class="orv_line">"Don't move. I don't think they've noticed us yet."</p>
+<p class="orv_line">It was the boy's voice.</p>
+<p class="orv_line">"When the guard bees approach, they make a distinct buzzing. Slowly back away, one step at a time, and focus on the sound. If we get about fifty steps back, they won't follow."</p>
+<p class="orv_line">"How do you know that?"</p>
+<p class="orv_line">The boy's eyes through his visor were calm. Fortunately, the swarm wasn't too large yet, as the nest had only been clipped.</p>
+<p class="orv_line">Yoo Sangah swallowed hard and took a step back. The girl next to her followed suit, looking nervous.</p>
+<p class="orv_line">They had backed away enough.</p>
+<p class="orv_line">But the boy took a step forward.</p>
+<p class="orv_line">Yoo Sangah watched in disbelief. Instead of backing away with them, the boy was stepping forward without looking back.</p>
+<p class="orv_line">Her tension eased slightly as she watched his small, determined back. Holding his net steady, the boy calmly stepped forward and began trapping the wasps one by one.</p>
+<p class="orv_line">It seemed to be a specialized insect net designed for wasps, not a standard one.</p>
+<p class="orv_line">After he nudged the nest a few times, more wasps flew out. Then, with a swift motion, the boy struck the branch, and the nest fell right into his net.</p>
+<p class="orv_line">He quickly twisted the net closed, trapping them inside. It was an incredibly professional display.</p>
+<p class="orv_line">"These are Asian giant hornets. They're invasive. A single hornet can kill hundreds of honeybees."</p>
+<p class="orv_line">"...What on earth are you? Do your parents live in the wild?"</p>
+<p class="orv_line">The boy stared up at the girl.</p>
+<p class="orv_line">"I don't have a mom or dad."</p>
+<p class="orv_line">"Uh, uh..."</p>
+<p class="orv_line">The girl scratched her head, looking embarrassed. But the boy didn't seem bothered. If anything, he looked proud.</p>
+<p class="orv_line">"I came because I heard there was a hornet nest nearby."</p>
+<p class="orv_line">"What are you going to do with them?"</p>
+<p class="orv_line">"I'm going to sell them to an insect shop owner I know."</p>
+<p class="orv_line">"Look at this kid," the girl muttered.</p>
+<p class="orv_line">Yoo Sangah let out a breath as she listened to the girl ramble about how she used to earn her own pocket money at that age.</p>
+<p class="orv_line">Anyway, thanks to the boy, she successfully claimed the last fruit.</p>
+<div class="orv_system"><p>[The second clue is "Coordinate B"]</p></div>
+<br>
+<p class="orv_line">Their party had suddenly grown to three.</p>
+<p class="orv_line">What would the company people or Kim Dokja have said if they saw this?</p>
+<div class="orv_quote"><p>「 The basics of a party are a tank, a healer, and a damage dealer. 」</p></div>
+<p class="orv_line">"Let's form a party."</p>
+<p class="orv_line">Yoo Sangah smiled, wondering what roles these two would play.</p>
+<p class="orv_line">The sun was setting. A proper trail appeared in the distance. Seeing a few hikers, they seemed to be nearing the base of the mountain.</p>
+<p class="orv_line">Looking back, the girl was muttering under her breath. "Well, that was more of an adventure than I expected."</p>
+<p class="orv_line">Yoo Sangah felt a strange sense of bonding with them, despite not knowing their names.</p>
+<p class="orv_line">Just like she said, it felt like a brief adventure had ended. She watched the sunset for a moment. Standing there with the bug-catching boy and the writer girl, Yoo Sangah spoke up.</p>
+<p class="orv_line">"I only came to kill time today."</p>
+<p class="orv_line">"I didn't come to hike either. I was just doing research for my novel," the girl said.</p>
+<p class="orv_line">"You didn't run away from home, did you?"</p>
+<p class="orv_line">"Run away? How old do you think I am?"</p>
+<p class="orv_line">The girl, who looked far too young for her lack of hiking gear, smirked.</p>
+<p class="orv_line">But still.</p>
+<p class="orv_line">"Well, there was a place I wanted to run away from."</p>
+<p class="orv_line">She asked the quiet boy if he was planning to go back now. "Did you really run away from home?"</p>
+<p class="orv_line">"I just don't like being at home... I like catching bugs."</p>
+<p class="orv_line">Yoo Sangah gently patted the boy's head through his hood. The boy looked up at her through his safety goggles.</p>
+<p class="orv_line">Looking into the child's eyes, Yoo Sangah spoke her mind without realizing it.</p>
+<p class="orv_line">"I actually ran away from home."</p>
+<p class="orv_line">"...You? But aren't you here for a company picnic?"</p>
+<p class="orv_line">Yoo Sangah smiled instead of answering. She could have explained in detail. About her family background. About the expectations of her parents. About the blind date profiles of third-generation chaebols sent to her phone every day. But Yoo Sangah...</p>
+<p class="orv_line">She didn't say anything.</p>
+<p class="orv_line">They were people she might never see again.</p>
+<p class="orv_line">Their conversation was disjointed, and their backgrounds were entirely different. They hadn't spent enough time to form a real bond. Yet, why did she feel this way?</p>
+<p class="orv_line">Yoo Sangah felt like they were 'on her side.' Looking over at the girl, she saw her typing furiously on her phone's memo app.</p>
+<p class="orv_line">"Alright, I'll definitely write this into my novel later."</p>
+<p class="orv_line">"...You really are a writer, then?"</p>
+<p class="orv_line">"I told you so."</p>
+<p class="orv_line">"So, what exactly did you write—"</p>
+<div class="orv_system"><p>[There's a third clue nearby.]</p></div>
+<br>
+<p class="orv_line">When she looked around with the AR screen, the ground beneath her feet began to shift.</p>
+<div class="orv_system"><p>["Escape Track" will be created]</p></div>
+<br>
+<p class="orv_line">It was a strange-looking track, as if it led to some unknown world. A path that seemed constructed from numbers and code.</p>
+<div class="orv_system"><p>[Run the track and escape within the time limit]</p></div>
+<div class="orv_system"><p>[Careful with stamina management]</p></div>
+<div class="orv_system"><p>[The first person who runs the track gets the "third clue"]</p></div>
+<br>
+<p class="orv_line">She could see familiar faces running from afar. The lead group consisted of the QA team and the finance team.</p>
+<p class="orv_line">[Yoo Sangah, did you get on the hidden route?]</p>
+<p class="orv_line">[Did you collect a lot of clues?]</p>
+<p class="orv_line">[Let's share it with us]</p>
+<p class="orv_line">[Yoo Sangah, where are you?]</p>
+<br>
+<p class="orv_line">When she opened the messages she had ignored earlier, she saw a flood of inquiries from other departments.</p>
+<p class="orv_line">Han Myeongoh from the finance team had sent the most. That middle-aged man was currently leading the pack up ahead.</p>
+<p class="orv_line">"Yoo Sangah! Team up with us! With me, if you don't mind!"</p>
+<p class="orv_line">Collaborating with them was one option. And she could take other people's clues according to the rules.</p>
+<p class="orv_line">As if reading the mood, the girl asked. "You're trying to slip away, right?" Yoo Sangah nodded, and the girl and the boy exchanged a glance.</p>
+<p class="orv_line">It was at that moment that the boy handed the net containing the hornet nest to the girl, and the girl spoke up.</p>
+<p class="orv_line">"Stop right there! There's a giant hornet here! Don't come any closer!"</p>
+<p class="orv_line">The employees, spotting a wasp buzzing in the distance, froze in terror. The girl made a scene, swinging the net toward them.</p>
+<p class="orv_line">"My pet hornet hates strangers. And I don't like strangers either!"</p>
+<p class="orv_line">"What the hell? Who is that girl? Sangah, come over here quickly, it's dangerous!"</p>
+<p class="orv_line">Yoo Sangah watched the scene in shock. Only then did she realize the girl's intention.</p>
+<p class="orv_line">But she didn't understand why. Why was this girl willing to act as a 'tank' in a quest that had nothing to do with her?</p>
+<p class="orv_line">The boy next to her was also waving his net excitedly to provoke the wasps. Why? There was no point in asking.</p>
+<p class="orv_line">So Yoo Sangah didn't ask for an explanation either.</p>
+<p class="orv_line">The girl shouted, "What are you doing? Hurry up and run! Go win this game!"</p>
+<p class="orv_line">"You still haven't told me what book you wrote!"</p>
+<p class="orv_line">Her reply was drowned out by the buzzing of the wasps. A few wasps must have escaped, because the girl let out a yelp.</p>
+<p class="orv_line">The boy waved his hand. She saw the girl's lips shape a final message, and for a split second, a spark seemed to dance across her face.</p>
+<p class="orv_line">"Let's meet again."</p>
+<p class="orv_line">What? She wasn't sure if that was what she said. She just guessed the words.</p>
+<p class="orv_line">Taking a breath, Yoo Sangah ran.</p>
+<p class="orv_line">She looked back at the boy. Should she ask for his name or contact details? What was she doing? It wasn't a life-or-death situation. It was just a silly company event.</p>
+<p class="orv_line">*Bzzzt.*</p>
+<p class="orv_line">A smile breaking through the static, and finally, the girl's face faded.</p>
+<p class="orv_line">"Hurry and go!"</p>
+<p class="orv_line">And Yoo Sangah ran. She didn't know she could run so fast. Beyond the AR screen, the digital track of numbers was fracturing.</p>
+<p class="orv_line">She could run even faster. A strange sense of liberation rose within her along with her ragged breathing. She couldn't remember the last time she had run with all her might.</p>
+<div class="orv_system"><p>[MINO GLASS' battery is low!]</p></div>
+<br>
+<p class="orv_line">Shouts from the pursuing employees echoed behind her. The heavy Mino Glass slipped on the bridge of her nose, the screen flickering and obscuring her vision.</p>
+<p class="orv_line">Even if she reached the end of the track, her life wouldn't change. She would still wake up at the same time, brush her teeth, wash her face, and go to work. She would meet the same expectations and live the same routine. There would be stressful calls from home. There would be people who annoyed her, and others who criticized her for not showing any vulnerability. She would go on studying Spanish she had no interest in, collecting certificates, and doing Pilates. She would smile her way through life.</p>
+<p class="orv_line">But what if she didn't want to live that way anymore?</p>
+<p class="orv_line">Whether she cut the rope or not, she wanted to choose her own path now.</p>
+<p class="orv_line">So Yoo Sangah ran. Tearing off the slipping glasses, she sprinted along the path where the arrow pointed. She ran faster than the wasps, more desperately than the climbers.</p>
+<p class="orv_line">Until her lungs burned and her legs felt like lead. She ran and ran. How far had she run?</p>
+<p class="orv_line">A notification popped up on her phone, which she looked down at reflexively.</p>
+<div class="orv_system"><p>[You've exhausted all the stamina given]</p></div>
+<div class="orv_system"><p>[Your avatar will die due to excessive exhaustion]</p></div>
+<br>
+<p class="orv_line">Huh?</p>
+<div class="orv_system"><p>[Recovering the avatar's life in exchange for "CEO's secret"]</p></div>
+<div class="orv_system"><p>[Stamina is all charged]</p></div>
+<br>
+<p class="orv_line">She looked up and saw the end of the track.</p>
+<div class="orv_system"><p>[You've completed the track]</p></div>
+<div class="orv_system"><p>[You got the third clue, "Coordinate C"]</p></div>
+<br>
+<p class="orv_line">Bending over with her hands on her knees, Yoo Sangah panted heavily as she read the notification.</p>
+<p class="orv_line">Her phone vibrated. It was a text message from the HR manager.</p>
+<p class="orv_line">[Yoo Sangah. Are you still on a treasure hunt? I'm almost done organizing here, so don't come back up and go down the mountain.]</p>
+<br>
+<p class="orv_line">That was the end of the adventure. Yoo Sangah didn't head back to the picnic site.</p>
+<p class="orv_line">Normally she would have returned to secure her performance points and help clean up, but she didn't feel like it today.</p>
+<p class="orv_line">So what was the treasure? She had only received three coordinates. Tapping them, a 'Combine' option appeared.</p>
+<p class="orv_line">Yoo Sangah immediately combined the three coordinates.</p>
+<div class="orv_system"><p>[The location of the treasure is displayed]</p></div>
+<br>
+<p class="orv_line">A familiar map interface popped up. The destination wasn't far, so she rented a public bicycle nearby. Riding through the cool night air, she reflected on the day.</p>
+<p class="orv_line">It had been a day full of anomalies. She had met a self-proclaimed writer and a boy who commanded insects.</p>
+<p class="orv_line">She had poured her heart into a treasure hunt, something she wouldn't have taken seriously even as a child. She had run with everything she had.</p>
+<div class="orv_system"><p>[Arrived at the destination]</p></div>
+<br>
+<p class="orv_line">She parked the bicycle outside a large bookstore nearby. The interior was brightly lit, with a bit of time left before closing. Yoo Sangah hesitated for a moment before stepping inside.</p>
+<p class="orv_line">If the coordinates were correct, this was the place. She activated the AR camera and looked around, but nothing stood out.</p>
+<p class="orv_line">As she walked down the aisles, she saw new releases.</p>
+<p class="orv_line">(···)</p>
+<p class="orv_line">Among them was the novel she had seen in the game.</p>
+<p class="orv_line">It was a real, published novel.</p>
+<p class="orv_line">Don't tell me the novel itself was the treasure. On the display stand, the printed copy of the web novel was drawing the most attention.</p>
+<p class="orv_line">"...We still can't contact the author? Hurry up and find her!"</p>
+<p class="orv_line">Wondering what the commotion was about, she noticed a small event set up in a corner. A sign stood next to it.</p>
+<p class="orv_line">A fan signing event for the author.</p>
+<p class="orv_line">The title was *SSSSS-Class Infinite Reincarnator*—a name she felt she had heard before.</p>
+<p class="orv_line">"Should we cancel the event?"</p>
+<p class="orv_line">"I told you we needed a written confirmation. She said she hated doing signing events."</p>
+<p class="orv_line">The bookstore staff were running around frantically, phones pressed to their ears.</p>
+<div class="orv_system"><p>[Only 1% of battery left]</p></div>
+<br>
+<p class="orv_line">Oh dear. Her phone was about to die. She needed to find the treasure quickly. But nothing was showing up on the screen.</p>
+<p class="orv_line">Through the camera, she saw only a few people browsing the shelves. One reader in particular was staring intently at a book, his eyes practically glowing.</p>
+<p class="orv_line">"How did she even plagiarize this part?"</p>
+<p class="orv_line">He put down the book and began searching for something on his phone.</p>
+<p class="orv_line">"Yeah, that's it. Chapter 41..."</p>
+<p class="orv_line">Yoo Sangah walked toward him, feeling a sudden wave of familiarity.</p>
+<p class="orv_line">"Chapter 41 is... Huh? This is weird."</p>
+<p class="orv_line">His pale face, his murmuring... and then, as if by magic, her phone screen went black. As she lowered the device, a familiar face appeared before her.</p>
+<p class="orv_line">"......Mr. Kim Dokja?"</p>
+<br>
+<p class="orv_line">They walked down the street, one holding an iced chocolate and the other an Americano. Yoo Sangah spoke first.</p>
+<p class="orv_line">"As expected, you're a reader."</p>
+<p class="orv_line">"What?"</p>
+<p class="orv_line">"You've already found all the treasures. That's why you're here."</p>
+<p class="orv_line">She hadn't seen him at the picnic, but knowing Kim Dokja, he probably found a quiet spot nearby and cleared it. It was typical of him.</p>
+<p class="orv_line">"Oh, the treasure?" Kim Dokja said, sipping his iced chocolate. "I didn't participate."</p>
+<p class="orv_line">"What? Then how—"</p>
+<p class="orv_line">"I just knew. Honestly, I didn't think anyone would actually clear the hidden route."</p>
+<p class="orv_line">Yoo Sangah listened as Kim Dokja explained why he was here. The "Treasure Hunt" update was originally assigned to the development team.</p>
+<p class="orv_line">But due to a lack of hands, they had pulled staff from other departments, including Kim Dokja.</p>
+<p class="orv_line">When the project expanded and caught the CEO's attention, the CEO personally ordered Kim Dokja—who, as a contractor, had no stake in promotions—to be the main designer of the task force.</p>
+<p class="orv_line">"So you made it all."</p>
+<p class="orv_line">"Not all of it. Just a little bit of the hidden route part."</p>
+<p class="orv_line">Kim Dokja scratched his cheek, looking embarrassed. Since she had never seen him make such an expression, Yoo Sangah felt a sudden urge to tease him.</p>
+<p class="orv_line">"I think you caught the CEO's eye, considering he gave you the assignment personally."</p>
+<p class="orv_line">"He was a bit unusual."</p>
+<p class="orv_line">"Did you meet him in person?"</p>
+<p class="orv_line">"Yes."</p>
+<p class="orv_line">That was a bit surprising.</p>
+<p class="orv_line">Rumors had circulated that the company's president had changed recently, and not even the high-ranking executives had seen the new president's face. The mysterious Mino Soft CEO was behind all the bizarre events like the "quest interview," yet he had only appeared before a contractor.</p>
+<p class="orv_line">"I don't think he's quite human."</p>
+<p class="orv_line">"Is he that bad?"</p>
+<p class="orv_line">"Oh, I don't mean it like that."</p>
+<p class="orv_line">Kim Dokja smiled, so Yoo Sangah smiled too.</p>
+<p class="orv_line">"His outfit was cool. He wore a fedora and a trench coat, looking like a classic gentleman."</p>
+<p class="orv_line">"Wow. I don't know if I'll ever see him either."</p>
+<p class="orv_line">"Yoo Sangah, of course..."</p>
+<p class="orv_line">"So, was the final objective just waiting at the bookstore?"</p>
+<p class="orv_line">"Well, according to the design, finding all the hidden coordinates would lead you to claim the 'treasure' at the bookstore."</p>
+<p class="orv_line">"And that's what you're giving me?"</p>
+<p class="orv_line">"Yes, that was the plan."</p>
+<p class="orv_line">That message had indeed appeared on the app.</p>
+<div class="orv_system"><p>[You succeeded in "Treasure Hunt"]</p></div>
+<div class="orv_system"><p>[You earned 2 extra points for promotion and will be reflected in the next quarter's HR review]</p></div>
+<div class="orv_system"><p>[You finished "Treasure Hunt" through the hidden route. Please receive the special product from the promised coordinates.]</p></div>
+<br>
+<p class="orv_line">"I haven't heard back from the CEO since yesterday. So it's not the official prize, but I thought I'd at least buy you a book with my own money."</p>
+<p class="orv_line">Yoo Sangah looked down at her dead phone.</p>
+<p class="orv_line">"I wish you'd joined me."</p>
+<p class="orv_line">"What?"</p>
+<p class="orv_line">"I had a lot of fun today. I met a strange writer, a boy in protective gear who catches bugs, and for the first time, I ran with everything I had without worrying about how I looked to others."</p>
+<p class="orv_line">Yoo Sangah recounted the brief, novel-like adventure to Kim Dokja.</p>
+<p class="orv_line">"But I don't have any actual treasure to give you. You went through all that trouble."</p>
+<p class="orv_line">"It's okay. I've already found it."</p>
+<p class="orv_line">"What?"</p>
+<p class="orv_line">"Do you want one?" Yoo Sangah pulled one of the portable batteries from her bag. Kim Dokja's eyes went wide.</p>
+<p class="orv_line">"Oh, this..."</p>
+<p class="orv_line">"You're always running out of battery. I figured you could use one."</p>
+<p class="orv_line">Kim Dokja's expression shifted through a flurry of emotions. "Can I really keep this?"</p>
+<p class="orv_line">"Yes, I have another one for myself. It's yours."</p>
+<p class="orv_line">"Ah, thank you. I really needed one." Kim Dokja immediately plugged it in to charge. With a soft beep, the battery status appeared on his screen.</p>
+<p class="orv_line">[Charging 1%]</p>
+<br>
+<p class="orv_line">Yoo Sangah didn't know what that 1% meant to Kim Dokja. To her, a portable battery was just a mundane corporate giveaway, and she had no affection for the company logo printed on it.</p>
+<p class="orv_line">Yet, at that moment, unwrapping the battery pack alongside Kim Dokja made her feel lighthearted.</p>
+<p class="orv_line">"It's lighter than I thought. It's easy to carry around."</p>
+<p class="orv_line">"Right?"</p>
+<p class="orv_line">Yoo Sangah plugged her phone in as well. The screen lit up, displaying the charging icon at 1%.</p>
+<p class="orv_line">[Charging 1%]</p>
+<br>
+<p class="orv_line">Yoo Sangah played with the "MINO" logo on the battery. If she turned on the AR glasses now, would she see something different?</p>
+<p class="orv_line">Looking at Kim Dokja, who held his phone and battery as if they were a lifeline, Yoo Sangah hesitated before letting go of the power button. Instead of looking through a lens, she looked up at the sky with her own eyes. There, she saw something unexpected in the night sky of Seoul.</p>
+<p class="orv_line">"...I didn't know there were so many stars in Seoul."</p>
+<p class="orv_line">The city sky, which usually seemed pitch-black, was exceptionally clear tonight. Countless stars shone above. Watching the starlight flow, Yoo Sangah felt as though she was moving toward somewhere new. Just as she had when she left home and joined the company. Just as she was now, walking home.</p>
+<p class="orv_line">Kim Dokja had also stopped, gazing up at the stars.</p>
+<p class="orv_line">"Mr. Dokja."</p>
+<p class="orv_line">"Yes?"</p>
+<p class="orv_line">Maybe there was no such thing as a hidden treasure.</p>
+<p class="orv_line">"I should head home."</p>
+<p class="orv_line">Yoo Sangah walked half a step ahead, letting the cool night breeze brush past her. She knew this feeling might not last. It might just be a fleeting sentiment that would fade by tomorrow.</p>
+<p class="orv_line">Kim Dokja, after staring at the sky a bit longer, nodded and began reading something on his phone again.</p>
+<p class="orv_line">Yoo Sangah still didn't know anything about the story Kim Dokja was reading.</p>
+<p class="orv_line">Instead, she thought about the treasure hunt.</p>
+<p class="orv_line">A treasure hunt with Yoo Sangah, a writer, and a young boy. And maybe Kim Dokja, too. Along with managers and strangers she had never met. Under a sky filled with stars.</p>
+<p class="orv_line">Yoo Sangah imagined a grand adventure of walking, laughing, and talking under the stars in search of treasure. And for the first time, she began to realize what she truly wanted to do.</p>
+<br>
+<p class="orv_line">[Side Story 1 - End]</p>
+<br>
+<hr>
+        </article>
+        <div class="change-ch">
+            <a href="./../"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" /></svg>Home</a>
+            <a href="./chapter-2">Next<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" /></svg></a>
+        </div>
+        <div class="evadav">
+  
+        <div class="giscus" id="comments" style="margin-top: -8px;">
+        </div>
+    </div>
+
+    <script id="main-script" data-titles="../../../../meta/side.json" data-index="0" data-type="side" src="../../../assets/reader.js"></script>
+    </body>
+
+</html>

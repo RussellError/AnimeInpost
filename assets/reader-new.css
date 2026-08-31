@@ -1,0 +1,770 @@
+:root {
+    --body-background: #14151b;
+    --primary: #1f2129;
+    --nav: #18191f;
+    --text-primary: #b6bccc;
+    --text-secondary: #c6cee2;
+    --icons-color: brightness(0) saturate(100%) invert(80%) sepia(12%) saturate(302%) hue-rotate(184deg) brightness(99%) contrast(97%);
+}
+
+* {
+    font-family: var(--default-font);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    width: 100%;
+    background-color: var(--body-background);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-secondary);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.orv_main h1 {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin: 1rem 0;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.orv_main {
+    width: min(100%, 800px);
+    margin: 0 auto;
+    background-color: var(--primary);
+    color: var(--text-primary);
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+/* This is for the images */
+.orv_image {
+    margin-top: var(--paragraph-space);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+.orv_image img {
+    display: block;
+    max-height: 90vh; 
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.orv_cover {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    width: min(100%, 800px);
+}
+
+.orv_cover img {
+    padding: 2vh;
+    width: auto;
+    height: min(90vh, 130vw);
+}
+
+.title_mobile {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    width: min(100%, 800px);
+}
+
+.title_mobile img {
+    padding: 2vh;
+    width: auto;
+    height: clamp(70px, 20vh, min(200px, 90vw));
+}
+
+/* This is for the navbar */
+.menu {
+    top: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    background-color: var(--nav);
+    width: 100%;
+    height: fit-content;
+    position: static;
+}
+
+.menu a:first-child {
+    margin-right: auto;
+}
+
+.menu a {
+    margin: 1vh clamp(0px, 1vw, 20px);
+    transition-duration: 250ms;
+    display: flex;
+    align-content: center;
+    padding: min(1vw, 5px);
+}
+
+.menu a:hover {
+    transform: scale(1.2);
+    transition: transform 500ms;
+}
+
+.menu a svg {
+    height: clamp(35px, 4vh, 70px);
+    width: auto;
+    filter: var(--icons-color);
+    scale: 0.8;
+}
+
+
+/* for the comments */
+
+.giscus {
+    position: relative;
+    top: 5vh;
+    max-width: clamp(100px, 90%, 900px);
+}
+
+/* For chapters */
+
+.chapters,
+.settings,
+.download,
+.edit {
+    background-color: var(--primary);
+    display: none;
+    z-index: 5;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100dvh;
+    width: min(600px, 100%);
+    box-shadow: -12px 2px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.close-chapters-btn,
+.close-settings-btn,
+.close-download-btn,
+.close-edit-btn {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    width: min(3vw, 30px);
+    width: min(3vw, 30px);
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 1em;
+    font-size: 30px;
+}
+
+.chapters {
+    overflow-y: auto;
+}
+
+.search-reasult{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.chapters input {
+    position: sticky;
+    top: 2em;
+    margin: 2em;
+    padding: 1em 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chapters input::placeholder {
+    font-weight: bold;
+    color: gray;
+}
+
+
+.chapter_item {
+    border-radius: 0.5em;
+    border: var(--text-primary) 0.1em solid;
+    color: var(--text-primary);
+    text-align: center;
+    margin: 0.5em;
+    width: min(400px, 90%);
+    align-self: center;
+    text-wrap: wrap;
+}
+
+.chapter_item p {
+    padding: 0.5em;
+}
+
+#current-chapter {
+    background-color: var(--text-primary);
+    color: var(--primary);
+}
+
+.chapters a,
+.chapters a:link,
+.chapters a:visited,
+.chapters a:hover,
+.chapters a:active,
+.chapters a:focus {
+    all: unset;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: inline;
+}
+
+/* This is for settings */
+
+.settings {
+    overflow-y: auto;
+}
+
+.setting_items {
+    margin-top: 6vh;
+}
+
+.setting_item {
+    padding: 0.75em;
+}
+
+.setting_reset {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
+
+.setting_item input,
+.setting_item select {
+    float: right;
+    height: min(25px, 10vh);
+    width: min(150px, 25vw);
+}
+
+.setting_item select{
+    backdrop-filter: brightness(0) invert(100%);
+}
+
+.setting_item input[type="text"] {
+    backdrop-filter: brightness(0) invert(100%);
+}
+
+/* for download tab */
+
+.download {
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.download h1,
+button {
+    text-align: center;
+    padding: 1em;
+    font-size: large;
+    margin: 2vh auto;
+    width: min(300px, 90%);
+}
+
+.download a {
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: black;
+    width: min(300px, 90%);
+}
+
+.download a button {
+    width: 100%;
+}
+
+/* for edit tab */
+
+.edit {
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.edit h1,
+button {
+    text-align: center;
+    padding: 1em;
+    font-size: large;
+    margin: 2vh auto;
+    width: min(300px, 90%);
+}
+
+.edit a {
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: black;
+    width: min(300px, 90%);
+}
+
+.edit a button {
+    width: 100%;
+}
+
+.edit a,
+.edit a:link,
+.edit a:visited,
+.edit a:hover,
+.edit a:active,
+.edit a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+/* Navigation button */
+
+.change-ch {
+    width: min(100%, 800px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    /* Adjust padding as needed */
+    background-color: var(--primary);
+}
+
+.change-ch a {
+    display: flex;
+    align-items: center;
+    color: #e3e3e3;
+    text-decoration: none;
+    font-size: 16px;
+    /* Adjust font size as needed */
+}
+
+.change-ch a,
+.change-ch svg{
+    margin: 0 5px;
+    filter: var(--icons-color);
+}
+
+.change-ch a:hover {
+    text-decoration: underline;
+    /* Optional: Underline on hover */
+}
+
+/* ads */
+
+.evadav {
+    width: min(100%, 800px);
+    height: auto;
+    height: auto;
+    max-height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* for print */
+
+@media print {
+
+    /* Hide non-essential elements for printing */
+    .menu,
+    .giscus,
+    .chapters,
+    .settings,
+    .download,
+    .edit,
+    .evadav,
+    .change-ch {
+        display: none !important;
+    }
+
+    /* Ensure main content takes full width */
+    .orv_main,
+    .orv_cover,
+    .title_mobile {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Adjust images for better print layout */
+    .orv_image img,
+    .orv_cover img,
+    .title_mobile img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+.chapter-images{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+}
+
+.chapter-title{
+    text-align:center;
+    padding:20px 10px;
+}
+
+.series-cover img{
+    width:100%;
+    display:block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+* {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+}
+
+/* ===== Overlay Reader Mode ===== */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.menu.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.change-ch {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 14px 24px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.change-ch.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.change-ch a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    background: rgba(124, 92, 255, 0.18);
+    border: 1px solid rgba(124, 92, 255, 0.4);
+    border-radius: 6px;
+    padding: 8px 14px;
+    height: 32px;
+}
+
+.change-ch a:hover {
+    text-decoration: none;
+    background: rgba(124, 92, 255, 0.28);
+}
+
+.main {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.chapter-images {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Panel images reserve vertical space by default — in plain CSS, so
+   it's there from the very first paint, before any JS has run. This
+   is what stops content below the images (reactions, comments) from
+   rendering up near the top of the page for a moment and then
+   jumping down once images finish loading — relying on JS to *add*
+   the reservation was always a frame too late. JS instead adds a
+   .loaded class per image once it actually finishes, which releases
+   the reservation back to the image's natural height. */
+.chapter-images img {
+    -webkit-user-select: none;
+    user-select: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 60vh;
+    background: var(--primary);
+    /* Safety net: if an image finishes loading a frame before our JS
+       adds .loaded, this stops it from visibly stretching to fill
+       the reserved box — it'll just letterbox instead. */
+    object-fit: contain;
+}
+
+.chapter-images img.loaded {
+    min-height: 0;
+}
+
+/* The credit/promo banner images (always the first and last image
+   in every chapter) render taller than regular manga panels, so they
+   get their own bigger reserved space by default. Tune this number
+   if it still feels off for your source images. */
+.chapter-images img:first-child,
+.chapter-images img:last-child {
+    min-height: 90vh;
+}
+
+.chapter-images img:first-child.loaded,
+.chapter-images img:last-child.loaded {
+    min-height: 0;
+}
+
+.chapters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: min(600px, 100%);
+    z-index: 2000;
+    overflow-y: auto;
+    background: #0e0e10;
+    box-sizing: border-box;
+    box-shadow: 100vw 0 0 100vw rgba(0, 0, 0, 0.75);
+}
+
+.change-ch-static {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px 24px;
+    margin-top: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.change-ch-static a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    color: #e3e3e3;
+    text-decoration: none;
+}
+
+
+#scroll-top-btn {
+    position: fixed;
+    bottom: 70px;
+    right: 12px;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.65);
+    border: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+#scroll-top-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: #ffffff !important;
+    fill: none !important;
+    display: block;
+}
+
+#scroll-top-btn.visible {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#scroll-top-btn:active {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+
+
+.chapter_item.active {
+    background: #2962ff;
+    border-left: 4px solid #4fc3f7;
+}
+
+.chapter_item.active p {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Static (always-visible) prev/select/next nav — separate from the
+   tap-triggered .change-ch overlay above; does not modify it. */
+
+.change-ch-static a {
+    flex-shrink: 0;
+    white-space: nowrap;
+    background: rgba(124, 92, 255, 0.18);
+    border: 1px solid rgba(124, 92, 255, 0.4);
+    border-radius: 6px;
+    padding: 8px 14px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.change-ch-static a.disabled,
+.change-ch a.disabled {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.chapter-select-static {
+    flex: 1 1 auto;
+    min-width: 120px;
+    height: 32px;
+    line-height: 16px;
+    background: rgba(124, 92, 255, 0.18);
+    color: #e3e3e3;
+    border: 1px solid rgba(124, 92, 255, 0.55);
+    border-radius: 6px;
+    padding: 6px 26px 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' width='16' height='16' fill='%23e3e3e3'%3E%3Cpath d='M480-360 280-560h400L480-360Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.chapter-select-static option {
+    background: #0e0e10;
+    color: #e3e3e3;
+}
+
+@media (max-width: 480px) {
+    .change-ch-static {
+        padding: 8px 14px;
+        gap: 8px;
+    }
+
+    .change-ch-static a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .chapter-select-static {
+        min-width: 100px;
+        height: 32px;
+        font-size: 12px;
+        padding: 6px 22px 6px 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .change-ch-static a span.static-nav-label {
+        display: none;
+    }
+}
+
+/* Small gap between the static nav bar and the reactions/comments
+   section below it (overrides comments.css's 32px top padding). */
+#rcWrapper {
+    margin-top: 0 !important;
+    padding-top: 12px !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+button,
+a,
+img {
+  user-select: none;
+  -webkit-user-select: none;
+}

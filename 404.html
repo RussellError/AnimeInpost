@@ -1,0 +1,486 @@
+<?php
+http_response_code(404);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 - Reality Not Found | AnimeInPost</title>
+
+<meta name="description" content="The page you're looking for could not be found on AnimeInPost. Return to AnimeInPost and continue reading manga, manhwa, and manhua.">
+<meta name="robots" content="noindex, follow">
+<meta name="author" content="AnimeInPost">
+<meta name="theme-color" content="#0b0b14">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<link rel="canonical" href="https://animeinpost.site/404.html">
+
+<link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+<link rel="shortcut icon" href="./assets/favicon.ico">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="manifest" href="./assets/manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+    background:#0b0b14;
+    font-family:'Inter',sans-serif;
+    color:#fff;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* ===== Background ===== */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%, #6c63ff33, transparent 40%),
+        radial-gradient(circle at 80% 80%, #ff2fd133, transparent 40%);
+    filter:blur(40px);
+    animation:pulse 6s ease-in-out infinite;
+    pointer-events:none;
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+}
+
+/* ===== Noise ===== */
+.noise{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity:.05;
+    pointer-events:none;
+}
+
+/* ===== Center ===== */
+.wrapper{
+    position:relative;
+    z-index:2;
+    width:min(92%,520px);
+    min-height:100vh;
+    margin:auto;
+    padding:30px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* ===== Card ===== */
+.card{
+    width:100%;
+    background:rgba(20,20,35,.85);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:44px 28px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    transition:transform .15s ease;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    background:
+        linear-gradient(
+            90deg,
+            #ff2fd1,
+            #6c63ff,
+            #47d7ff,
+            #ff2f2f
+        );
+    opacity:.15;
+    filter:blur(10px);
+    animation:borderFlash 3s infinite;
+    pointer-events:none;
+}
+
+@keyframes borderFlash{
+    0%,100%{
+        opacity:.1;
+    }
+
+    50%{
+        opacity:.35;
+    }
+}
+
+/* ===== 404 ===== */
+.error-code{
+    font-size:110px;
+    font-weight:800;
+    position:relative;
+    display:inline-block;
+    letter-spacing:6px;
+    margin-bottom:10px;
+    animation:shake 2.5s infinite;
+}
+
+.error-code::before,
+.error-code::after{
+    content:"404";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    overflow:hidden;
+}
+
+.error-code::before{
+    color:#ff2fd1;
+    transform:translate(3px,0);
+    animation:glitch1 1.5s infinite;
+}
+
+.error-code::after{
+    color:#47d7ff;
+    transform:translate(-3px,0);
+    animation:glitch2 1.5s infinite;
+}
+
+@keyframes glitch1{
+    0%,100%{
+        clip-path:inset(0 0 80% 0);
+    }
+
+    50%{
+        clip-path:inset(40% 0 20% 0);
+    }
+}
+
+@keyframes glitch2{
+    0%,100%{
+        clip-path:inset(70% 0 0 0);
+    }
+
+    50%{
+        clip-path:inset(10% 0 50% 0);
+    }
+}
+
+@keyframes shake{
+    0%,100%{
+        transform:translate(0);
+    }
+
+    20%{
+        transform:translate(-2px,2px);
+    }
+
+    40%{
+        transform:translate(2px,-2px);
+    }
+
+    60%{
+        transform:translate(-1px,1px);
+    }
+
+    80%{
+        transform:translate(1px,-1px);
+    }
+}
+
+/* ===== Title ===== */
+.title{
+    font-size:26px;
+    font-weight:700;
+    margin-bottom:12px;
+    position:relative;
+}
+
+.title.glitch::before,
+.title.glitch::after{
+    content:"Reality Breach Detected";
+    position:absolute;
+    left:0;
+    width:100%;
+    overflow:hidden;
+}
+
+.title.glitch::before{
+    color:#ff2fd1;
+    animation:gl1 2s infinite;
+}
+
+.title.glitch::after{
+    color:#47d7ff;
+    animation:gl2 2s infinite;
+}
+
+@keyframes gl1{
+    0%,100%{
+        transform:translate(0);
+    }
+
+    50%{
+        transform:translate(2px,0);
+    }
+}
+
+@keyframes gl2{
+    0%,100%{
+        transform:translate(0);
+    }
+
+    50%{
+        transform:translate(-2px,0);
+    }
+}
+
+/* ===== Text ===== */
+.text{
+    color:#b9b9cf;
+    font-size:15px;
+    line-height:1.7;
+    margin-bottom:28px;
+}
+
+/* ===== Main Button ===== */
+.btn{
+    display:inline-block;
+    padding:14px 22px;
+    border-radius:14px;
+    background:linear-gradient(135deg,#6c63ff,#ff2fd1);
+    color:#fff;
+    font-weight:600;
+    text-decoration:none;
+    transition:.2s;
+    position:relative;
+    z-index:2;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 30px rgba(255,47,209,.25);
+}
+
+/* ===== Natural Footer ===== */
+footer{
+    margin-top:30px;
+    padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    position:relative;
+    z-index:2;
+}
+
+.footer-card{
+    flex:1;
+    min-width:0;
+    padding:11px 8px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px;
+    color:#b9b9cf;
+    font-size:12px;
+    font-weight:500;
+    text-decoration:none;
+    text-align:center;
+    transition:.2s ease;
+}
+
+.footer-card:hover{
+    transform:translateY(-2px);
+    background:rgba(255,255,255,.07);
+    border-color:#6c63ff;
+    color:#fff;
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+}
+
+.copyright{
+    width:100%;
+    text-align:center;
+    margin-top:4px;
+    padding:0;
+    background:none;
+    border:none;
+    border-radius:0;
+    font-size:11px;
+    color:#666;
+}
+
+/* ===== Screen Flicker ===== */
+.flicker{
+    position:fixed;
+    inset:0;
+    background:#fff;
+    opacity:0;
+    pointer-events:none;
+    animation:flicker 6s infinite;
+    z-index:10;
+}
+
+@keyframes flicker{
+    0%,97%,100%{
+        opacity:0;
+    }
+
+    98%{
+        opacity:.05;
+    }
+
+    99%{
+        opacity:.1;
+    }
+}
+
+/* ===== Mobile ===== */
+@media(max-width:480px){
+
+    .wrapper{
+        width:94%;
+        padding:20px 0;
+    }
+
+    .card{
+        padding:36px 20px;
+    }
+
+    .error-code{
+        font-size:80px;
+    }
+
+    .title{
+        font-size:20px;
+    }
+
+    .text{
+        font-size:14px;
+    }
+
+    footer{
+        gap:7px;
+    }
+
+    .footer-card{
+        padding:10px 5px;
+        font-size:11px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="noise"></div>
+<div class="flicker"></div>
+
+<div class="wrapper">
+
+    <div class="card">
+
+        <div class="error-code">
+            404
+        </div>
+
+        <div class="title glitch">
+            Reality Breach Detected
+        </div>
+
+        <div class="text">
+            This page is not just missing... it is refusing to exist in this timeline.<br>
+            You may have crossed into a broken route.
+        </div>
+
+        <a class="btn" href="/">
+            ⟵ Return to Safe Zone
+        </a>
+
+        <footer>
+
+            <a class="footer-card" href="/about.html">
+                About Us
+            </a>
+
+            <a class="footer-card" href="/donate.html">
+                Support
+            </a>
+
+            <a class="footer-card" href="/contact.html">
+                Contact
+            </a>
+
+            <div class="copyright">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="13"
+                     height="13"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     style="vertical-align:middle;margin-right:5px;">
+
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M15 9a4 4 0 1 0 0 6"/>
+
+                </svg>
+
+                2026 AnimeInPost — All rights reserved
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</div>
+
+<script>
+/* Subtle cursor distortion */
+document.addEventListener("mousemove", (e) => {
+
+    const card = document.querySelector(".card");
+
+    if (!card) return;
+
+    const x =
+        (window.innerWidth / 2 - e.clientX) * 0.01;
+
+    const y =
+        (window.innerHeight / 2 - e.clientY) * 0.01;
+
+    card.style.transform =
+        `translate(${x}px, ${y}px)`;
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "title": "One Piece Volume",
+  "altTitles": [
+    "ONE PIECE",
+    "OP",
+    "ワンピース",
+    "Wan Pīsu",
+    "海賊王",
+    "航海王",
+    "원피스"
+  ],
+  "description": "Monkey D. Luffy and his Straw Hat crew sail across the Grand Line in search of the legendary treasure known as the One Piece. Their journey takes them through countless islands, battles, mysteries, and adventures as they pursue Luffy's dream of becoming the King of the Pirates.",
+  "cover": "../../assets/covers/one-piece-vol.webp",
+  "backdrop": "../../assets/covers/one-piece-vol.webp",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Drama",
+    "Fantasy",
+    "Martial Arts",
+    "Mystery",
+    "Shounen",
+    "Supernatural"
+  ],
+  "rating": 9.7,
+  "bookmarks": 0,
+  "status": "Ongoing",
+  "type": "Manga",
+  "author": "Eiichiro Oda"
+}

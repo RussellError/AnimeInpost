@@ -1,0 +1,32 @@
+{
+  "title": "One Piece",
+  "altTitles": [
+    "ONE PIECE",
+    "OP",
+    "ワンピース",
+    "Wan Pīsu",
+    "海賊王",
+    "航海王",
+    "海賊王に俺はなる",
+    "원피스"
+  ],
+  "description": "Monkey D. Luffy sets out on an epic adventure to become the King of the Pirates and find the legendary treasure known as the One Piece. With his Straw Hat crew, Luffy travels across the Grand Line, facing powerful enemies, uncovering the mysteries of the world, and pursuing a dream that could change the fate of the entire world.",
+  "cover": "../../assets/covers/one-piece.webp",
+  "backdrop": "../../assets/covers/one-piece.webp",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Drama",
+    "Fantasy",
+    "Martial Arts",
+    "Mystery",
+    "Shounen",
+    "Supernatural"
+  ],
+  "rating": 9.7,
+  "bookmarks": 0,
+  "status": "Ongoing",
+  "type": "Manga",
+  "author": "Eiichiro Oda"
+}

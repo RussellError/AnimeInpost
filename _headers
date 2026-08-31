@@ -1,0 +1,17 @@
+/assets/images/*
+  Cache-Control: public, max-age=864000
+
+/assets/covers/*
+  Cache-Control: public, max-age=864000
+
+/data/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/meta/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/stories/*
+  Cache-Control: public, max-age=10800
+
+/assets/*
+  Cache-Control: public, max-age=3600

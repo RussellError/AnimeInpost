@@ -1,0 +1,201 @@
+{
+  "heading": "Popular",
+  "tabs": [
+    {
+      "id": "weekly",
+      "label": "Weekly",
+      "items": [
+      
+      
+      
+      
+      {
+          "title": "One Piece",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+          ],
+          "href": "/series/one-piece-manga/",
+          "image": "./assets/covers/one-piece.webp"
+        },
+        
+        
+      {
+          "title": "Shadow Slave",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+          ],
+          "href": "/series/shadow-slave/",
+          "image": "./assets/covers/shadow-slave.webp"
+        },
+        
+        
+        {
+          "title": "Absolute Sword Sense",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+          ],
+          "href": "/series/absolute-sword-sense/",
+          "image": "./assets/covers/absolute-sword-sense.webp"
+        },
+        {
+          "title": "Swordmaster's Youngest Son",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+          ],
+          "href": "/series/the-swordmasters-youngest-son/",
+          "image": "./assets/covers/the-swordmasters-youngest-son.webp"
+        },
+        {
+          "title": "Dungeon Odyssey",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+          ],
+          "href": "/series/dungeon-odyssey/",
+          "image": "./assets/covers/dungeon-odyssey.webp"
+        },
+        {
+          "title": "Urek Mazino",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+          ],
+          "href": "/series/urek-mazino/",
+          "image": "./assets/covers/urek-mazino.webp"
+        },
+        {
+          "title": "Solo Leveling",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+          ],
+          "href": "/series/solo-leveling/",
+          "image": "./assets/covers/solo-leveling.webp"
+        }
+      ]
+    },
+    {
+      "id": "monthly",
+      "label": "Monthly",
+      "items": [
+        {
+          "title": "Trait Hoarder",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+          ],
+          "href": "/series/trait-hoarder/",
+          "image": "./assets/covers/trait-hoarder.webp"
+        },
+        {
+          "title": "Omniscient Reader's Viewpoint",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+          ],
+          "href": "/series/orv-manhwa/",
+          "image": "./assets/covers/orv-manhwa.webp"
+        },
+        {
+          "title": "Star-Embracing Swordmaster",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+          ],
+          "href": "/series/star-embracing-swordmaster/",
+          "image": "./assets/covers/star-embracing-swordmaster.webp"
+        },
+        {
+          "title": "The Priest of Corruption",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy"
+          ],
+          "href": "/series/the-priest-of-corruption/",
+          "image": "./assets/covers/the-priest-of-corruption.webp"
+        },
+        {
+          "title": "Solo Leveling Ragnarok",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+          ],
+          "href": "/series/solo-leveling-ragnarok-manhwa/",
+          "image": "./assets/covers/solo-leveling-ragnarok.webp"
+        }
+      ]
+    },
+    {
+      "id": "all",
+      "label": "All",
+      "items": [
+        {
+          "title": "Solo Leveling",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+          ],
+          "href": "/series/solo-leveling/",
+          "image": "./assets/covers/solo-leveling.webp"
+        },
+        {
+          "title": "I'm Not a Regressor",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy"
+          ],
+          "href": "/series/im-not-a-regressor/",
+          "image": "./assets/covers/im-not-a-regressor.webp"
+        },
+        {
+          "title": "Tower of God",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Dark Fantasy"
+          ],
+          "href": "/series/tower-of-god/",
+          "image": "./assets/covers/tower-of-god.webp"
+        },
+        {
+          "title": "Dungeon Odyssey",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+          ],
+          "href": "/series/dungeon-odyssey/",
+          "image": "./assets/covers/dungeon-odyssey.webp"
+        },
+        {
+          "title": "Omniscient Reader's Viewpoint",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+          ],
+          "href": "/series/orv-manhwa/",
+          "image": "./assets/covers/orv-manhwa.webp"
+        }
+      ]
+    }
+  ]
+}

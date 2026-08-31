@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://animeinpost.site/sitemap-series.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://animeinpost.site/sitemap-manhwa.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://animeinpost.site/sitemap-chapters.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://animeinpost.site/sitemap-novel.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://animeinpost.site/sitemap-static.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://animeinpost.site/one-piece-sitemap.xml</loc>
+    </sitemap>
+</sitemapindex>

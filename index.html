@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>AnimeInPost — Read Manga, Manhwa & Manhua Online</title>
+
+<meta name="description" content="Read manga, manhwa, and manhua online for free at AnimeInPost. Discover trending series, latest chapters, and daily updates in one place.">
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="bingbot" content="index, follow">
+
+<meta name="author" content="AnimeInPost">
+<meta name="application-name" content="AnimeInPost">
+<meta name="generator" content="AnimeInPost">
+
+<meta name="language" content="English">
+<meta http-equiv="content-language" content="en">
+
+<meta name="theme-color" content="#0f172a">
+<meta name="color-scheme" content="light dark">
+
+<meta name="format-detection" content="telephone=no">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="AnimeInPost">
+
+<link rel="canonical" href="https://animeinpost.site/">
+
+<link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+<link rel="shortcut icon" href="./assets/favicon.ico">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="manifest" href="./assets/manifest.json">
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="./assets/css/hero-carousel.css">
+<link rel="stylesheet" href="./assets/css/latest-chapters.css">
+<link rel="stylesheet" href="./assets/css/nav-panel.css">
+<link rel="stylesheet" href="./assets/css/desktop-layout.css">
+<link rel="stylesheet" href="./assets/css/skeleton.css">
+<link rel="stylesheet" href="./assets/css/trending-now.css">
+<link rel="stylesheet" href="./assets/css/popular.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AnimeInPost",
+  "url": "https://animeinpost.site"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AnimeInPost",
+  "url": "https://animeinpost.site",
+  "logo": "https://animeinpost.site/assets/logo.png"
+}
+</script>
+
+<style>
+:root{
+  --bg:#f5f7ff;
+  --card:#ffffff;
+  --header:#ffffff;
+  --border:#dcdcdc;
+  --text:#111;
+  --muted:#555;
+  --accent:#0077ff;
+  --accent-rgb: 0, 119, 255;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0a0b10;
+    --card:#121522;
+    --header:#0f111a;
+    --border:#1f2433;
+    --text:#fff;
+    --muted:#aaa;
+    --accent:#32e3ff;
+    --accent-rgb: 50, 227, 255;
+  }
+}
+:root.force-light{
+  --bg:#f5f7ff; --card:#ffffff; --header:#ffffff; --border:#dcdcdc;
+  --text:#111; --muted:#555; --accent:#0077ff; --accent-rgb: 0, 119, 255;
+}
+:root.force-dark{
+  --bg:#0a0b10; --card:#121522; --header:#0f111a; --border:#1f2433;
+  --text:#fff; --muted:#aaa; --accent:#32e3ff; --accent-rgb: 50, 227, 255;
+}
+body{ margin:0; font-family:Arial; background:var(--bg); color:var(--text); transition:0.3s ease; }
+
+/* Header is a fixed brand color (purple) regardless of light/dark theme,
+   matching the reference recording exactly. */
+header{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 16px; background:#903DE0; border-bottom:none;
+  position:relative;
+}
+.icon{ width:44px; height:44px; display:flex; align-items:center; justify-content:center; cursor:pointer; border-radius:50%; overflow:hidden; }
+.icon img{ width:38px; height:38px; object-fit:cover; }
+.brand{ font-weight:bold; color:var(--accent); font-size:16px; margin-left:2px; display:flex; align-items:center; gap:10px; white-space:nowrap; }
+.spacer{ flex:1; }
+
+.wrapper{ max-width:1200px; margin:auto; padding:16px; }
+
+.section-title{
+  font-size:15px; font-weight:bold; color:var(--text); margin:16px 0 10px; padding:0 16px;
+  display:flex; align-items:center; gap:8px; max-width:1200px; margin-left:auto; margin-right:auto;
+  box-sizing:border-box; position:relative; z-index:10;
+}
+
+@media(max-width:768px){
+  .icon{ position:relative; z-index:10; }
+  .brand{ font-size:14px; }
+}
+
+footer{
+  margin-top:30px; padding:20px; background:var(--card); border-top:1px solid var(--border);
+  display:flex; flex-wrap:wrap; justify-content:center; gap:12px; border-radius:18px 18px 0 0;
+}
+.footer-card{
+  background:var(--card); border:1px solid var(--border); color:var(--muted);
+  padding:10px 16px; border-radius:12px; font-size:13px; text-decoration:none; transition:0.2s ease;
+}
+.footer-card:hover{ transform:translateY(-3px); border-color:var(--accent); color:var(--text); box-shadow:0 6px 18px rgba(0,0,0,.12); }
+.copyright{
+  width:100%; text-align:center; margin-top:10px; padding:10px 14px; background:var(--card);
+  border:1px solid var(--border); border-radius:12px; font-size:12px; color:var(--muted);
+}
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 16px;
+  background:#903DE0;
+  border-bottom:none;
+}
+
+/* Logo — plain, no backing circle. Shared by the real header AND the
+   nav panel's own top row (both use the .header-logo class) so the two
+   stay pixel-identical. */
+.header-logo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  overflow:hidden;
+  text-decoration:none;
+  flex-shrink:0;
+}
+
+.header-logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.menu-btn{
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:none;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+  padding:0;
+}
+
+.menu-btn svg{
+  width:28px;
+  height:28px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="nav-panel-overlay" id="navPanelOverlay"></div>
+
+<div class="nav-panel" id="navPanel">
+  <div class="nav-panel-top">
+  <a href="/" class="header-logo">
+    <img src="./assets/logo.png" alt="AnimeInPost">
+  </a>
+
+  <button class="menu-btn" id="navPanelClose" aria-label="Close menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+      <path d="M18 6L6 18"/>
+      <path d="M6 6l12 12"/>
+    </svg>
+  </button>
+</div>
+
+  <div class="nav-search-wrap">
+    <div class="nav-search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="navSearchInput" placeholder="Search series...">
+    </div>
+    <div class="nav-search-results" id="navSearchResults"></div>
+  </div>
+
+  <div class="nav-grid">
+    <a href="/" class="nav-tile active">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M3 10.5L12 3l9 7.5"/>
+  <path d="M5 9.5V21h14V9.5"/>
+</svg></span>
+      Home
+    </a>
+    <a href="/bookmarks.html" class="nav-tile">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M6 3h12v18l-6-4-6 4V3z"/>
+</svg></span>
+      Bookmarks
+    </a>
+    <a href="/series/" class="nav-tile">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M2 5a3 3 0 0 1 3-3h7v18H5a3 3 0 0 0-3 3z"/>
+  <path d="M22 5a3 3 0 0 0-3-3h-7v18h7a3 3 0 0 1 3 3z"/>
+</svg></span>
+      Series
+    </a>
+  </div>
+
+  <div class="nav-section-label">Resources</div>
+  <div class="nav-grid">
+    <a href="./download.html" class="nav-tile">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M4 3h14a2 2 0 0 1 2 2v16H6a2 2 0 0 0-2 2V3z"/>
+</svg></span>
+      Ebooks
+    </a>
+    <a href="#" class="nav-tile">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M4 20V10"/>
+  <path d="M10 20V4"/>
+  <path d="M16 20v-7"/>
+  <path d="M22 20v-12"/>
+</svg></span>
+      Comics
+    </a>
+    <a href="#" class="nav-tile">
+      <span class="nav-tile-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-4 4-8z"/>
+  <path d="M12 14a3 3 0 1 0 3 3c0-1.5-1.5-3-3-3z"/>
+</svg></span>
+      Users
+    </a>
+  </div>
+</div>
+
+<header>
+  <a href="/" class="header-logo">
+    <img src="./assets/logo.png" alt="AnimeInPost">
+  </a>
+
+  <nav class="desktop-nav">
+    <a href="/" class="desktop-nav-link active">Home</a>
+    <a href="/series/" class="desktop-nav-link">Series</a>
+    <div class="desktop-nav-dropdown" id="resourcesDropdown">
+      <button type="button" class="desktop-nav-link desktop-nav-dropdown-btn" id="resourcesDropdownBtn">
+        Resources
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </button>
+      <div class="desktop-nav-dropdown-menu">
+        <a href="./download.html">Ebooks</a>
+        <a href="#">Comics</a>
+        <a href="#">Users</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="desktop-header-right">
+    <button type="button" class="desktop-search" id="desktopSearchTrigger" aria-label="Open search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" placeholder="Search" tabindex="-1" readonly>
+      <span class="desktop-search-kbd">Ctrl K</span>
+    </button>
+
+    <a href="/bookmarks.html" class="desktop-bookmark-btn" aria-label="Bookmarks">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 3h12v18l-6-4-6 4V3z"/>
+      </svg>
+    </a>
+  </div>
+
+  <button class="menu-btn" id="navPanelTrigger" aria-label="Open menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+      <path d="M3 6h18"/>
+      <path d="M3 12h18"/>
+      <path d="M3 18h18"/>
+    </svg>
+  </button>
+</header>
+
+<!-- Desktop search overlay (Ctrl/Cmd+K style) -->
+<div class="desktop-search-overlay" id="desktopSearchOverlay">
+  <div class="desktop-search-modal">
+    <div class="desktop-search-modal-input">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="desktopSearchModalInput" placeholder="Search comics and users...">
+      <button type="button" class="desktop-search-modal-esc" id="desktopSearchModalEsc">Esc</button>
+    </div>
+    <div class="desktop-search-modal-results" id="desktopSearchModalResults"></div>
+  </div>
+</div>
+
+<!-- ================= HERO CAROUSEL (NEW SECTION) ================= -->
+<section class="hero-carousel" id="heroCarousel">
+  <div class="hero-track" id="heroTrack"></div>
+  <div class="hero-dots" id="heroDots"></div>
+</section>
+
+<!-- TRENDING NOW (JSON-driven) -->
+<section class="tn-section" id="trendingNow">
+  <div class="tn-head">
+    <div class="tn-head-left">
+      <span class="tn-skel-badge skel"></span>
+      <span class="tn-skel-heading skel"></span>
+    </div>
+    <span class="tn-skel-cta skel"></span>
+  </div>
+  <div class="tn-scroll">
+    <div class="tn-card"><div class="tn-skel-cover skel"></div><div class="tn-skel-line skel"></div><div class="tn-skel-line short skel"></div></div>
+    <div class="tn-card"><div class="tn-skel-cover skel"></div><div class="tn-skel-line skel"></div><div class="tn-skel-line short skel"></div></div>
+    <div class="tn-card"><div class="tn-skel-cover skel"></div><div class="tn-skel-line skel"></div><div class="tn-skel-line short skel"></div></div>
+    <div class="tn-card"><div class="tn-skel-cover skel"></div><div class="tn-skel-line skel"></div><div class="tn-skel-line short skel"></div></div>
+    <div class="tn-card"><div class="tn-skel-cover skel"></div><div class="tn-skel-line skel"></div><div class="tn-skel-line short skel"></div></div>
+    <div class="tn-card"><div class="tn-skel-cover skel"></div><div class="tn-skel-line skel"></div><div class="tn-skel-line short skel"></div></div>
+  </div>
+</section>
+
+<!-- Card-shaped divider between Trending Now and Latest Chapters -->
+<div class="tn-section-divider" aria-hidden="true">
+  <div class="tn-section-divider-bar"></div>
+</div>
+
+<!-- LATEST CHAPTERS (dark row-list, data-driven) -->
+<h1 class="section-title">Latest Chapters</h1>
+<div class="wrapper">
+  <div class="latest-chapters" id="latestChapters">
+    <!-- rendered by ./assets/js/latest-chapters.js from data/latest-chapters.json -->
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:70%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:65%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:75%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:60%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:72%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:68%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:80%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:63%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:77%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:66%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:71%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:69%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:74%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:62%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:78%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:64%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:73%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:67%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:76%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+    <div class="lc-row"><div class="lc-cover skel"></div><div class="lc-body"><div class="tn-skel-line skel" style="width:61%;height:14px;margin-top:0"></div><div class="tn-skel-line skel" style="width:45%"></div><div class="tn-skel-line skel" style="width:55%"></div></div></div>
+  </div>
+  <div class="lc-pagination" id="latestChaptersPagination">
+    <!-- numbered pill controls: ‹ 1 2 3 4 5 › -->
+  </div>
+</div>
+
+<!-- POPULAR (JSON-driven, Weekly/Monthly/All tabs) -->
+<section class="pop-section" id="popular">
+  <div class="pop-skel-heading skel"></div>
+  <div class="pop-skel-tabs skel"></div>
+  <div class="pop-divider"></div>
+  <div class="pop-skel-row"><div class="pop-skel-cover skel"></div><div class="pop-skel-body"><div class="pop-skel-line skel"></div><div class="pop-skel-line short skel"></div></div></div>
+  <div class="pop-skel-row"><div class="pop-skel-cover skel"></div><div class="pop-skel-body"><div class="pop-skel-line skel"></div><div class="pop-skel-line short skel"></div></div></div>
+  <div class="pop-skel-row"><div class="pop-skel-cover skel"></div><div class="pop-skel-body"><div class="pop-skel-line skel"></div><div class="pop-skel-line short skel"></div></div></div>
+  <div class="pop-skel-row"><div class="pop-skel-cover skel"></div><div class="pop-skel-body"><div class="pop-skel-line skel"></div><div class="pop-skel-line short skel"></div></div></div>
+  <div class="pop-skel-row"><div class="pop-skel-cover skel"></div><div class="pop-skel-body"><div class="pop-skel-line skel"></div><div class="pop-skel-line short skel"></div></div></div>
+</section>
+
+<footer>
+  <a class="footer-card" href="/about.html">About Us</a>
+  <a class="footer-card" href="/donate.html">Support </a>
+  <a class="footer-card" href="/contact.html">Contact</a>
+  <div class="copyright">
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px;">
+    <circle cx="12" cy="12" r="9"/>
+    <path d="M15 9a4 4 0 1 0 0 6"/>
+  </svg>
+  2026 AnimeInPost — All rights reserved
+</div>
+</footer>
+
+<!-- Hero carousel engine — fetches data/hero-slides.json -->
+<script src="./assets/js/hero-carousel.js"></script>
+
+<!-- Time-ago engine (must load before latest-chapters.js) -->
+<script src="./assets/js/time-ago.js"></script>
+
+<!-- Latest chapters engine — fetches data/latest-chapters.json -->
+<script src="./assets/js/latest-chapters.js"></script>
+
+<!-- Trending Now engine — fetches data/trending.json -->
+<script src="./assets/js/trending-now.js"></script>
+
+<!-- Popular engine — fetches data/popular.json -->
+<script src="./assets/js/popular.js"></script>
+
+<!-- Search module (must load before nav-panel.js) -->
+<script src="./assets/js/search.js"></script>
+<script>
+  initSearch({
+    inputSelector: "#navSearchInput",
+    resultsSelector: "#navSearchResults",
+    dataUrl: "./data/search-index.json",
+    seeAllUrl: "/series/"
+  });
+
+  // Trending Now (JSON-driven "Trending Comics" style row).
+  // Rating/chapter numbers are refreshed live from /meta right after
+  // the cached list paints — see trending-now.js.
+  initTrendingNow({
+    rootSelector: "#trendingNow",
+    dataUrl: "./data/trending.json",
+    metaDir: "./meta/"
+  });
+
+  // Popular (JSON-driven, Weekly/Monthly/All tabs).
+  // Rating is refreshed live from /meta right after the cached list
+  // paints — see popular.js.
+  initPopular({
+    rootSelector: "#popular",
+    dataUrl: "./data/popular.json",
+    metaDir: "./meta/"
+  });
+
+  // Desktop search overlay (Ctrl/Cmd+K style, 769px+)
+  const desktopSearchEmptyState = `
+    <div class="search-empty-state">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <p>Enter at least 3 characters to search.</p>
+    </div>
+  `;
+
+  const desktopSearch = initSearch({
+    inputSelector: "#desktopSearchModalInput",
+    resultsSelector: "#desktopSearchModalResults",
+    dataUrl: "./data/search-index.json",
+    seeAllUrl: "/series/",
+    emptyStateHtml: desktopSearchEmptyState
+  });
+
+  const desktopSearchTrigger = document.getElementById("desktopSearchTrigger");
+  const desktopSearchOverlay = document.getElementById("desktopSearchOverlay");
+  const desktopSearchModal = desktopSearchOverlay
+    ? desktopSearchOverlay.querySelector(".desktop-search-modal")
+    : null;
+  const desktopSearchEsc = document.getElementById("desktopSearchModalEsc");
+
+  function openDesktopSearch() {
+    if (!desktopSearchOverlay) return;
+    desktopSearchOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+    if (desktopSearch) desktopSearch.reset();
+    // Focus after the overlay is visible so the click that opened it
+    // doesn't immediately blur the input.
+    requestAnimationFrame(() => {
+      if (desktopSearch) desktopSearch.focus();
+    });
+  }
+
+  function closeDesktopSearch() {
+    if (!desktopSearchOverlay) return;
+    desktopSearchOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  if (desktopSearchTrigger) {
+    desktopSearchTrigger.addEventListener("click", openDesktopSearch);
+  }
+
+  if (desktopSearchEsc) {
+    desktopSearchEsc.addEventListener("click", closeDesktopSearch);
+  }
+
+  if (desktopSearchOverlay) {
+    // Click on the dimmed backdrop (not the modal itself) closes it.
+    desktopSearchOverlay.addEventListener("click", (e) => {
+      if (desktopSearchModal && !desktopSearchModal.contains(e.target)) {
+        closeDesktopSearch();
+      }
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    const isOpen = desktopSearchOverlay && desktopSearchOverlay.classList.contains("active");
+
+    if (isOpen && e.key === "Escape") {
+      closeDesktopSearch();
+      return;
+    }
+
+    // Ctrl+K / Cmd+K opens the overlay from anywhere (desktop only —
+    // the trigger button itself is hidden below 769px via CSS).
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+      if (desktopSearchTrigger && desktopSearchTrigger.offsetParent !== null) {
+        e.preventDefault();
+        openDesktopSearch();
+      }
+    }
+  });
+
+  // Resources dropdown toggle (desktop nav)
+  const resourcesDropdown = document.getElementById("resourcesDropdown");
+  const resourcesDropdownBtn = document.getElementById("resourcesDropdownBtn");
+  if (resourcesDropdown && resourcesDropdownBtn) {
+    resourcesDropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      resourcesDropdown.classList.toggle("open");
+    });
+    document.addEventListener("click", (e) => {
+      if (!resourcesDropdown.contains(e.target)) {
+        resourcesDropdown.classList.remove("open");
+      }
+    });
+  }
+</script>
+
+<!-- Nav panel: opens on icon click, wires search input -->
+<script src="./assets/js/nav-panel.js"></script>
+
+</body>
+</html>

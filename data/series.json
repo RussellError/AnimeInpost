@@ -1,0 +1,660 @@
+{
+  "total": 100,
+  "series": [
+  
+ 
+
+
+{
+  "slug": "weapon-maker",
+  "title": "Weapon Maker",
+  "cover": "/assets/covers/weapon-maker.webp",
+  "badge": null
+},
+{
+  "slug": "mookhyang-the-origin",
+  "title": "Mookhyang: The Origin",
+  "cover": "/assets/covers/mookhyang-the-origin.webp",
+  "badge": null
+},
+{
+  "slug": "i-shall-live-as-a-prince",
+  "title": "I Shall Live as a Prince",
+  "cover": "/assets/covers/i-shall-live-as-a-prince.webp",
+  "badge": null
+},
+{
+  "slug": "return-of-the-8th-class-magician",
+  "title": "Return of the 8th Class Magician",
+  "cover": "/assets/covers/return-of-the-8th-class-magician.webp",
+  "badge": null
+},
+{
+  "slug": "i-grow-stronger-by-eating",
+  "title": "I Grow Stronger by Eating",
+  "cover": "/assets/covers/i-grow-stronger-by-eating.webp",
+  "badge": null
+},
+{
+  "slug": "heavenly-demon-instructor",
+  "title": "Heavenly Demon Instructor",
+  "cover": "/assets/covers/heavenly-demon-instructor.webp",
+  "badge": null
+},
+{
+  "slug": "never-die-extra",
+  "title": "Never Die Extra",
+  "cover": "/assets/covers/never-die-extra.webp",
+  "badge": null
+},
+{
+  "slug": "of-all-things-i-became-a-crow",
+  "title": "Of All Things, I Became a Crow",
+  "cover": "/assets/covers/of-all-things-i-became-a-crow.webp",
+  "badge": null
+},
+{
+  "slug": "ill-be-taking-a-break-for-personal-reasons",
+  "title": "I'll Be Taking a Break for Personal Reasons",
+  "cover": "/assets/covers/ill-be-taking-a-break-for-personal-reasons.webp",
+  "badge": null
+},
+{
+  "slug": "devil-returns-to-school-days",
+  "title": "Devil Returns to School Days",
+  "cover": "/assets/covers/devil-returns-to-school-days.webp",
+  "badge": null
+},
+{
+  "slug": "my-school-life-pretending-to-be-a-worthless-person",
+  "title": "My School Life Pretending to Be a Worthless Person",
+  "cover": "/assets/covers/my-school-life-pretending-to-be-a-worthless-person.webp",
+  "badge": null
+},
+{
+  "slug": "reincarnated-escort-warrior",
+  "title": "Reincarnated Escort Warrior",
+  "cover": "/assets/covers/reincarnated-escort-warrior.webp",
+  "badge": null
+},
+{
+  "slug": "the-tutorial-tower-of-the-advanced-player",
+  "title": "The Tutorial Tower of the Advanced Player",
+  "cover": "/assets/covers/the-tutorial-tower-of-the-advanced-player.webp",
+  "badge": null
+},
+
+{
+      "slug": "return-of-the-unrivaled-spear-knight",
+      "title": "Return of the Unrivaled Spear Knight",
+      "cover": "/assets/covers/return-of-the-unrivaled-spear-knight.webp",
+      "badge": null
+    },
+    
+    {
+      "slug": "regressor-of-the-fallen-family",
+      "title": "Regressor of the Fallen Family",
+      "cover": "/assets/covers/regressor-of-the-fallen-family.webp",
+      "badge": null
+    },
+    
+    {
+      "slug": "a-dragonslayers-peerless-regression",
+      "title": "A Dragonslayer's Peerless Regression",
+      "cover": "/assets/covers/a-dragonslayers-peerless-regression.webp",
+      "badge": null
+    },
+    
+    {
+      "slug": "player-who-returned-10000-years-later",
+      "title": "Player Who Returned 10,000 Years Later",
+      "cover": "/assets/covers/player-who-returned-10000-years-later.webp",
+      "badge": null
+    },
+    
+    {
+      "slug": "surviving-as-a-genius-on-borrowed-time",
+      "title": "Surviving as a Genius on Borrowed Time",
+      "cover": "/assets/covers/surviving-as-a-genius-on-borrowed-time.webp",
+      "badge": null
+    },
+
+
+{
+      "slug": "childhood-friend-of-the-zenith",
+      "title": "Childhood Friend of The Zenith",
+      "cover": "/assets/covers/childhood-friend-of-the-zenith.webp",
+      "badge": null
+    },
+    
+    
+    
+
+{
+      "slug": "the-academys-sashimi-sword-master",
+      "title": "The Academy’s Sashimi Sword Master",
+      "cover": "/assets/covers/the-academys-sashimi-sword-master.webp",
+      "badge": null
+    },
+    
+    
+    
+    {
+      "slug": "level-999-goblin",
+      "title": "Level 999 Goblin",
+      "cover": "/assets/covers/level-999-goblin.webp",
+      "badge": null
+    },
+
+
+{
+      "slug": "im-not-a-regressor",
+      "title": "I'm Not a Regressor",
+      "cover": "/assets/covers/im-not-a-regressor.webp",
+      "badge": null
+    },
+
+
+
+
+{
+      "slug": "i-killed-an-academy-player",
+      "title": "I Killed an Academy Player",
+      "cover": "/assets/covers/i-killed-an-academy-player.webp",
+      "badge": null
+    },
+
+
+
+{
+      "slug": "breakers",
+      "title": "Breakers",
+      "cover": "/assets/covers/breakers.webp",
+      "badge": null
+    },
+
+
+{
+      "slug": "solo-farming-in-the-tower",
+      "title": "Solo Farming In The Tower",
+      "cover": "/assets/covers/solo-farming-in-the-tower.webp",
+      "badge": null
+    },
+
+
+
+{
+      "slug": "what-a-bountiful-harvest-demon-lord",
+      "title": "What a Bountiful Harvest, Demon Lord!",
+      "cover": "/assets/covers/what-a-bountiful-harvest-demon-lord.webp",
+      "badge": null
+    },
+
+
+{
+      "slug": "terminally-ill-genius-dark-knight",
+      "title": "Terminally-Ill Genius Dark Knight",
+      "cover": "/assets/covers/terminally-ill-genius-dark-knight.webp",
+      "badge": null
+    }, 
+  
+  
+  
+  
+  
+  {
+      "slug": "overgeared",
+      "title": "Overgeared",
+      "cover": "/assets/covers/overgeared.webp",
+      "badge": null
+    },
+    
+    
+    {
+      "slug": "infinite-mage",
+      "title": "Infinite Mage",
+      "cover": "/assets/covers/infinite-mage.webp",
+      "badge": null
+    },
+    
+    
+    {
+      "slug": "return-of-the-mount-hua-sect",
+      "title": "Return of the Mount Hua Sect",
+      "cover": "/assets/covers/return-of-the-mount-hua-sect.webp",
+      "badge": null
+    },
+  
+  {
+      "slug": "shadow-slave",
+      "title": "Shadow Slave",
+      "cover": "/assets/covers/shadow-slave.webp",
+      "badge": null
+    },
+    
+  
+
+{
+      "slug": "the-knight-king-who-returned-with-a-god",
+      "title": "The Knight King Who Returned with a God",
+      "cover": "/assets/covers/the-knight-king-who-returned-with-a-god.webp",
+      "badge": null
+    },
+
+  
+  
+  
+  
+  {
+      "slug": "a-villains-will-to-survive",
+      "title": "A Villain's Will to Survive",
+      "cover": "/assets/covers/a-villains-will-to-survive.webp",
+      "badge": null
+    },
+  
+  
+  
+  
+  
+  
+  
+  
+    {
+      "slug": "a-million-sub-gym-influencer-becomes-a-webtoon-loser",
+      "title": "A Million-Sub Gym Influencer Becomes a Webtoon Loser?",
+      "cover": "/assets/covers/a-million-sub-gym-influencer-becomes-a-webtoon-loser.webp",
+      "badge": null
+    },
+    {
+      "slug": "bloodhounds-regression-instinct",
+      "title": "Bloodhound's Regression Instinct",
+      "cover": "/assets/covers/bloodhounds-regression-instinct.webp",
+      "badge": null
+    },
+    {
+      "slug": "absolute-necromancer",
+      "title": "Absolute Necromancer",
+      "cover": "/assets/covers/absolute-necromancer.webp",
+      "badge": null
+    },
+    {
+      "slug": "bones",
+      "title": "Bones",
+      "cover": "/assets/covers/bones.webp",
+      "badge": null
+    },
+    {
+      "slug": "male-god-your-persona-has-collapsed",
+      "title": "Male God, Your Persona Has Collapsed!",
+      "cover": "/assets/covers/male-god-your-persona-has-collapsed.webp",
+      "badge": null
+    },
+    {
+      "slug": "sss-class-suicide-hunter",
+      "title": "SSS-Class Suicide Hunter",
+      "cover": "/assets/covers/sss-class-suicide-hunter.webp",
+      "badge": null
+    },
+    {
+      "slug": "superhuman-battlefield",
+      "title": "Superhuman Battlefield",
+      "cover": "/assets/covers/superhuman-battlefield.webp",
+      "badge": null
+    },
+    {
+      "slug": "boundless-necromancer",
+      "title": "Boundless Necromancer",
+      "cover": "/assets/covers/boundless-necromancer.webp",
+      "badge": null
+    },
+    {
+      "slug": "insanely-talented-player",
+      "title": "Insanely-Talented Player",
+      "cover": "/assets/covers/insanely-talented-player.webp",
+      "badge": null
+    },
+    {
+      "slug": "my-fake-girlfriends-are-using-me-as-a-shield",
+      "title": "My Fake Girlfriends Are Using Me as a Shield",
+      "cover": "/assets/covers/my-fake-girlfriends-are-using-me-as-a-shield.webp",
+      "badge": null
+    },
+    {
+      "slug": "heavenly-inquisition-sword",
+      "title": "Heavenly Inquisition Sword",
+      "cover": "/assets/covers/heavenly-inquisition-sword.webp",
+      "badge": null
+    },
+    {
+      "slug": "trait-hoarder",
+      "title": "Trait Hoarder",
+      "cover": "/assets/covers/trait-hoarder.webp",
+      "badge": null
+    },
+    {
+      "slug": "the-last-adventurer",
+      "title": "The Last Adventurer",
+      "cover": "/assets/covers/the-last-adventurer.webp",
+      "badge": null
+    },
+    {
+      "slug": "the-hero-starts-over-at-the-academy",
+      "title": "The Hero Starts Over at the Academy",
+      "cover": "/assets/covers/the-hero-starts-over-at-the-academy.webp",
+      "badge": null
+    },
+    {
+      "slug": "return-of-the-sss-class-ranker",
+      "title": "Return of the SSS-Class Ranker",
+      "cover": "/assets/covers/return-of-the-sss-class-ranker.webp",
+      "badge": null
+    },
+    {
+      "slug": "return-of-the-apocalypse-class-death-knight",
+      "title": "Return of the Apocalypse-Class Death Knight",
+      "cover": "/assets/covers/return-of-the-apocalypse-class-death-knight.webp",
+      "badge": null
+    },
+    {
+      "slug": "kidnapped-dragons",
+      "title": "Kidnapped Dragons",
+      "cover": "/assets/covers/kidnapped-dragons.webp",
+      "badge": null
+    },
+    {
+      "slug": "dragon-devouring-mage",
+      "title": "Dragon-Devouring Mage",
+      "cover": "/assets/covers/dragon-devouring-mage.webp",
+      "badge": null
+    },
+    {
+      "slug": "star-embracing-swordmaster",
+      "title": "Star-Embracing Swordmaster",
+      "cover": "/assets/covers/star-embracing-swordmaster.webp",
+      "badge": null
+    },
+    {
+      "slug": "dungeon-odyssey",
+      "title": "Dungeon Odyssey",
+      "cover": "/assets/covers/dungeon-odyssey.webp",
+      "badge": null
+    },
+    {
+      "slug": "absolute-sword-sense",
+      "title": "Absolute Sword Sense",
+      "cover": "/assets/covers/absolute-sword-sense.webp",
+      "badge": null
+    },
+    {
+      "slug": "orv-manhwa",
+      "title": "Omniscient Reader's Viewpoint",
+      "cover": "/assets/covers/orv-manhwa.webp",
+      "badge": null
+    },
+    {
+      "slug": "solo-leveling-ragnarok-manhwa",
+      "title": "Solo Leveling: Ragnarok",
+      "cover": "/assets/covers/solo-leveling-ragnarok.webp",
+      "badge": null
+    },
+    {
+      "slug": "orv",
+      "title": "Omniscient Reader's Viewpoint Novel",
+      "cover": "/assets/covers/orv.webp",
+      "badge": "novel"
+    },
+    {
+      "slug": "urek-mazino",
+      "title": "Urek Mazino",
+      "cover": "/assets/covers/urek-mazino.webp",
+      "badge": null
+    },
+    {
+      "slug": "tower-of-god",
+      "title": "Tower of God",
+      "cover": "/assets/covers/tower-of-god.webp",
+      "badge": null
+    },
+    {
+      "slug": "lookism",
+      "title": "Lookism",
+      "cover": "/assets/covers/lookism.webp",
+      "badge": null
+    },
+    {
+      "slug": "i-am-the-fated-villain",
+      "title": "I Am The Fated Villain",
+      "cover": "/assets/covers/i-am-the-fated-villain.webp",
+      "badge": null
+    },
+    {
+      "slug": "twate-manhwa",
+      "title": "The World After The End",
+      "cover": "/assets/covers/twate-manhwa.webp",
+      "badge": null
+    },
+    {
+      "slug": "eleceed",
+      "title": "Eleceed",
+      "cover": "/assets/covers/eleceed.webp",
+      "badge": null
+    },
+    {
+      "slug": "the-beginning-after-the-end",
+      "title": "The Beginning After The End",
+      "cover": "/assets/covers/the-beginning-after-the-end.webp",
+      "badge": null
+    },
+    {
+      "slug": "one-piece-manga",
+      "title": "One Piece",
+      "cover": "/assets/covers/one-piece.webp",
+      "badge": null
+    },
+    {
+      "slug": "one-piece",
+      "title": "One Piece Volume",
+      "cover": "/assets/covers/one-piece-vol.webp",
+      "volumes": 100,
+      "badge": "volume"
+    },
+    {
+      "slug": "cont",
+      "title": "Omniscient Reader's Viewpoint: Sequel",
+      "cover": "/assets/covers/cont.webp",
+      "badge": "novel"
+    },
+    {
+      "slug": "side",
+      "title": "Omniscient Reader's Viewpoint: Side Story",
+      "cover": "/assets/covers/side.webp",
+      "badge": "novel"
+    },
+    {
+      "slug": "solo-leveling",
+      "title": "Solo Leveling",
+      "cover": "/assets/covers/solo-leveling.webp",
+      "badge": null
+    },
+    {
+      "slug": "logging-10000-years-into-the-future",
+      "title": "Logging 10,000 Years into the Future",
+      "cover": "/assets/covers/logging-10000-years-into-the-future.webp",
+      "badge": null
+    },
+    {
+      "slug": "the-regressed-son-of-a-duke-is-an-assassin",
+      "title": "The Regressed Son of a Duke is an Assassin",
+      "cover": "/assets/covers/the-regressed-son-of-a-duke-is-an-assassin.webp",
+      "badge": null
+    },
+    {
+      "slug": "nano-machine",
+      "title": "Nano Machine",
+      "cover": "/assets/covers/nano-machine.webp",
+      "badge": null
+    },
+    {
+      "slug": "the-priest-of-corruption",
+      "title": "The Priest of Corruption",
+      "cover": "/assets/covers/the-priest-of-corruption.webp",
+      "badge": null
+    },
+    {
+      "slug": "top-tier-providence",
+      "title": "Top Tier Providence",
+      "cover": "/assets/covers/top-tier-providence.webp",
+      "badge": null
+    },
+    {
+      "slug": "the-swordmasters-youngest-son",
+      "title": "The Swordmaster's Youngest Son",
+      "cover": "/assets/covers/the-swordmasters-youngest-son.webp",
+      "badge": null
+    },
+    {
+      "slug": "regressor-instruction-manual",
+      "title": "Regressor Instruction Manual",
+      "cover": "/assets/covers/regressor-instruction-manual.webp",
+      "badge": null
+    },
+    {
+      "slug": "pick-me-up-infinite-gacha",
+      "title": "Pick Me Up, Infinite Gacha",
+      "cover": "/assets/covers/pick-me-up-infinite-gacha.webp",
+      "badge": null
+    },
+    {
+      "slug": "30-years-since-the-prologue",
+      "title": "30 Years Since the Prologue",
+      "cover": "/assets/covers/30-years-since-the-prologue.webp",
+      "badge": null
+    },
+    {
+      "slug": "a-painter-who-draws-dungeons",
+      "title": "A Painter Who Draws Dungeons",
+      "cover": "/assets/covers/a-painter-who-draws-dungeons.webp",
+      "badge": null
+    },
+    {
+      "slug": "a-regressors-tale-of-cultivation",
+      "title": "A Regressor's Tale of Cultivation",
+      "cover": "/assets/covers/a-regressors-tale-of-cultivation.webp",
+      "badge": null
+    },
+    {
+      "slug": "academys-genius-swordmaster",
+      "title": "Academy's Genius Swordmaster",
+      "cover": "/assets/covers/academys-genius-swordmaster.webp",
+      "badge": null
+    },
+    {
+      "slug": "boruto-two-blue-vortex",
+      "title": "Boruto: Two Blue Vortex",
+      "cover": "/assets/covers/boruto-two-blue-vortex.webp",
+      "badge": null
+    },
+    {
+      "slug": "eternally-regressing-knight",
+      "title": "Eternally Regressing Knight",
+      "cover": "/assets/covers/eternally-regressing-knight.webp",
+      "badge": null
+    },
+    {
+      "slug": "god-of-martial-arts",
+      "title": "God of Martial Arts",
+      "cover": "/assets/covers/god-of-martial-arts.webp",
+      "badge": null
+    },
+    {
+      "slug": "got-dropped-into-a-ghost-story-still-gotta-work",
+      "title": "Got Dropped into a Ghost Story, Still Gotta Work",
+      "cover": "/assets/covers/got-dropped-into-a-ghost-story-still-gotta-work.webp",
+      "badge": null
+    },
+    {
+      "slug": "i-was-mistaken-as-a-monstrous-genius-actor",
+      "title": "I Was Mistaken As a Monstrous Genius Actor",
+      "cover": "/assets/covers/i-was-mistaken-as-a-monstrous-genius-actor.webp",
+      "badge": null
+    },
+    {
+      "slug": "invincible-in-the-apocalypse",
+      "title": "Invincible in the Apocalypse",
+      "cover": "/assets/covers/invincible-in-the-apocalypse.webp",
+      "badge": null
+    },
+    {
+      "slug": "is-it-bad-that-the-main-characters-a-roleplayer",
+      "title": "Is It Bad That the Main Character's a Roleplayer?",
+      "cover": "/assets/covers/is-it-bad-that-the-main-characters-a-roleplayer.webp",
+      "badge": null
+    },
+    {
+      "slug": "magic-emperor",
+      "title": "Magic Emperor",
+      "cover": "/assets/covers/magic-emperor.webp",
+      "badge": null
+    },
+    {
+      "slug": "manager-kim",
+      "title": "Manager Kim",
+      "cover": "/assets/covers/manager-kim.webp",
+      "badge": null
+    },
+    {
+      "slug": "my-slain-dragon-bride",
+      "title": "My Slain Dragon Bride",
+      "cover": "/assets/covers/my-slain-dragon-bride.webp",
+      "badge": null
+    },
+    {
+      "slug": "perhaps-invincible",
+      "title": "Perhaps Invincible",
+      "cover": "/assets/covers/perhaps-invincible.webp",
+      "badge": null
+    },
+    {
+      "slug": "revenge-of-the-iron-blooded-sword-hound",
+      "title": "Revenge of the Iron-Blooded Sword Hound",
+      "cover": "/assets/covers/revenge-of-the-iron-blooded-sword-hound.webp",
+      "badge": null
+    },
+    {
+      "slug": "solo-max-level-newbie",
+      "title": "Solo Max-Level Newbie",
+      "cover": "/assets/covers/solo-max-level-newbie.webp",
+      "badge": null
+    },
+    {
+      "slug": "star-instructor-master-baek",
+      "title": "Star Instructor, Master Baek",
+      "cover": "/assets/covers/star-instructor-master-baek.webp",
+      "badge": null
+    },
+    {
+      "slug": "the-executioner",
+      "title": "The Executioner",
+      "cover": "/assets/covers/the-executioner.webp",
+      "badge": null
+    },
+    {
+      "slug": "the-extras-academy-survival-guide",
+      "title": "The Extra's Academy Survival Guide",
+      "cover": "/assets/covers/the-extras-academy-survival-guide.webp",
+      "badge": null
+    },
+    {
+      "slug": "the-greatest-estate-developer",
+      "title": "The Greatest Estate Developer",
+      "cover": "/assets/covers/the-greatest-estate-developer.webp",
+      "badge": null
+    },
+    {
+      "slug": "the-max-level-players-100th-regression",
+      "title": "The Max-Level Player's 100th Regression",
+      "cover": "/assets/covers/the-max-level-players-100th-regression.webp",
+      "badge": null
+    }
+  ]
+}

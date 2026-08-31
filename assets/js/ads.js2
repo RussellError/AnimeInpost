@@ -1,0 +1,137 @@
+(function () {
+
+    /* =========================================================
+       1. HOSTINGER BANNER
+       ========================================================= */
+
+    const reactionsBlock = document.querySelector(".rc-reactions-block");
+
+    if (reactionsBlock && !document.querySelector(".hostinger-banner-ad")) {
+
+        const banner = document.createElement("div");
+
+        banner.className = "hostinger-banner-ad";
+
+        banner.style.cssText = `
+            display:block !important;
+            position:relative !important;
+            width:100% !important;
+            max-width:1000px !important;
+            padding-top:25% !important;
+            margin:20px auto !important;
+            overflow:hidden !important;
+            box-sizing:border-box !important;
+            z-index:1 !important;
+        `;
+
+        banner.innerHTML = `
+            <a href="https://www.hostinger.com/bd?REFERRALCODE=asuracomix"
+               target="_blank"
+               rel="nofollow sponsored noopener"
+               style="
+                   display:block !important;
+                   position:absolute !important;
+                   top:0 !important;
+                   left:0 !important;
+                   width:100% !important;
+                   height:100% !important;
+               ">
+                <img
+                    src="https://animeinpost.site/assets/misc/banner.png"
+                    alt="Advertisement"
+                    style="
+                        display:block !important;
+                        position:absolute !important;
+                        top:0 !important;
+                        left:0 !important;
+                        width:100% !important;
+                        height:100% !important;
+                        object-fit:cover !important;
+                    "
+                >
+            </a>
+        `;
+
+        reactionsBlock.insertAdjacentElement("afterend", banner);
+
+        console.log("ADS: Hostinger banner inserted");
+    }
+
+
+    /* =========================================================
+       2. EFFECTIVE CPM SOCIAL BAR
+       ========================================================= */
+
+    const socialBarZone = "11250371";
+    const socialBarSrc = "https://nap5k.com/tag.min.js";
+
+    if (!document.querySelector('script[data-zone="' + socialBarZone + '"]')) {
+
+        const target = [document.documentElement, document.body].filter(Boolean).pop();
+        const socialBar = target.appendChild(document.createElement("script"));
+
+        socialBar.dataset.zone = socialBarZone;
+        socialBar.src = socialBarSrc;
+
+        socialBar.onload = function () {
+            console.log("ADS: Social bar loaded");
+        };
+
+        socialBar.onerror = function () {
+            console.error("ADS: Social bar failed to load");
+        };
+    }
+
+
+    /* =========================================================
+       3. END-OF-PAGE EFFECTIVE CPM AD
+       ========================================================= */
+
+    const endAdId =
+        "container-465da2d3b057511071e4e0bafedb1b93";
+
+    if (!document.getElementById(endAdId)) {
+
+        const wrapper = document.createElement("div");
+
+        wrapper.className = "effective-cpm-end-ad";
+
+        wrapper.style.cssText = `
+            display:block !important;
+            width:100% !important;
+            max-width:1000px !important;
+            min-height:50px !important;
+            margin:30px auto !important;
+            text-align:center !important;
+            overflow:hidden !important;
+        `;
+
+        const container = document.createElement("div");
+
+        container.id = endAdId;
+
+        wrapper.appendChild(container);
+
+        document.body.appendChild(wrapper);
+
+
+        const endAdScript = document.createElement("script");
+
+        endAdScript.async = true;
+        endAdScript.setAttribute("data-cfasync", "false");
+
+        endAdScript.src =
+            "https://pl30136701.effectivecpmnetwork.com/465da2d3b057511071e4e0bafedb1b93/invoke.js";
+
+        endAdScript.onload = function () {
+            console.log("ADS: End ad loaded");
+        };
+
+        endAdScript.onerror = function () {
+            console.error("ADS: End ad failed to load");
+        };
+
+        wrapper.appendChild(endAdScript);
+    }
+
+})();

@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#0a0910"><title>Log In - AnimeInPost</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0910;--bg2:#12101a;--card:rgba(21,19,29,.86);
+  --field:rgba(38,35,48,.78);--line:rgba(255,255,255,.085);
+  --text:#f8f7fb;--muted:#9d99a8;--dim:#696574;
+  --purple:#a43cff;--purple2:#7d35f2;
+}
+html,body{min-height:100%;background:var(--bg)}
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--text);overflow-x:hidden;
+  background:
+    radial-gradient(ellipse at 50% -8%,rgba(143,46,239,.11),transparent 38%),
+    repeating-linear-gradient(135deg,rgba(255,255,255,.018) 0,rgba(255,255,255,.018) 1px,transparent 1px,transparent 78px),
+    linear-gradient(180deg,#0d0b13 0%,#0a0910 100%);
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 50% 55%,transparent 30%,rgba(0,0,0,.27) 100%);
+}
+.auth-page{min-height:100vh;display:flex;justify-content:center;padding:46px 18px 56px}
+.shell{width:min(100%,690px);position:relative}
+.hero{text-align:center;margin-bottom:34px}
+.logo{
+  width:104px;height:104px;object-fit:contain;display:block;margin:0 auto 17px;
+  filter:drop-shadow(0 8px 18px rgba(49,188,255,.09));
+}
+.welcome{
+  color:#fff;font-size:clamp(38px,7vw,57px);font-weight:950;
+  line-height:.98;letter-spacing:-2px;text-transform:uppercase;
+  text-shadow:0 4px 22px rgba(255,255,255,.06)
+}
+.brand{
+  margin-top:12px;color:#a83df0;font-size:clamp(42px,8vw,62px);
+  font-weight:950;letter-spacing:-2.8px;line-height:1;
+  text-shadow:0 0 26px rgba(164,60,255,.16)
+}
+.divider{width:124px;height:17px;margin:16px auto 13px;position:relative}
+.divider:before{
+  content:"";position:absolute;left:0;right:0;top:8px;height:1.5px;
+  background:linear-gradient(90deg,transparent,#9836ec 22%,#b35aff 50%,#9836ec 78%,transparent)
+}
+.divider:after{
+  content:"";position:absolute;width:12px;height:12px;left:50%;top:2px;
+  transform:translateX(-50%) rotate(45deg);background:#a43cff;
+  box-shadow:0 0 18px rgba(164,60,255,.65)
+}
+.subtitle{font-size:16.5px;color:#aaa6b4;font-weight:500}
+.card{
+  position:relative;border:1px solid var(--line);border-radius:27px;
+  background:linear-gradient(145deg,rgba(30,28,38,.91),rgba(17,16,24,.89));
+  box-shadow:0 28px 75px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.035);
+  padding:39px 48px 36px;backdrop-filter:blur(18px);overflow:hidden
+}
+.card:before{
+  content:"";position:absolute;left:10%;right:10%;top:-1px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(190,133,255,.34),transparent)
+}
+.group{margin-bottom:21px}
+.label{display:block;margin-bottom:9px;font-size:15.5px;font-weight:650;color:#e6e3eb}
+.wrap{position:relative}
+.icon{
+  position:absolute;left:19px;top:50%;transform:translateY(-50%);
+  width:21px;height:21px;color:#686572;pointer-events:none
+}
+.input{
+  width:100%;height:66px;border:1px solid rgba(255,255,255,.055);
+  border-radius:17px;background:var(--field);color:#fff;outline:none;
+  padding:0 55px 0 56px;font-size:16.5px;font-weight:500;
+  box-shadow:inset 0 1px 2px rgba(0,0,0,.12);
+  transition:.2s border-color,.2s box-shadow,.2s background
+}
+.input::placeholder{color:#65616e}
+.input:focus{
+  border-color:rgba(164,60,255,.72);background:rgba(42,38,53,.9);
+  box-shadow:0 0 0 4px rgba(164,60,255,.105),inset 0 1px 2px rgba(0,0,0,.1)
+}
+.toggle{
+  position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  border:0;background:transparent;color:#716d7a;width:36px;height:36px;
+  cursor:pointer;border-radius:9px
+}
+.toggle:hover{color:#b2adba;background:rgba(255,255,255,.035)}
+.button{
+  width:100%;height:64px;margin-top:5px;border:0;border-radius:17px;
+  color:white;font-size:19px;font-weight:800;letter-spacing:-.2px;cursor:pointer;
+  background:linear-gradient(100deg,#9d35ed 0%,#8137f4 100%);
+  box-shadow:0 12px 28px rgba(126,46,228,.30),inset 0 1px 0 rgba(255,255,255,.18);
+  transition:transform .16s,filter .16s,box-shadow .16s
+}
+.button:hover{filter:brightness(1.08);box-shadow:0 15px 34px rgba(126,46,228,.38),inset 0 1px 0 rgba(255,255,255,.2)}
+.button:active{transform:translateY(1px)}
+.switch{text-align:center;margin-top:25px;color:#9894a2;font-size:15.5px}
+.switch a{color:#ad49f5;text-decoration:none;font-weight:750}
+.switch a:hover{text-decoration:underline}
+.message{
+  display:none;margin:0 0 17px;padding:12px 14px;border-radius:12px;
+  background:rgba(164,60,255,.1);border:1px solid rgba(164,60,255,.17);
+  color:#d5b2f8;font-size:14px
+}
+.message.show{display:block}
+@media(max-width:600px){
+  .auth-page{padding:26px 8px 36px}.hero{margin-bottom:26px}
+  .logo{width:91px;height:91px;margin-bottom:14px}
+  .welcome{font-size:38px;letter-spacing:-1.4px}
+  .brand{font-size:42px;letter-spacing:-1.8px;margin-top:11px}
+  .subtitle{font-size:15.5px}
+  .card{width:100%;padding:31px 29px 29px;border-radius:25px}
+  .input{height:62px;border-radius:16px}.button{height:61px;border-radius:16px}
+}
+@media(max-width:390px){
+  .card{padding-left:22px;padding-right:22px}
+  .welcome{font-size:34px}.brand{font-size:38px}
+}
+</style>
+</head><body><main class="auth-page"><div class="shell"><header class="hero">
+<img class="logo" src="./assets/logo.png" alt="AnimeInPost">
+<h1 class="welcome">Welcome To</h1>
+<div class="brand">AnimeInPost</div>
+<div class="divider" aria-hidden="true"></div>
+<p class="subtitle">Log in or create an account to start reading.</p>
+</header>
+<section class="card" aria-label="Log in">
+<div class="message"></div>
+<form id="loginForm" novalidate>
+<div class="group"><label class="label" for="identity">Username or Email</label><div class="wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.7-3.3 3.1-5 7-5s6.3 1.7 7 5"/></svg>
+<input class="input" id="identity" name="identity" type="text" autocomplete="username" placeholder="Username or email" required></div></div>
+<div class="group"><label class="label" for="password">Password</label><div class="wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+<input class="input" id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+<button class="toggle" type="button" data-toggle="password" aria-label="Show password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="21" height="21"><path d="M2.5 12s3.4-5 9.5-5 9.5 5 9.5 5-3.4 5-9.5 5-9.5-5-9.5-5Z"/><circle cx="12" cy="12" r="2.5"/></svg></button></div></div>
+<button class="button" type="submit">Log In</button>
+</form>
+<p class="switch">Don't have an account? <a href="/register.html">Sign up</a></p>
+</section></div></main>
+<script>
+document.querySelectorAll("[data-toggle]").forEach(b=>{
+  b.addEventListener("click",()=>{
+    const i=document.getElementById(b.dataset.toggle);
+    const show=i.type==="password"; i.type=show?"text":"password";
+    b.setAttribute("aria-label",show?"Hide password":"Show password");
+  });
+});
+const show=(t)=>{const m=document.querySelector(".message");if(m){m.textContent=t;m.classList.add("show")}};
+const l=document.getElementById("loginForm");
+const r=document.getElementById("registerForm");
+if(l)l.addEventListener("submit",e=>{
+ e.preventDefault(); if(!l.checkValidity()){l.reportValidity();return}
+ show("Login form is ready to connect to your AnimeInPost user API.");
+});
+if(r)r.addEventListener("submit",e=>{
+ e.preventDefault(); if(!r.checkValidity()){r.reportValidity();return}
+ if(r.password.value!==r.confirm.value){show("Passwords do not match.");return}
+ show("Registration form is ready to connect to your AnimeInPost user API.");
+});
+</script>
+</body></html>

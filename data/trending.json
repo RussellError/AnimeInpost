@@ -1,0 +1,65 @@
+{
+  "heading": "Trending Now",
+  "ctaLabel": "All Series",
+  "ctaHref": "/series/",
+  "items": [
+  
+  
+  
+  {
+      "title": "A Villain's Will to Survive",
+      "href": "/series/a-villains-will-to-survive/",
+      "image": "./assets/covers/a-villains-will-to-survive.webp"
+    },
+    
+    
+    {
+      "title": "Absolute Sword Sense",
+      "href": "/series/absolute-sword-sense/",
+      "image": "./assets/covers/absolute-sword-sense.webp"
+    },
+    {
+      "title": "Star-Embracing Swordmaster",
+      "href": "/series/star-embracing-swordmaster/",
+      "image": "./assets/covers/star-embracing-swordmaster.webp"
+    },
+    {
+      "title": "Pick Me Up, Infinite Gacha",
+      "href": "/series/pick-me-up-infinite-gacha/",
+      "image": "./assets/covers/pick-me-up-infinite-gacha.webp"
+    },
+    {
+      "title": "Solo Leveling Ragnarok",
+      "href": "/series/solo-leveling-ragnarok-manhwa/",
+      "image": "./assets/covers/solo-leveling-ragnarok.webp"
+    },
+    {
+      "title": "The Priest of Corruption",
+      "href": "/series/the-priest-of-corruption/",
+      "image": "./assets/covers/the-priest-of-corruption.webp"
+    },
+    {
+      "title": "Urek Mazino",
+      "href": "/series/urek-mazino/",
+      "image": "./assets/covers/urek-mazino.webp"
+    },
+    {
+      "title": "Solo Leveling",
+      "href": "/series/solo-leveling/",
+      "image": "./assets/covers/solo-leveling.webp"
+    },
+    
+    {
+      "title": "The Knight King Who Returned with a God",
+      "href": "/series/the-knight-king-who-returned-with-a-god/",
+      "image": "./assets/covers/the-knight-king-who-returned-with-a-god.webp"
+    },
+    
+    
+    {
+      "title": "Tower of God",
+      "href": "/series/tower-of-god/",
+      "image": "./assets/covers/tower-of-god.webp"
+    }
+  ]
+}

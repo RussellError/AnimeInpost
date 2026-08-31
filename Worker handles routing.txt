@@ -1,0 +1,88 @@
+export default {
+  async fetch(request) {
+    const url = new URL(request.url);
+    const path = url.pathname;
+
+    const MAIN = "https://animeinpost.pages.dev";
+    const SERIES = "https://animeinpost-1.pages.dev";
+
+    // Redirect /series and /series/<series> to trailing slash
+    // Do NOT redirect chapter URLs (/read/)
+    if (
+      !path.endsWith("/") &&
+      !path.includes("/read/") &&
+      (
+        path === "/series" ||
+        path.startsWith("/series/")
+      )
+    ) {
+      return Response.redirect(
+        new URL(path + "/" + url.search, url.origin),
+        301
+      );
+    }
+
+    let target = MAIN;
+
+    // Main project
+    if (
+      path === "/" ||
+      path.startsWith("/assets/") ||
+      path.startsWith("/meta/") ||
+      path === "/robots.txt" ||
+      path === "/sitemap.xml" ||
+      path === "/favicon.ico" ||
+      path === "/manifest.json"
+    ) {
+      target = MAIN;
+    }
+
+    // AnimeInpost-1
+    else if (
+      path === "/series/" ||
+      path.startsWith("/series/cont/") ||
+      path.startsWith("/series/eleceed/") ||
+      path.startsWith("/series/i-am-the-fated-villain/") ||
+      path.startsWith("/series/lookism/") ||
+      path.startsWith("/series/one-piece-manga/") ||
+      path.startsWith("/series/one-piece/") ||
+      path.startsWith("/series/orv/") ||
+      path.startsWith("/series/orv-manhwa/") ||
+      path.startsWith("/series/side/") ||
+      path.startsWith("/series/solo-leveling/") ||
+      path.startsWith("/series/solo-leveling-ragnarok-manhwa/") ||
+      path.startsWith("/series/the-beginning-after-the-end/") ||
+      path.startsWith("/series/tower-of-god/") ||
+      path.startsWith("/series/twate-manhwa/") ||
+      path.startsWith("/series/urek-mazino/") ||
+
+      // New series
+      path.startsWith("/series/logging-10000-years-into-the-future/") ||
+      path.startsWith("/series/nano-machine/") ||
+      path.startsWith("/series/pick-me-up-infinite-gacha/") ||
+      path.startsWith("/series/regressor-instruction-manual/") ||
+      path.startsWith("/series/the-priest-of-corruption/") ||
+      path.startsWith("/series/the-regressed-son-of-a-duke-is-an-assassin/") ||
+      path.startsWith("/series/the-swordmasters-youngest-son/") ||
+      path.startsWith("/series/top-tier-providence/")
+    ) {
+      target = SERIES;
+    }
+
+    const targetUrl = new URL(path + url.search, target);
+
+    const response = await fetch(new Request(targetUrl, request));
+
+    // Serve custom 404 page from Main project
+    if (response.status === 404) {
+      const custom404 = await fetch("https://animeinpost.pages.dev/404.html");
+
+      return new Response(custom404.body, {
+        status: 404,
+        headers: custom404.headers,
+      });
+    }
+
+    return response;
+  }
+}
