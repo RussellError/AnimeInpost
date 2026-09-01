@@ -6,6 +6,33 @@
 
 
 
+{
+    "title": "Eleceed",
+    "url": "/series/eleceed/",
+    "img": "/assets/covers/eleceed.webp",
+    "tag": "manhwa",
+    "chapters": [
+      {
+        "number": 416,
+        "url": "/series/eleceed/read/chapter-416"
+      },
+      {
+        "number": 415,
+        "url": "/series/eleceed/read/chapter-415"
+      },
+      {
+        "number": 414,
+        "url": "/series/eleceed/read/chapter-414"
+      }
+    ]
+  },
+  
+
+
+
+
+
+
 
 
 {
@@ -880,28 +907,7 @@
 
 
   
-  {
-    "title": "Eleceed",
-    "url": "/series/eleceed/",
-    "img": "/assets/covers/eleceed.webp",
-    "tag": "manhwa",
-    "chapters": [
-      {
-        "number": 415,
-        "url": "/series/eleceed/read/chapter-415"
-      },
-      {
-        "number": 414,
-        "url": "/series/eleceed/read/chapter-414"
-      },
-      {
-        "number": 413,
-        "url": "/series/eleceed/read/chapter-413"
-      }
-    ]
-  },
   
-
 
 
 {
