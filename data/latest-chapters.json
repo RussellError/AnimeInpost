@@ -7,6 +7,38 @@
 
 
 
+
+{
+    "title": "Top Tier Providence",
+    "url": "/series/top-tier-providence/",
+    "img": "/assets/covers/top-tier-providence.webp",
+    "tag": "manhua",
+    "chapters": [
+      {
+        "number": 276,
+        "url": "/series/top-tier-providence/read/chapter-276"
+      },
+      {
+        "number": 275,
+        "url": "/series/top-tier-providence/read/chapter-275"
+      },
+      {
+        "number": 274,
+        "url": "/series/top-tier-providence/read/chapter-274"
+      }
+    ]
+  },
+  
+  
+  
+
+
+
+
+
+
+
+
 {
     "title": "Swordmaster's Youngest Son",
     "url": "/series/the-swordmasters-youngest-son/",
@@ -1692,31 +1724,6 @@
 
 
 
-  
-  
-
-
-{
-    "title": "Top Tier Providence",
-    "url": "/series/top-tier-providence/",
-    "img": "/assets/covers/top-tier-providence.webp",
-    "tag": "manhua",
-    "chapters": [
-      {
-        "number": 275,
-        "url": "/series/top-tier-providence/read/chapter-275"
-      },
-      {
-        "number": 274,
-        "url": "/series/top-tier-providence/read/chapter-274"
-      },
-      {
-        "number": 273,
-        "url": "/series/top-tier-providence/read/chapter-273"
-      }
-    ]
-  },
-  
   
   
 
