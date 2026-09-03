@@ -4,6 +4,45 @@
 
 
 
+
+
+
+
+
+
+{
+    "title": "Shadow Slave",
+    "url": "/series/shadow-slave/",
+    "img": "/assets/covers/shadow-slave.webp",
+    "tag": "manhwa",
+    "chapters": [
+      {
+        "number": 7,
+        "url": "/series/shadow-slave/read/chapter-7"
+      },
+      {
+        "number": 6,
+        "url": "/series/shadow-slave/read/chapter-6"
+      },
+      {
+        "number": 5,
+        "url": "/series/shadow-slave/read/chapter-5"
+      }
+    ]
+  },
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
 {
     "title": "Pick Me Up Infinite Gacha",
     "url": "/series/pick-me-up-infinite-gacha/",
@@ -663,31 +702,7 @@
 
 
 
-{
-    "title": "Shadow Slave",
-    "url": "/series/shadow-slave/",
-    "img": "/assets/covers/shadow-slave.webp",
-    "tag": "manhwa",
-    "chapters": [
-      {
-        "number": 6,
-        "url": "/series/shadow-slave/read/chapter-6"
-      },
-      {
-        "number": 5,
-        "url": "/series/shadow-slave/read/chapter-5"
-      },
-      {
-        "number": 4,
-        "url": "/series/shadow-slave/read/chapter-4"
-      }
-    ]
-  },
-  
-  
-  
-  
-  
+
   
   
   
