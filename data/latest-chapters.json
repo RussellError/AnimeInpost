@@ -5,6 +5,32 @@
 
 
 
+{
+    "title": "Lookism",
+    "url": "/series/lookism/",
+    "img": "/assets/covers/lookism.webp",
+    "tag": "manhwa",
+    "chapters": [
+      {
+        "number": 623,
+        "url": "/series/lookism/read/chapter-623"
+      },
+      {
+        "number": 622,
+        "url": "/series/lookism/read/chapter-622"
+      },
+      {
+        "number": 621,
+        "url": "/series/lookism/read/chapter-621"
+      }
+    ]
+  },
+  
+  
+
+
+
+
 
 
 
@@ -640,29 +666,6 @@
   
  
 
-
-{
-    "title": "Lookism",
-    "url": "/series/lookism/",
-    "img": "/assets/covers/lookism.webp",
-    "tag": "manhwa",
-    "chapters": [
-      {
-        "number": 622,
-        "url": "/series/lookism/read/chapter-622"
-      },
-      {
-        "number": 621,
-        "url": "/series/lookism/read/chapter-621"
-      },
-      {
-        "number": 620,
-        "url": "/series/lookism/read/chapter-620"
-      }
-    ]
-  },
-  
-  
 
 
 
