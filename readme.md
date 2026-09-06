@@ -3,6 +3,7 @@ AnimeInPost
 AnimeInPost is an online manga, manhwa, manhua, and novel reading platform.
 
 🌐 Website: https://animeinpost.site/
+🌐 Website: https://animeinpost.pages.dev/
 
 Features
 
